@@ -40,5 +40,11 @@ To have the Leopard UI load a different Iframe for the new language solution the
 langurl=https://some-new-url.es/
 ```
 
+## Additional Output Parameters
 
+You can control not just the new target iframe url and TIE url but also the Leopard Chat Title and locale for UI labels and ASR and TTS.
+
+### Screenshot
+
+![](../.gitbook/assets/language-handover.jpg)
 
