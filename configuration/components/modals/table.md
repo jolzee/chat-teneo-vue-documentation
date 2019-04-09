@@ -25,7 +25,7 @@ extensions = ${ExtensionHelper.displayTable("webview", "My Example Table Title",
 The `displayTable` method has this format:
 
 ```groovy
-public static String displayTable(def channel = "webview", def title, def footer = "", def enableSearch = true, def headers, def rows) {}
+public static String displayTabledisplayTable(def channel = "webview", def title, def footer = "", def enableSearch = true, def headers, def rows, def rowsPerPage = [5, 10, 25]) {}
 ```
 
 ### Utility to Create Table Headers
