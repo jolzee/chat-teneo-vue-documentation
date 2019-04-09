@@ -112,7 +112,8 @@ extensions = ${ExtensionHelper.displayTable("webview", "My Example Table Title",
 				"account": "Savings",
 				"balance": "$2376.54"
 			}
-		]
+		],
+		"rowsPerPage": [5, 10, 25]
 	}
 }
 ```
