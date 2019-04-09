@@ -26,6 +26,7 @@
     * [Live Chat](configuration/integrations/live-chat.md)
     * [Pusher](configuration/integrations/pusher.md)
   * [Message Response Options](configuration/response-options/README.md)
+    * [Open Long Response in Modal](configuration/response-options/open-long-response-in-modal.md)
     * [Splitting a Response](configuration/response-options/splitting-a-response.md)
     * [Buttons and Lists](configuration/response-options/buttons-and-lists.md)
     * [Hyperlinks](configuration/response-options/hyperlinks.md)
