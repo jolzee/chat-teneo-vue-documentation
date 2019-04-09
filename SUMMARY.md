@@ -8,6 +8,7 @@
   * [Leopard Config Page](configuration/leopard-config-page.md)
   * [Website URLs](configuration/website-urls.md)
   * [Views](configuration/views/README.md)
+    * [Hiding Chat Icons](configuration/views/hiding-chat-icons.md)
     * [Desktop](configuration/views/desktop.md)
     * [Mobile](configuration/views/mobile.md)
   * [ASR and TTS](configuration/asr-and-tts.md)
