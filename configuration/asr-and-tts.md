@@ -12,8 +12,11 @@ description: >-
 * English
 * French
 * German
+* Danish
 * Dutch
+* Norwegian 
 * Spanish
+* Swedish
 * Russian
 
 The chat interface also has some i18n added that will change some of the labels used in Leopard to be shown in the respective language. It doesn't have full coverage of every area available in Leopards UI but it does cover the main bases.  The file used to control the labels is located in `\src\constants\translations.js`
