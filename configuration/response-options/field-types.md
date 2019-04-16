@@ -46,7 +46,7 @@ inputType = password
 
 ## Location Information
 
-For some conversations it might be desirable to use the user's current location as a mean of refining a back end query. This new feature will allow you to define the following new values for an **inputType** output parameter.
+For some conversations it might be desirable to use the user's current browser location as a means of refining a back end query. To request the location information from the browser you just need to set one of the following output parameters on a node in a Teneo Flow. 
 
 | Output Param Name | Value | Example Response Format |
 | :--- | :--- | :--- |
