@@ -44,5 +44,29 @@ The password field will mask the users password as they enter it in. It will als
 inputType = password
 ```
 
-## 
+## Location Information
+
+For some conversations it might be desirable to use the user's current location as a mean of refining a back end query. This new feature will allow you to define the following new values for an **inputType** output parameter.
+
+| Output Param Name | Value | Example Response Format |
+| :--- | :--- | :--- |
+| inputType  | locationCityStateZip | Sammamish, Washington 98075 |
+| inputType  | locationZip | 98075 |
+| inputType  | locationLatLong | 40.748736,-73.98486 |
+| inputType  | locationJson | JSON Format seen below |
+
+![JSON Format for inputType=locationJson](../../.gitbook/assets/carbon.png)
+
+{% hint style="info" %}
+To be able to retrieve any info other than "**locationLatLong**" you will need to define a license key for [https://locationiq.com](https://locationiq.com) in **.env** called: **VUE\_APP\_LOCATION\_IQ\_KEY**
+{% endhint %}
+
+Teneo will automatically send back the requested information to Teneo. This will come in as request parameters with the same names: \(**locationCityStateZip/locationZip/locationLatLong/locationJson**\) The parameter values are URL Encoded and you should URL decode them retrieving the location information. This can be done either in a pre-processing script, a listener or a transition.
+
+For example:
+
+```java
+import java.net.URLDecoder;
+URLDecoder.decode(engineEnvironment.getParameter("locationCityStateZip"), "UTF-8")}
+```
 
