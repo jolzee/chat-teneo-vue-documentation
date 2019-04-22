@@ -23,6 +23,6 @@ You can output links in html or answer text that are then fed back into Teneo as
 Alternatively:
 
 ```markup
-<a href="#" onclick="sendUserInput('How do I fix my paper jam?')">How do I fix a paper jam?</a>
+<a href="#" class="sendInput" data-input="This will be sent to Teneo">This is just the anchor text</a>
 ```
 
