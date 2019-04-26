@@ -55,7 +55,7 @@ npm run build
 
 ## Leopard
 
-If you would like to leverage [Live Chat](configuration/integrations/live-chat.md), [Location Detection](configuration/response-options/field-types.md#location-information), [Pusher Messaging](configuration/integrations/pusher.md) or Social Authentication then you will need to update your license keys in the `.env` properties file.  
+If you would like to leverage [Live Chat](configuration/integrations/live-chat.md), [Location Detection](configuration/response-options/field-types.md#location-information), [Pusher Messaging](configuration/integrations/pusher.md) or [Social Authentication](configuration/integrations/social-authentication.md) then you will need to update your license keys in the `.env` properties file.  
 
 {% code-tabs %}
 {% code-tabs-item title=".env" %}
