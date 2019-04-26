@@ -24,6 +24,7 @@
       * [HTML](configuration/components/modals/html.md)
       * [Custom](configuration/components/modals/custom.md)
   * [Integrations](configuration/integrations/README.md)
+    * [Social Authentication](configuration/integrations/social-authentication.md)
     * [Live Chat](configuration/integrations/live-chat.md)
     * [Pusher](configuration/integrations/pusher.md)
   * [Message Response Options](configuration/response-options/README.md)
