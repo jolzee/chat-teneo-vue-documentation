@@ -53,7 +53,40 @@ The following command will compile and minify all the code for production. The r
 npm run build
 ```
 
+## Leopard
+
+If you would like to leverage [Live Chat](configuration/integrations/live-chat.md), [Location Detection](configuration/response-options/field-types.md#location-information), [Pusher Messaging](configuration/integrations/pusher.md) or Social Authentication then you will need to update your license keys in the `.env` properties file.  
+
+{% code-tabs %}
+{% code-tabs-item title=".env" %}
+```text
+VUE_APP_LIVE_CHAT_INC_KEY=
+VUE_APP_PUSHER_KEY=
+VUE_APP_LOCATION_IQ_KEY=
+VUE_APP_LONG_PRESS_LENGTH=1000
+VUE_APP_FIREBASE_API_KEY=
+VUE_APP_FIREBASE_AUTH_DOMAIN=
+VUE_APP_FIREBASE_DATABASE_URL=
+VUE_APP_FIREBASE_PROJECT_ID=
+VUE_APP_FIREBASE_STORAGE_BUCKET=
+VUE_APP_FIREBASE_MESSAGING_SENDER_ID=
+```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
+
 ## Studio
+
+### Capture the Channel
+
+Leopard sends `channel=webview` to Teneo along with every request. You will want to define a global variable in Teneo and populate it based off the value of this request parameter.
+
+```groovy
+if (engineEnvironment.getParameter("channel")) { 
+    channel = engineEnvironment.getParameter("channel") 
+}
+```
+
+### Capture the Login command
 
 Disable the following flow from the TDR's - `The user continues conversation after Timeout`  This flow is located in `Dialogue » Non-conversational » Timeout`
 
@@ -80,6 +113,27 @@ In your greeting flow you will want to add a syntax trigger with the following c
 ```
 {% endcode-tabs-item %}
 {% endcode-tabs %}
+
+### Capture the User's Time Zone
+
+Leopard automatically sends the user's time zone as a request parameter  \(`timeZone`\) to Teneo. This is useful in that you might want to properly greet the user based on the time of day. 
+
+To capture the time zone in Teneo add this script to Pre-processing.
+
+```groovy
+if (engineEnvironment.getParameter("timeZone")){
+	Lib_sUserTimeZone = engineEnvironment.getParameter("timeZone")
+}
+```
+
+Alter the `On top` script in the default Teneo TDR `Greeting` flow to the following. The user then will be correctly greeted based off the time of day.
+
+```groovy
+TimeZone timeZone = TimeZone.getTimeZone(Lib_sUserTimeZone);
+iHour = Integer.parseInt(String.format('%tH', new GregorianCalendar(timeZone)));
+```
+
+![](.gitbook/assets/greeting.jpg)
 
 ## ExtensionHelper
 
