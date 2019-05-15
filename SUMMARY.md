@@ -36,5 +36,6 @@
     * [Field Types](configuration/response-options/field-types.md)
     * [Field Masks](configuration/response-options/field-masks.md)
     * [Input Field Help Text](configuration/response-options/input-field-help-text.md)
+* [Embedding](embedding.md)
 * [Code Guidelines](code-guidelines.md)
 

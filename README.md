@@ -7,13 +7,13 @@ description: >-
 
 # Quick Start
 
+## Introduction
+
+Leopard can be used for demonstrations, prototypes and in production. In non-embed mode the chat client is designed to float over an Iframed web page. 
+
+It can also be embedded on an external site. 
+
 ## Limitations
-
-Leopard in its current form is useful for prototypes and demonstrations. It's designed to float over an Iframed web page.
-
-With a little bit of coding work it's very likely that Leopard could be built as a standard [web component](https://www.webcomponents.org/introduction) and therefore easily included on web site regardless of the underlying tech.  
-
-{% embed url="https://cli.vuejs.org/guide/build-targets.html\#web-component" %}
 
 [Vue.js](https://vuejs.org/) and [Vuetify ](https://vuetifyjs.com/en/getting-started/quick-start)are pretty modern frameworks. Leopard will therefore run fine on Microsoft Edge, Firefox, Chrome and Safari. It will not work in IE 11 or below without adding some coding logic to the build process.  
 
