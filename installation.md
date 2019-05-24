@@ -45,7 +45,7 @@ npm run serve
 
 The browser should automatically open to [http://localhost:8080/](http://localhost:8080/) once compiling has finished. You can change code in the project and the Website should automatically reload. 
 
-### Build
+### Build for just modern browsers
 
 The following command will compile and minify all the code for production. The resulting HTML, CSS and JS code in the `/dist` folder can then be deployed to any web server.
 
@@ -57,7 +57,7 @@ npm run build
 This build will only support modern browser and will not support IE11
 {% endhint %}
 
-## Build for Modern Browsers with IE11 fallback
+### Build for modern browsers with IE11 fallback
 
 ```bash
 npm run build:modern
