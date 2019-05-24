@@ -6,3 +6,17 @@ description: >-
 
 # Components
 
+{% hint style="info" %}
+If you requires two components outputted inline for example **you can append a numerical ordering** to the **`extensions`** output parameter. 
+
+For example you might want to show some button options along with an inline carousel.
+
+```groovy
+extensions1 = ${ExtensionHelper.displayClickableList(yesNoMaybeOptions,channel)}
+```
+
+```groovy
+extensions2 = ${ExtensionHelper.displayImageCarousel(imageUrlArray,channel)}
+```
+{% endhint %}
+
