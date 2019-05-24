@@ -53,6 +53,20 @@ The following command will compile and minify all the code for production. The r
 npm run build
 ```
 
+{% hint style="info" %}
+This build will only support modern browser and will not support IE11
+{% endhint %}
+
+## Build for Modern Browsers with IE11 fallback
+
+```bash
+npm run build:modern
+```
+
+{% hint style="info" %}
+This will allow Leopard to be run in IE11 along with modern browsers.
+{% endhint %}
+
 ## Leopard
 
 If you would like to leverage [Live Chat](configuration/integrations/live-chat.md), [Location Detection](configuration/response-options/field-types.md#location-information), [Pusher Messaging](configuration/integrations/pusher.md) or [Social Authentication](configuration/integrations/social-authentication.md) then you will need to update your license keys in the `.env` properties file.  
