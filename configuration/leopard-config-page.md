@@ -102,5 +102,15 @@ You can always access the config from the Leopard chat window's menu.
 
 ## Exporting
 
+You can export the JSON configuration for individual solutions or all solutions from within the config area of Leopard. You can either choose to have the configuration exported to the file system or copied to your clipboard. 
+
+![](../.gitbook/assets/export-indiv.png)
+
+![](../.gitbook/assets/export-all.png)
+
 ## Importing
+
+Within the Leopard configuration page you can import previously exported solution configurations.  Adding and merging is all automatically handled.  
+
+![](../.gitbook/assets/upload.png)
 
