@@ -100,6 +100,18 @@ You can always access the config from the Leopard chat window's menu.
 
   Accessing this documentation
 
+## Styling Chat Button and Chat Window Header
+
+At a solution level you can define custom css that is applied to both the chat open & close button as well the chat window header.
+
+For example this css produces the look and feel seen in the image below.
+
+```css
+background: #944ad6; background: -moz-linear-gradient(left, #944ad6 0%, #207cca 90%, #207cca 100%, #207cca 100%, #207cca 100%, #1c76d6 100%, #207cca 101%, #207cca 101%, #207cca 102%, #207cca 102%); background: -webkit-linear-gradient(left,  #944ad6 0%,#207cca 90%,#207cca 100%,#207cca 100%,#207cca 100%,#1c76d6 100%,#207cca 101%,#207cca 101%,#207cca 102%,#207cca 102%); background: linear-gradient(to right,  #944ad6 0%,#207cca 90%,#207cca 100%,#207cca 100%,#207cca 100%,#1c76d6 100%,#207cca 101%,#207cca 101%,#207cca 102%,#207cca 102%); filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#944ad6', endColorstr='#207cca',GradientType=1 );
+```
+
+![](../.gitbook/assets/style.png)
+
 ## Exporting
 
 You can export the JSON configuration for individual solutions or all solutions from within the config area of Leopard. You can either choose to have the configuration exported to the file system or copied to your clipboard. 
