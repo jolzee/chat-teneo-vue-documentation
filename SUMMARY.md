@@ -21,6 +21,7 @@
       * [Video](configuration/components/modals/video.md)
       * [Audio](configuration/components/modals/audio.md)
       * [Tables](configuration/components/modals/table.md)
+      * [Maps](configuration/components/modals/maps.md)
       * [HTML](configuration/components/modals/html.md)
       * [Custom](configuration/components/modals/custom.md)
   * [Integrations](configuration/integrations/README.md)
