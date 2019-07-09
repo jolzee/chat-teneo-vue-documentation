@@ -100,6 +100,12 @@ You can always access the config from the Leopard chat window's menu.
 
   Accessing this documentation
 
+![](../.gitbook/assets/cfg.jpg)
+
+## Solution Add/Edit Screen
+
+![](../.gitbook/assets/cfg-solution.jpg)
+
 ## Styling Chat Button and Chat Window Header
 
 At a solution level you can define custom css that is applied to both the chat open & close button as well the chat window header.
