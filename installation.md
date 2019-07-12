@@ -18,13 +18,13 @@ The latest code is stored in Github.
 ### Clone the Repository
 
 ```bash
-git clone https://github.com/jolzee/chat-teneo-vue
+git clone https://github.com/jolzee/chat-teneo-vue leopard
 ```
 
  Next navigate into the cloned project
 
 ```bash
-cd chat-teneo-vue
+cd leopard
 ```
 
 ### Project setup
