@@ -67,30 +67,89 @@ npm run build:modern
 This will allow Leopard to be run in IE11 along with modern browsers.
 {% endhint %}
 
-## Leopard
+## Leopard Environment Variables
 
-If you would like to leverage [Live Chat](configuration/integrations/live-chat.md), [Location Detection](configuration/response-options/field-types.md#location-information), [Pusher Messaging](configuration/integrations/pusher.md) or [Social Authentication](configuration/integrations/social-authentication.md) then you will need to update your license keys in the `.env` properties file.  
+If you would like to leverage [Live Chat](configuration/integrations/live-chat.md), [Location Detection](configuration/response-options/field-types.md#location-information), [Pusher Messaging](configuration/integrations/pusher.md) or [Social Authentication](configuration/integrations/social-authentication.md) then you will need to update your license keys in the `.env` properties file.  Know that you can define a `.env.local` file within the same directory. This file will be used for local builds. `.env.local` files are added to `.gitignore` so that your licence keys and config isn't publicly exposed.
 
 {% code-tabs %}
 {% code-tabs-item title=".env" %}
 ```text
+VUE_APP_FIREBASE_API_KEY=XXXXXXXXXXX_XXXXXXXXXXX-XXXXXXXXXXX
+VUE_APP_FIREBASE_AUTH_DOMAIN=my-project-id.firebaseapp.com
+VUE_APP_FIREBASE_DATABASE_URL=https://my-project-id.firebaseio.com
+VUE_APP_FIREBASE_MESSAGING_SENDER_ID=1234567890
+VUE_APP_FIREBASE_PROJECT_ID=my-project-id
+VUE_APP_FIREBASE_STORAGE_BUCKET=my-project-id.appspot.com
+VUE_APP_GET_STATIC_DEFAULT_CONFIG=true
 VUE_APP_HIDE_CONFIG_MENU=false
-VUE_APP_LIVE_CHAT_INC_KEY=
-VUE_APP_PUSHER_KEY=
+VUE_APP_LIVE_CHAT_INC_KEY=1234567
+VUE_APP_LOAD_CONFIG_FOR_NEW_SESSIONS=false
 VUE_APP_LOCATION_IQ_KEY=
 VUE_APP_LONG_PRESS_LENGTH=1000
-VUE_APP_FIREBASE_API_KEY=
-VUE_APP_FIREBASE_AUTH_DOMAIN=
-VUE_APP_FIREBASE_DATABASE_URL=
-VUE_APP_FIREBASE_PROJECT_ID=
-VUE_APP_FIREBASE_STORAGE_BUCKET=
-VUE_APP_FIREBASE_MESSAGING_SENDER_ID=
-VUE_APP_GET_STATIC_DEFAULT_CONFIG=true
+VUE_APP_PUSHER_KEY=
 ```
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
-## Studio
+### Description of Some Variables
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">Environment Variable</th>
+      <th style="text-align:left">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left">VUE_APP_GET_STATIC_DEFAULT_CONFIG</td>
+      <td style="text-align:left">
+        <p>If set to <b><code>false</code></b> then the leopard chat client will retrieve
+          your solution config json from the <code>/static/default.json</code> on first
+          load. From there on the configuration is stored in your browser&apos;s
+          local storage. Any changes you make in the leopard config will update the
+          configuration in your local storage.</p>
+        <p></p>
+        <p>If set to <b><code>true</code></b> then instead of making an ajax request
+          to load the default solution config from the static directory the <code>default.json</code> file
+          located in <code>/src/assets/default.json</code> will be loaded. This file
+          is always bundled in the final build and will not result in an AJAX request.
+          Note that changing the <code>/static/default.json</code> in the deployment
+          folder will do nothing when this setting is turned on.</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">VUE_APP_HIDE_CONFIG_MENU</td>
+      <td style="text-align:left">If set to <b><code>false </code></b>then you are able to navigate to Leopard&apos;s
+        configuration area from the Leopard&apos;s fly-out menu. This should be
+        the default setting in a development environment where you might be using
+        Leopard to demonstrate multiple Teneo solutions.
+        <br />
+        <br />If set to <b><code>true </code></b>then the menu option for the config
+        are is hidden from the menu and you will not be able to navigate to the
+        respective route. This is the setting you will want to have enabled in
+        a production environment where you&apos;re embedding Leopard.</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">VUE_APP_LOAD_CONFIG_FOR_NEW_SESSIONS</td>
+      <td style="text-align:left">
+        <p>If set to <b><code>false </code></b>then the local storage version of your
+          solution configurations will be used for all new sessions with Leopard.
+          This is the setting you will most likely want to have disabled in a development
+          environment where possibly multiple sales engineers each use the same hosted
+          Leopard UI to demonstrate different Teneo solutions. It effectively allows
+          each developer to have their own configurations.</p>
+        <p></p>
+        <p>If set to <b><code>true </code></b>then the user&apos;s local storage is
+          cleared for every new session and the <code>default.json</code> is loaded
+          fresh. In a production environment you will probably want to enable this
+          setting so that if you deploy a change to the solution config (color theme,
+          name of the chat window, TIE endpoint url, etc.) then that change will
+          appear automatically when Leopard is next opened by a user.</p>
+      </td>
+    </tr>
+  </tbody>
+</table>## Studio
 
 ### Capture the Channel
 
