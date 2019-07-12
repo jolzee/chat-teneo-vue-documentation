@@ -7,16 +7,6 @@ description: >-
 
 # Expensive Operations
 
-### Screenshots
-
-![](../../.gitbook/assets/delayleopard.gif)
-
-### Output Parameter
-
-```text
-command = delay
-```
-
 ## Instructions
 
 Add an output parameter of `command = delay` to any output node. Leopard will then show the "thinking" graphic until it next receives a response from Teneo. When the graphic is shown Teneo automatically sends back an empty input to Teneo with a request parameter of `command=continue` .  You can then begin your expensive operation and return the response as per usual. 
@@ -36,4 +26,16 @@ if (engineEnvironment.getParameter("command")) {
 ```
 {% endcode-tabs-item %}
 {% endcode-tabs %}
+
+### Screenshots
+
+![](../../.gitbook/assets/delayleopard.gif)
+
+### Output Parameter
+
+```text
+command = delay
+```
+
+## 
 
