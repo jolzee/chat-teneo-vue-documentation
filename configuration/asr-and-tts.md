@@ -75,7 +75,7 @@ export const ASR_CORRECTIONS = [
 {% endcode-tabs %}
 
 {% hint style="info" %}
-Eventually it would be ideal to add this functionality on a solution by solution basis within the configuration web interface of Leopard.
+You can also define ASR transcription corrections at a solution configuration level. Edit a solution in the Leopard config area and there a field that allows you to define the corrections.
 {% endhint %}
 
 ## TTS Override
