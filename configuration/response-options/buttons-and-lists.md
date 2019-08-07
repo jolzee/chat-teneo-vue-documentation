@@ -142,6 +142,6 @@ If you just want to quickly produce some buttons then it might be easier to call
 
 ```groovy
 extensions = ExtensionHelper.simpleDisplayClickableList(
-        "Please Choose, Yes, No, Maybe", "webview");
+        "Please Choose; Yes; No; Maybe", "webview");
 ```
 
