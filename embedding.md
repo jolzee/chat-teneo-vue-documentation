@@ -14,7 +14,7 @@ TENEOCTX = {
 	message: "This was sent from the customer's web site"
 }
 </script>
-<script src="https://<your-tie-url>/<ctx>/static/embed-leopard.js"></script>
+<script src="https://<your-leopard-url>/<ctx>/static/embed-leopard.js"></script>
 ```
 
 The keys in the `TENEOCTX` object will be passed as individual request parameters to your TIE endpoint with every request.  
