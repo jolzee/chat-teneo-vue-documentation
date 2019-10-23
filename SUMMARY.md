@@ -12,6 +12,7 @@
     * [Desktop](configuration/views/desktop.md)
     * [Mobile](configuration/views/mobile.md)
   * [ASR and TTS](configuration/asr-and-tts.md)
+  * [Prompt Trigger Polling](configuration/prompt-trigger-polling.md)
   * [Language Auto Switch](configuration/language-auto-switch.md)
   * [Components](configuration/components/README.md)
     * [Date & Time Pickers](configuration/components/date-and-time-pickers.md)
