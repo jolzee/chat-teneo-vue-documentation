@@ -11,6 +11,18 @@ description: >-
 Leopard sends no user input when polling. It does add a**`command=prompt`**request parameter to each poll request.
 {% endhint %}
 
+{% hint style="danger" %}
+Your Teneo solution must return the number of active flows to Leopard for every request. This is needed so that the polling is only active when there are no active flows \(you are not mid dialog\) 
+{% endhint %}
+
+{% code-tabs %}
+{% code-tabs-item title="Post Processing" %}
+```groovy
+_.putOutputParameter("numActiveFlows", "" + _.getActiveFlows().size())
+```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
+
 ## Screenshots
 
 ![Leopard Config for Prompt Trigger Polling](../.gitbook/assets/promt-trigger-config.jpg)
