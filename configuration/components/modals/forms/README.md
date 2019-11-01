@@ -9,6 +9,10 @@ description: >-
 
 ## Introduction
 
+{% hint style="warning" %}
+A form will only ever display in a **modal window**. You have control over the max width of the form but you can't control its position on the page. It always be displayed in the center of the page.
+{% endhint %}
+
 Although you can capture any input via dialog through the course of conversation it can be more familiar and user friendly to display a traditional form to a user at a key point of a conversation. Having this option in Leopard doesn't force the use or display of custom forms in any solution but rather provides flexibility in confirming or capturing information outside of lengthy conversations.
 
 You have great control of the form structure, appearance, behavior, initial values and validation rules. 

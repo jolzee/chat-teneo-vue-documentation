@@ -27,7 +27,7 @@ println(formData.someField)
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">Element</th>
+      <th style="text-align:left">Property</th>
       <th style="text-align:left">Required/Optional</th>
       <th style="text-align:left">Default Value</th>
       <th style="text-align:left">Type</th>

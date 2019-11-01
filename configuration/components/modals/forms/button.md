@@ -10,7 +10,7 @@ description: >-
 
 `"button": {}` [See usage here](./#component-configuration)
 
-| Element | Required/Optional | Default Value | Type | Notes |
+| Property | Required/Optional | Default Value | Type | Notes |
 | :--- | :--- | :--- | :--- | :--- |
 | text | optional | Submit | String | The text shown in the button that sends the form data back to Teneo |
 | icon | optional | `icon not displayed` | String | Name of an icon from [Material Design Icons](https://materialdesignicons.com/) |

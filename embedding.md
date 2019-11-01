@@ -72,7 +72,7 @@ if (teneoFrameWindow) {
 
 You can run JavaScript sent from Teneo on the website that embeds Teneo. Add an output parameter to any node in Teneo with the name "**script**" with the value containing the JavaScript you want to run.
 
-![Creates a button and changes the site&apos;s background text to Red!!](.gitbook/assets/image%20%281%29.png)
+![Creates a button and changes the site&apos;s background text to Red!!](.gitbook/assets/image%20%282%29.png)
 
 
 

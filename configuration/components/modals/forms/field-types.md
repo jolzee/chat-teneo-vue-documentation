@@ -14,22 +14,23 @@ Simple header component `<header/>`. This component can be used to separate and 
 
 ### Config Options
 
-| Element | Required/Optional | Default | Type | Notes |
+| Property | Required/Optional | Default | Type | Notes |
 | :--- | :--- | :--- | :--- | :--- |
-| fieldType | required | header | String |  |
-| label | required |  | String | Text you want to display as a header |
-| classes | optional |  | Array of Strings | Any of the classes minus the preceding period sign - [https://vuetifyjs.com/en/styles/typography](https://vuetifyjs.com/en/styles/typography) |
+| `header` | `required` | header | object |  |
+| `header.label` | `required` |  | String | Text you want to display as a header |
+| header.classes | optional |  | Array of Strings | Any of the classes minus the preceding period sign - [https://vuetifyjs.com/en/styles/typography](https://vuetifyjs.com/en/styles/typography) |
 
 ### JSON
 
 ```javascript
 {
-    "fieldType": "header",
-    "label": "This is a header",
+  "header": {
+    "label": "Rugby Time",
     "classes": [
-        "headline",
-        "font-weight-bold"
+      "headline",
+      "font-weight-bold"
     ]
+  }
 }
 ```
 
@@ -43,22 +44,23 @@ Make sure your HTML is escaped correctly so that it's still valid JSON that is b
 
 ### Config Options
 
-| Element | Required/Optional | Default | Type | Notes |
+| Property | Required/Optional | Default | Type | Notes |
 | :--- | :--- | :--- | :--- | :--- |
-| fieldType | required | html | String |  |
-| label | required |  | String | HTML content |
-| classes | optional |  | Array of Strings | Any of the classes minus the preceding period sign - [https://vuetifyjs.com/en/styles/typography](https://vuetifyjs.com/en/styles/typography) |
+| `html` | `required` |  | object |  |
+| `html.label` | `required` |  | String | HTML content |
+| html.classes | optional |  | Array of Strings | Any of the classes minus the preceding period sign - [https://vuetifyjs.com/en/styles/typography](https://vuetifyjs.com/en/styles/typography) |
 
 ### JSON
 
 ```javascript
 {
-    "fieldType": "html",
-    "label": "<p>To install Vuetify, type <kbd>npm install vuetify<\/kbd> into your console. Once complete, type <kbd>cd <code>&lt;project name&gt;<\/code><\/kbd> and run <kbd>npm install<\/kbd><\/p>",
+  "html": {
+    "label": "<p>To install Vuetify, type <kbd>npm install vuetify</kbd> into your console. Once complete, type <kbd>cd <code>&lt;project name&gt;</code></kbd> and run <kbd>npm install</kbd></p>",
     "classes": [
-        "body-2",
-        "font-weight-regular"
+      "body-2",
+      "font-weight-regular"
     ]
+  }
 }
 ```
 
@@ -72,15 +74,15 @@ Simple component that adds a `<hr/>` that can be used to separate fields or logi
 
 ### Config Options
 
-| Element | Required/Optional | Value | Type | Notes |
+| Property | Required/Optional | Value | Type | Notes |
 | :--- | :--- | :--- | :--- | :--- |
-| fieldType | required | divider | String |  |
+| `divider` | `required` | true | Boolean | Adds a `<hr/>` as the specific part of the form |
 
 ### JSON
 
 ```javascript
 {
-    "fieldType": "divider"
+  "divider": true
 }
 ```
 
@@ -92,25 +94,25 @@ Simple component that adds a `<hr/>` that can be used to separate fields or logi
 
 ### Config Options
 
-| Element | Required/Optional | Default | Type | Notes |
+| Property | Required/Optional | Default | Type | Notes |
 | :--- | :--- | :--- | :--- | :--- |
-| fieldType | required | alert | String |  |
-| text | required |  | String | The message you want to display in the alert box |
-| type | optional |  | String |  Specify a **success**, **info**, **warning** or **error** alert |
-| border | optional |  | String |  Puts a border on the alert. Accepts **top** \| **right** \| **bottom** \| **left** |
-| elevation | optional |  | Integer | Designates an elevation applied to the component between 0 and 24 |
-| coloredBorder | optional |  | Boolean |  Applies the **color** defined by the type to the alert's border |
-| dense | optional |  | Boolean | Decreases the alerts height |
-| prominent | optional |  | Boolean | Displays a larger vertically centered icon to draw more attention |
-| outlined | optional |  | Boolean | Makes the background transparent and applies a thin border |
-| tile | optional |  | Boolean | Removes the component's border-radius |
-| mdiIcon | optional |  | String | Any icon name from [https://materialdesignicons.com/](https://materialdesignicons.com/) |
+| `alert` | `required` |  | Object |  |
+| `alert.text` | `required` | undefined | String | The message you want to display in the alert box |
+| alert.type | optional | info | String |  Specify a **success**, **info**, **warning** or **error** alert |
+| alert.border | optional | left | String |  Puts a border on the alert. Accepts **top** \| **right** \| **bottom** \| **left** |
+| alert.elevation | optional | 2 | Integer | Designates an elevation applied to the component between 0 and 24 |
+| alert.coloredBorder | optional | true | Boolean |  Applies the **color** defined by the type to the alert's border |
+| alert.dense | optional | false | Boolean | Decreases the alerts height |
+| alert.prominent | optional | false | Boolean | Displays a larger vertically centered icon to draw more attention |
+| alert.outlined | optional | false | Boolean | Makes the background transparent and applies a thin border |
+| alert.tile | optional | false | Boolean | Removes the component's border-radius |
+| alert.icon | optional | information | String | Any icon name from [https://materialdesignicons.com/](https://materialdesignicons.com/) |
 
 ### JSON
 
 ```javascript
 {
-    "fieldType": "alert",
+  "alert": {
     "text": "Donec elit libero, sodales nec, volutpat a, suscipit non, turpis. In auctor lobortis lacus.",
     "type": "success",
     "border": "left",
@@ -120,7 +122,8 @@ Simple component that adds a `<hr/>` that can be used to separate fields or logi
     "prominent": false,
     "outlined": false,
     "tile": false,
-    "mdiIcon": "account-edit"
+    "icon": "account-edit"
+  }
 }
 ```
 
@@ -132,23 +135,24 @@ Simple image component. You can control the image url, alt text, and max width a
 
 ### Config Options
 
-| Element | Required/Optional | Default | Type | Notes |
+| Property | Required/Optional | Default | Type | Notes |
 | :--- | :--- | :--- | :--- | :--- |
-| fieldType | required | image | String |  |
-| alt | optional |  | String | Alternate text for screen readers. Leave empty for decorative images |
-| src | required |  | String | The image URL |
-| maxWidth | optional |  | String | Sets the maximum width for the image. Can be pixels or percentage  |
-| maxHeight | optional |  | String | Sets the maximum height for the image. Can be pixels or percentage  |
+| `image` | `required` |  | Object |  |
+| `image.src` | `required` | undefined | String | The image URL |
+| image.alt | optional | Random Picture | String | Alternate text for screen readers. Leave empty for decorative images |
+| image.maxWidth | optional | 100% | String | Sets the maximum width for the image. Can be pixels or percentage  |
+| image.maxHeight | optional | 600 | String | Sets the maximum height for the image. Can be pixels or percentage  |
 
 ### JSON
 
 ```javascript
 {
-    "fieldType": "image",
+  "image": {
     "alt": "RWC 2019",
     "src": "http://sportforbusiness.com/wp-content/uploads/JP-Rugby-worldcup-01.jpg",
     "maxWidth": "100%",
     "maxHeight": "600"
+  }
 }
 ```
 
@@ -164,49 +168,58 @@ Many of the options are optional and sensible defaults are used.
 
 ### Config Options
 
-| Element | Required/Optional | Value | Type | Notes |
+| Property | Required/Optional | Value | Type | Notes |
 | :--- | :--- | :--- | :--- | :--- |
-| fieldType | required | text | String |  |
-| name | required |  | String |  |
-| label | required |  | String |  |
-| hint | optional |  | String |  |
-| initialValue | optional |  | String |  |
-| placeHolder | optional |  | String |  |
-| type | optional |  | String |  |
-| clearable | optional |  | Boolean |  |
-| persistentHint | optional |  | Boolean |  |
-| dense | optional |  | Boolean |  |
-| counter | optional |  | Integer |  |
-| icons | optional |  | Object |  |
-| prefix | optional |  | String |  |
-| suffix | optional |  | String |  |
-| validations | optional |  | String |  |
+| `textInput` | `required` |  | Object |  |
+| `textInput.name` | `required` | undefined | String | A unique camelCase name for this form element. This is the name that will be used when posting back the form data to Teneo |
+| `textInput.label` | `required` | undefined | String |  |
+| textInput.description | optional | undefined | String | If added produces a 2 column layout with the description in the left column. Can be used as an alternative for the [header field](field-types.md#header) |
+| textInput.hint | optional | undefined | String |  |
+| textInput.persistentHint | optional | true | Boolean |  |
+| textInput.initialValue | optional | undefined | String | Populate the default if originally known from an integration call or gathered through conversation |
+| textInput.placeHolder | optional | undefined | String |  |
+| textInput.style | optional | undefined | [Style Object](style.md) | Control the look for the form field |
+| textInput.clearable | optional | false | Boolean | Add input clear functionality |
+| textInput.dense | optional | false | Boolean |  |
+| textInput.counter | optional | false | Integer |  |
+| textInput.icons | optional | undefined | Icons Object | Prepend, append icons outside and inside the field's display  |
+| textInput.prefix | optional | undefined | String |  |
+| textInput.suffix | optional | undefined | String |  |
+| textInput.validations | optional | undefined | String | [VeeValidate validations](validation.md) can be combined together by separating them with a pipe sign \| |
 
 ### JSON
 
 ```javascript
 {
+  "textInput": {
     "name": "username",
-    "fieldType": "text",
     "label": "Email",
     "hint": "Just the username part please",
     "initialValue": "jolzee",
     "placeHolder": "username",
-    "type": "solo",
+    "style": {
+      "solo": true,
+      "outlined": false,
+      "flat": false,
+      "filled": false,
+      "rounded": false,
+      "shaped": false,
+      "soloInverted": false
+    },
     "clearable": true,
     "persistentHint": true,
     "dense": false,
     "counter": 12,
-    "icons":
-    {
-        "prepend": "",
-        "prependInner": "",
-        "append": "",
-        "appendOuter": "email-edit"
+    "icons": {
+      "prepend": "",
+      "prependInner": "",
+      "append": "",
+      "appendOuter": "email-edit"
     },
     "prefix": "",
     "suffix": "@gmail.com",
     "validations": "required"
+  }
 }
 ```
 
@@ -222,38 +235,48 @@ Many of the options are optional and sensible defaults are used.
 
 ### Config Options
 
-| Element | Required/Optional | Default | Type | Notes |
+| Property | Required/Optional | Default | Type | Notes |
 | :--- | :--- | :--- | :--- | :--- |
-| fieldType | `required` | textarea | String |  |
-| name | `required` |  | String |  |
-| label | `required` |  | String |  |
-| hint | optional |  | String |  |
-| initialValue | optional |  | String |  |
-| autoGrow | optional |  | Boolean |  |
-| placeHolder | optional |  | String |  |
-| type | optional |  | String |  |
-| clearable | optional |  | Boolean |  |
-| persistentHint | optional |  | Boolean |  |
-| rows | optional |  | Integer |  |
-| dense | optional |  | Boolean |  |
-| counter | optional |  | Integer |  |
-| prefix | optional |  | String |  |
-| suffix | optional |  | String |  |
-| icons | optional |  | Object |  |
-| validations | optional |  | String |  |
+| `textarea` | `required` |  | Object |  |
+| `textarea.name` | `required` | undefined | String |  |
+| `textarea.label` | `required` | undefined | String |  |
+| textInput.description | optional | undefined | String | If added produces a 2 column layout with the description in the left column. Can be used as an alternative for the [header field](field-types.md#header) |
+| textarea.hint | optional | undefined | String |  |
+| textarea.initialValue | optional | undefined | String |  |
+| textarea.autoGrow | optional | true | Boolean |  |
+| textarea.placeHolder | optional | undefined | String |  |
+| textInput.style | optional | undefined | [Style Object](style.md) | Control the look for the form field |
+| textarea.clearable | optional | false | Boolean |  |
+| textarea.persistentHint | optional | false | Boolean |  |
+| textarea.rows | optional | 5 | Integer |  |
+| textarea.dense | optional | false | Boolean |  |
+| textarea.counter | optional | undefined | Integer |  |
+| textarea.prefix | optional | undefined | String |  |
+| textarea.suffix | optional | undefined | String |  |
+| textarea.icons | optional |  | Icons Object |  |
+| textarea.validations | optional | undefined | String | [VeeValidate validations](validation.md) can be combined together by separating them with a pipe sign \| |
 
 ### JSON
 
 ```javascript
 {
+  "textarea": {
     "name": "bio",
-    "fieldType": "textarea",
     "label": "Write a bio for yourself",
+    "description": "Please write a Bio about yourself.",
     "hint": "Keep it brief and to the point",
     "initialValue": "Bacon ipsum dolor amet rump ham hock sirloin doner fatback beef kielbasa picanha leberkas sausage buffalo capicola. Shoulder tail pancetta tenderloin. ",
     "autoGrow": true,
     "placeHolder": "Peter Joles is a Sales Engineer at Artificial Solutions...",
-    "type": "solo",
+    "style": {
+      "solo": false,
+      "outlined": false,
+      "flat": false,
+      "filled": true,
+      "rounded": false,
+      "shaped": false,
+      "soloInverted": false
+    },
     "clearable": true,
     "persistentHint": true,
     "rows": 5,
@@ -261,14 +284,14 @@ Many of the options are optional and sensible defaults are used.
     "counter": 12,
     "prefix": "",
     "suffix": "",
-    "icons":
-    {
-        "prepend": "",
-        "prependInner": "",
-        "append": "",
-        "appendOuter": "file-document-edit"
+    "icons": {
+      "prepend": "",
+      "prependInner": "",
+      "append": "",
+      "appendOuter": "file-document-edit"
     },
     "validations": "required"
+  }
 }
 ```
 
@@ -282,35 +305,36 @@ Many of the options are optional and sensible defaults are used.
 
 ### Config Options
 
-| Element | Required/Optional | Default | Type | Notes |
+| Property | Required/Optional | Default | Type | Notes |
 | :--- | :--- | :--- | :--- | :--- |
-| fieldType | `required` | select | String |  |
-| name | `required` |  | String |  |
-| label | `required` |  | String |  |
-| hint | optional |  | String |  |
-| initialValue | optional |  | String |  |
-| chips | optional |  | Boolean |  |
-| deletableChips | optional |  | Boolean |  |
-| persistentHint | optional |  | Boolean |  |
-| clearable | optional |  | Boolean |  |
-| multiple | optional |  | Boolean |  |
-| dense | optional |  | Boolean |  |
-| hideSelected | optional |  | Boolean |  |
-| items | optional |  | Array of Strings |  |
-| type | optional |  | String |  |
-| icons | optional |  | Object |  |
-| validations | optional |  | String |  |
+| `select` | `required` | select | Object |  |
+| `select.name` | `required` | undefined | String |  |
+| `select.label` | `required` | undefined | String |  |
+| textInput.description | optional | undefined | String | If added produces a 2 column layout with the description in the left column. Can be used as an alternative for the [header field](field-types.md#header) |
+| select.hint | optional | undefined | String |  |
+| select.initialValue | optional | undefined | String |  |
+| select.chips | optional | false | Boolean |  |
+| select.deletableChips | optional | true | Boolean |  |
+| select.persistentHint | optional | true | Boolean |  |
+| select.clearable | optional | true | Boolean |  |
+| select.multiple | optional | false | Boolean |  |
+| select.dense | optional | false | Boolean |  |
+| select.hideSelected | optional | true | Boolean |  |
+| select.items | optional | undefined | Array of Strings |  |
+| select.style | optional | optional | String |  |
+| select.icons | optional | undefined | Icons Object |  |
+| select.validations | optional | undefined | String | [VeeValidate validations](validation.md) can be combined together by separating them with a pipe sign \| |
 
 ### JSON
 
 ```javascript
 {
+  "select": {
     "name": "favoriteRugbyTeam",
-    "fieldType": "select",
     "label": "What's your favorite Rugby Team",
     "hint": "Go with the Green and Gold",
     "initialValue": [
-        "South Africa"
+      "South Africa"
     ],
     "chips": true,
     "deletableChips": false,
@@ -320,19 +344,27 @@ Many of the options are optional and sensible defaults are used.
     "dense": false,
     "hideSelected": true,
     "items": [
-        "England",
-        "South Africa",
-        "New Zealand"
+      "England",
+      "South Africa",
+      "New Zealand"
     ],
-    "type": "solo",
-    "icons":
-    {
-        "prepend": "",
-        "prependInner": "",
-        "append": "",
-        "appendOuter": "football-australian"
+    "style": {
+      "solo": true,
+      "outlined": false,
+      "flat": false,
+      "filled": false,
+      "rounded": false,
+      "shaped": false,
+      "soloInverted": false
+    },
+    "icons": {
+      "prepend": "",
+      "prependInner": "",
+      "append": "",
+      "appendOuter": "football-australian"
     },
     "validations": "required"
+  }
 }
 ```
 
@@ -348,32 +380,32 @@ Many of the options are optional and sensible defaults are used.
 
 | Element | Required/Optional | Default | Type | Notes |
 | :--- | :--- | :--- | :--- | :--- |
-| fieldType | `required` | comboBox | String |  |
-| name | `required` |  | String |  |
-| label | `required` |  | String |  |
-| hint | optional |  | String |  |
-| persistentHint | optional |  | Boolean |  |
-| chips | optional |  | Boolean |  |
-| multiple | optional |  | Boolean |  |
-| hideSelected | optional |  | Boolean |  |
-| deletableChips | optional |  | Boolean |  |
-| clearable | optional |  | Boolean |  |
-| dense | optional |  | Boolean |  |
-| items | optional |  | Array of Objects |  |
-| type | optional |  | String |  |
-| openOnClear | optional |  | Boolean |  |
-| icons | optional |  | Object |  |
-| validations | optional |  | String |  |
+| `comboBox` | `required` |  | Object |  |
+| `comboBox.name` | `required` | undefined | String |  |
+| `comboBox.label` | `required` | undefined | String |  |
+| textInput.description | optional | undefined | String | If added produces a 2 column layout with the description in the left column. Can be used as an alternative for the [header field](field-types.md#header) |
+| comboBox.hint | optional | undefined | String |  |
+| comboBox.persistentHint | optional | true | Boolean |  |
+| comboBox.chips | optional | false | Boolean |  |
+| comboBox.multiple | optional | true | Boolean |  |
+| comboBox.hideSelected | optional | true | Boolean |  |
+| comboBox.deletableChips | optional | true | Boolean |  |
+| comboBox.clearable | optional | true | Boolean |  |
+| comboBox.dense | optional | false | Boolean |  |
+| comboBox.items | optional | undefined | Array of Objects |  |
+| comboBox.style | optional | undefined | String |  |
+| openOnClear | optional | false | Boolean |  |
+| comboBox.icons | optional | undefined | Icons Object |  |
+| comboBox.validations | optional | undefined | String | [VeeValidate validations](validation.md) can be combined together by separating them with a pipe sign \| |
 
 ### JSON
 
 ```javascript
 {
+  "comboBox": {
     "name": "skills",
-    "fieldType": "comboBox",
     "label": "What programming skill do you have?",
     "hint": "Don't worry if we don't have a skill listed",
-    "persistentHint": true,
     "chips": true,
     "multiple": true,
     "hideSelected": false,
@@ -381,25 +413,33 @@ Many of the options are optional and sensible defaults are used.
     "clearable": true,
     "dense": false,
     "items": [
-        {
-            "text": "Java",
-            "value": "java"
-        },
-        {
-            "text": "Node JS",
-            "value": "nodejs"
-        }
+      {
+        "text": "Java",
+        "value": "java"
+      },
+      {
+        "text": "Node JS",
+        "value": "nodejs"
+      }
     ],
-    "type": "solo",
+    "style": {
+      "solo": true,
+      "outlined": false,
+      "flat": false,
+      "filled": false,
+      "rounded": false,
+      "shaped": false,
+      "soloInverted": false
+    },
     "openOnClear": false,
-    "icons":
-    {
-        "prepend": "",
-        "prependInner": "",
-        "append": "",
-        "appendOuter": "code-braces"
+    "icons": {
+      "prepend": "",
+      "prependInner": "",
+      "append": "",
+      "appendOuter": "code-braces"
     },
     "validations": "required"
+  }
 }
 ```
 
@@ -413,22 +453,23 @@ Many of the options are optional and sensible defaults are used.
 
 ### Config Options
 
-| Element | Required/Optional | Default | Type | Notes |
+| Property | Required/Optional | Default | Type | Notes |
 | :--- | :--- | :--- | :--- | :--- |
-| fieldType | `required` | checkbox | String |  |
-| name | `required` |  | String |  |
-| label | `required` |  | String |  |
-| hint | optional |  | String |  |
-| persistentHint | optional |  | Boolean |  |
-| dense | optional |  | Boolean |  |
-| initialValue | optional |  | String |  |
-| validations | optional |  | String |  |
+| `checkbox` | `required` |  | Object |  |
+| `checkbox.name` | `required` | undefined | String |  |
+| `checkbox.label` | `required` | undefined | String |  |
+| textInput.description | optional | undefined | String | If added produces a 2 column layout with the description in the left column. Can be used as an alternative for the [header field](field-types.md#header) |
+| checkbox.hint | optional | undefined | String |  |
+| checkbox.persistentHint | optional | true | Boolean |  |
+| checkbox.dense | optional | false | Boolean |  |
+| checkbox.initialValue | optional | undefined | String |  |
+| checkbox.validations | optional | undefined | String | [VeeValidate validations](validation.md) can be combined together by separating them with a pipe sign \| |
 
 ### JSON
 
 ```javascript
 {
-    "fieldType": "checkbox",
+  "checkbox": {
     "name": "agreedToTerms",
     "label": "Do you agree to our terms and conditions?",
     "hint": "You have to agree before submitting this form",
@@ -436,6 +477,7 @@ Many of the options are optional and sensible defaults are used.
     "dense": false,
     "initialValue": false,
     "validations": "required"
+  }
 }
 ```
 
@@ -449,30 +491,32 @@ Many of the options are optional and sensible defaults are used.
 
 ### Config Options
 
-| Element | Required/Optional | Default | Type | Notes |
+| Property | Required/Optional | Default | Type | Notes |
 | :--- | :--- | :--- | :--- | :--- |
-| fieldType | `required` | switch | String |  |
-| name | `required` |  | String |  |
-| label | `required` |  | String |  |
-| persistentHint | optional |  | Boolean |  |
-| dense | optional |  | Boolean |  |
-| hint | optional |  | String |  |
-| initialValue | optional |  | String |  |
-| inset | optional |  | Boolean |  |
-| validations | optional |  | String |  |
+| `switch` | `required` |  | Object |  |
+| `switch.name` | `required` | undefined | String |  |
+| `switch.label` | `required` | undefined | String |  |
+| textInput.description | optional | undefined | String | If added produces a 2 column layout with the description in the left column. Can be used as an alternative for the [header field](field-types.md#header) |
+| switch.persistentHint | optional | true | Boolean |  |
+| switch.dense | optional | false | Boolean |  |
+| switch.hint | optional | undefined | String |  |
+| switch.initialValue | optional | undefined | String |  |
+| switch.inset | optional | false | Boolean |  |
+| switch.validations | optional | undefined | String | [VeeValidate validations](validation.md) can be combined together by separating them with a pipe sign \| |
 
 ### JSON
 
 ```javascript
 {
-    "fieldType": "switch",
+  "switch": {
     "name": "newsLetter",
     "label": "Do you want to receive our monthly newsletter?",
-    "persistantHint": false,
+    "persistentHint": false,
     "dense": false,
     "hint": "We won't spam - ever!",
     "initialValue": true,
     "inset": false
+  }
 }
 ```
 
@@ -486,26 +530,130 @@ Many of the options are optional and sensible defaults are used.
 
 ### Config Options
 
-| Element | Required/Optional | Default | Type | Notes |
-| :--- | :--- | :--- | :--- | :--- |
-| fieldType | `required` | radio | String |  |
-| name | `required` |  | String |  |
-| label | `required` |  | String |  |
-| dense | optional |  | Boolean |  |
-| hint | optional |  | String |  |
-| persistentHint | optional |  | Boolean |  |
-| mandatory | optional |  | Boolean |  |
-| multiple | optional |  | Boolean |  |
-| row | optional |  | Integer |  |
-| items | optional |  | Array of Objects |  |
-| icons | optional |  | Object |  |
-| validations | optional |  | String |  |
-
-### JSON
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">Property</th>
+      <th style="text-align:left">Required/Optional</th>
+      <th style="text-align:left">Default</th>
+      <th style="text-align:left">Type</th>
+      <th style="text-align:left">Notes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left"><code>radio</code>
+      </td>
+      <td style="text-align:left"><code>required</code>
+      </td>
+      <td style="text-align:left"></td>
+      <td style="text-align:left">Object</td>
+      <td style="text-align:left"></td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>radio.name</code>
+      </td>
+      <td style="text-align:left"><code>required</code>
+      </td>
+      <td style="text-align:left">undefined</td>
+      <td style="text-align:left">String</td>
+      <td style="text-align:left"></td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>radio.label</code>
+      </td>
+      <td style="text-align:left"><code>required</code>
+      </td>
+      <td style="text-align:left">undefined</td>
+      <td style="text-align:left">String</td>
+      <td style="text-align:left"></td>
+    </tr>
+    <tr>
+      <td style="text-align:left">textInput.description</td>
+      <td style="text-align:left">optional</td>
+      <td style="text-align:left">undefined</td>
+      <td style="text-align:left">String</td>
+      <td style="text-align:left">If added produces a 2 column layout with the description in the left column.
+        Can be used as an alternative for the <a href="field-types.md#header">header field</a>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">radio.dense</td>
+      <td style="text-align:left">optional</td>
+      <td style="text-align:left">false</td>
+      <td style="text-align:left">Boolean</td>
+      <td style="text-align:left"></td>
+    </tr>
+    <tr>
+      <td style="text-align:left">radio.hint</td>
+      <td style="text-align:left">optional</td>
+      <td style="text-align:left">undefined</td>
+      <td style="text-align:left">String</td>
+      <td style="text-align:left"></td>
+    </tr>
+    <tr>
+      <td style="text-align:left">radio.persistentHint</td>
+      <td style="text-align:left">optional</td>
+      <td style="text-align:left">true</td>
+      <td style="text-align:left">Boolean</td>
+      <td style="text-align:left"></td>
+    </tr>
+    <tr>
+      <td style="text-align:left">radio.mandatory</td>
+      <td style="text-align:left">optional</td>
+      <td style="text-align:left">false</td>
+      <td style="text-align:left">Boolean</td>
+      <td style="text-align:left"></td>
+    </tr>
+    <tr>
+      <td style="text-align:left">radio.multiple</td>
+      <td style="text-align:left">optional</td>
+      <td style="text-align:left">false</td>
+      <td style="text-align:left">Boolean</td>
+      <td style="text-align:left"></td>
+    </tr>
+    <tr>
+      <td style="text-align:left">radio.row</td>
+      <td style="text-align:left">optional</td>
+      <td style="text-align:left">false</td>
+      <td style="text-align:left">Integer</td>
+      <td style="text-align:left">Displays radio buttons in row</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">radio.items</td>
+      <td style="text-align:left">optional</td>
+      <td style="text-align:left">undefined</td>
+      <td style="text-align:left">Array of Objects</td>
+      <td style="text-align:left">
+        <p><code>[{ </code>
+        </p>
+        <p><code>&quot;label&quot;: &quot;The radio label&quot;, </code>
+        </p>
+        <p><code>&quot;value&quot;: &quot;theFormValue&quot; }]</code>
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">radio.icons</td>
+      <td style="text-align:left">optional</td>
+      <td style="text-align:left">undefined</td>
+      <td style="text-align:left">Object</td>
+      <td style="text-align:left"></td>
+    </tr>
+    <tr>
+      <td style="text-align:left">radio.validations</td>
+      <td style="text-align:left">optional</td>
+      <td style="text-align:left">undefined</td>
+      <td style="text-align:left">String</td>
+      <td style="text-align:left"><a href="validation.md">VeeValidate validations</a> can be combined together
+        by separating them with a pipe sign |</td>
+    </tr>
+  </tbody>
+</table>### JSON
 
 ```javascript
 {
-    "fieldType": "radio",
+  "radio": {
     "name": "ageRange",
     "label": "What's you age range?",
     "dense": false,
@@ -515,20 +663,20 @@ Many of the options are optional and sensible defaults are used.
     "multiple": false,
     "row": false,
     "items": [
-        {
-            "label": "18-25",
-            "value": "18to25"
-        },
-        {
-            "label": "26-45",
-            "value": "26to45"
-        }
+      {
+        "label": "18-25",
+        "value": "18to25"
+      },
+      {
+        "label": "26-45",
+        "value": "26to45"
+      }
     ],
-    "icons":
-    {
-        "prepend": "gesture-tap-hold",
-        "append": ""
+    "icons": {
+      "prepend": "gesture-tap-hold",
+      "append": ""
     }
+  }
 }
 ```
 
