@@ -33,7 +33,9 @@ A custom form is currently tied directly to the respective output node that retu
 
 This means that the form button against that response will be displayed in the chat dialog until the user completes the form and submits it back to Teneo. At that point the form button in the chat UI is removed from that particular response.
 
-!!!! Current configuration is that the same form and button can be displayed in new responses if new dialog takes you there. If you want to prevent the offer of a custom form that has already been submitted then that logic needs to be engineered server side in Teneo around the "postback" data that is posted back to Teneo on a successful submission.
+{% hint style="info" %}
+Current configuration is that the same form and button can be displayed in new responses if new dialog takes you there. If you want to prevent the offer of a custom form that has already been submitted then that logic needs to be engineered server side in Teneo around the "postback" data that is posted back to Teneo on a successful submission.
+{% endhint %}
 
 The form button can remain visible in the dialog until it's completed and submitted back. Therefore you should configure the "postback" information of the form to align with your flow strategy for capturing and responding to the data posted back Teneo.
 
@@ -88,9 +90,25 @@ A more comprehensive example can be [found here](example-config.md)
 | validationFailedMessage | optional | Please complete all required fields | String | A custom message to be displayed once a user submits the form and there are validation errors |
 | openAutomatically | optional | false | Boolean | Controls if the form should automatically open for the Teneo response that contains the formConfig |
 | openFormButtonText | optional | Form | String | Set the button text to open the form. Seen just below the answer text. |
-| postback | optional |  | Object | Controls what is send back to Teneo on a successful submission of the form  |
-| button | optional |  | Object | Controls the display of the button used in the form to complete the form submission |
-| [fields](field-types.md) | required |  | Array of Field Type Objects | Allows you to add as many of the available [fields](field-types.md) in a specific order  |
+| postback | optional | [Postback Object](postback.md) | Object | Controls what is send back to Teneo on a successful submission of the form  |
+| button | optional | [Button Object](button.md) | Object | Controls the display of the button used in the form to complete the form submission |
+| [fields](field-types.md) | required | [Field Objects](field-types.md) | Array of Field Type Objects | Allows you to add as many of the available [fields](field-types.md) in a specific order  |
+
+{% page-ref page="example-config.md" %}
+
+{% page-ref page="postback.md" %}
+
+{% page-ref page="button.md" %}
+
+{% page-ref page="field-types.md" %}
+
+{% page-ref page="style.md" %}
+
+{% page-ref page="icons-object.md" %}
+
+{% page-ref page="masks.md" %}
+
+{% page-ref page="validation.md" %}
 
 ## 
 
