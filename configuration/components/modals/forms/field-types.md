@@ -164,7 +164,15 @@ Many of the options are optional and sensible defaults are used.
 
 ### Screenshot
 
-![](../../../../.gitbook/assets/text-field.jpg)
+![Hint text, counter, append outer icon and suffix ](../../../../.gitbook/assets/text-field.jpg)
+
+![Clearable input fields](../../../../.gitbook/assets/image%20%2811%29.png)
+
+![Counters](../../../../.gitbook/assets/image%20%286%29.png)
+
+![Labels and hints](../../../../.gitbook/assets/image%20%287%29.png)
+
+![Prefix and Suffix](../../../../.gitbook/assets/image%20%282%29.png)
 
 ### Config Options
 
@@ -375,6 +383,10 @@ Configurable combo box field. This field can allow multiple items to be selected
 Many of the options are optional and sensible defaults are used.
 
 ### Screenshot
+
+![](../../../../.gitbook/assets/image%20%289%29.png)
+
+![Dense](../../../../.gitbook/assets/image%20%2810%29.png)
 
 ### Config Options
 

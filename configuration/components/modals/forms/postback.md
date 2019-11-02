@@ -13,9 +13,12 @@ To capture the `formData` in Teneo you must validate that the request parameter 
 You can use the following code to retrieve the form data in Teneo:
 
 ```groovy
+import groovy.json.JsonSlurper
+
 def formData = engineEnvironment.getParameter("formData"); 
 if (formData) { 
-    formData = parseJson(UrlDecode(formData)) 
+    def jsonSlurper = new JsonSlurper()
+    formData = jsonSlurper.parseText(URLDecoder.decode(formData))
 }
 println(formData.someField)
 ```

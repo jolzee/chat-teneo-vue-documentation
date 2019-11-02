@@ -31,5 +31,5 @@ You can apply a set of custom validations against any of the form fields that ac
 | `required` | The field under validation must have a non-empty value. By default, all validators pass the validation if they have "empty values" unless they are required. Those empty values are: empty strings, undefined, null, empty arrays. |
 | `required_if:country,US` | The field under validation must have a non-empty value **only if** the target field \(first argument\) is set to one of the specified values \(other arguments\). |
 
-![](../../../../.gitbook/assets/image.png)
+![](../../../../.gitbook/assets/image%20%281%29.png)
 
