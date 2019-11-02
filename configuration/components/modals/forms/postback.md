@@ -4,7 +4,7 @@ description: >-
   successfully validated and submitted.
 ---
 
-# Postback
+# Postback Object
 
 The data for the form fields is always posted back to Teneo as a URL encoded JSON string. It's value is assigned to a configurable request parameter but the default parameter name is "`formData`".
 

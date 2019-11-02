@@ -171,8 +171,8 @@ Many of the options are optional and sensible defaults are used.
 | Property | Required/Optional | Value | Type | Notes |
 | :--- | :--- | :--- | :--- | :--- |
 | `textInput` | `required` |  | Object |  |
-| `textInput.name` | `required` | undefined | String | A unique camelCase name for this form element. This is the name that will be used when posting back the form data to Teneo |
-| `textInput.label` | `required` | undefined | String |  |
+| `textInput.name` | `required` | undefined | String | A unique `camelCase` name for this form element. This is the name that will be used when posting back the form data to Teneo |
+| `textInput.label` | `required` | undefined | String | Sets input label |
 | textInput.description | optional | undefined | String | If added produces a 2 column layout with the description in the left column. Can be used as an alternative for the [header field](field-types.md#header) |
 | textInput.hint | optional | undefined | String |  |
 | textInput.persistentHint | optional | true | Boolean |  |
@@ -182,7 +182,7 @@ Many of the options are optional and sensible defaults are used.
 | textInput.clearable | optional | false | Boolean | Add input clear functionality |
 | textInput.dense | optional | false | Boolean |  |
 | textInput.counter | optional | false | Integer |  |
-| textInput.icons | optional | undefined | Icons Object | Prepend, append icons outside and inside the field's display  |
+| textInput.icons | optional | undefined | [Icons Object](icons-object.md) | Prepend, append icons outside and inside the field's display  |
 | textInput.prefix | optional | undefined | String |  |
 | textInput.suffix | optional | undefined | String |  |
 | textInput.validations | optional | undefined | String | [VeeValidate validations](validation.md) can be combined together by separating them with a pipe sign \| |
@@ -238,8 +238,8 @@ Many of the options are optional and sensible defaults are used.
 | Property | Required/Optional | Default | Type | Notes |
 | :--- | :--- | :--- | :--- | :--- |
 | `textarea` | `required` |  | Object |  |
-| `textarea.name` | `required` | undefined | String |  |
-| `textarea.label` | `required` | undefined | String |  |
+| `textarea.name` | `required` | undefined | String | A unique `camelCase` name for this form element. This is the name that will be used when posting back the form data to Teneo |
+| `textarea.label` | `required` | undefined | String | Sets input label |
 | textInput.description | optional | undefined | String | If added produces a 2 column layout with the description in the left column. Can be used as an alternative for the [header field](field-types.md#header) |
 | textarea.hint | optional | undefined | String |  |
 | textarea.initialValue | optional | undefined | String |  |
@@ -253,7 +253,7 @@ Many of the options are optional and sensible defaults are used.
 | textarea.counter | optional | undefined | Integer |  |
 | textarea.prefix | optional | undefined | String |  |
 | textarea.suffix | optional | undefined | String |  |
-| textarea.icons | optional |  | Icons Object |  |
+| textarea.icons | optional |  | [Icons Object](icons-object.md) | Prepend, append icons outside and inside the field's display |
 | textarea.validations | optional | undefined | String | [VeeValidate validations](validation.md) can be combined together by separating them with a pipe sign \| |
 
 ### JSON
@@ -308,9 +308,9 @@ Many of the options are optional and sensible defaults are used.
 | Property | Required/Optional | Default | Type | Notes |
 | :--- | :--- | :--- | :--- | :--- |
 | `select` | `required` | select | Object |  |
-| `select.name` | `required` | undefined | String |  |
-| `select.label` | `required` | undefined | String |  |
-| textInput.description | optional | undefined | String | If added produces a 2 column layout with the description in the left column. Can be used as an alternative for the [header field](field-types.md#header) |
+| `select.name` | `required` | undefined | String | A unique `camelCase` name for this form element. This is the name that will be used when posting back the form data to Teneo |
+| `select.label` | `required` | undefined | String | Sets input label |
+| select.description | optional | undefined | String | If added produces a 2 column layout with the description in the left column. Can be used as an alternative for the [header field](field-types.md#header) |
 | select.hint | optional | undefined | String |  |
 | select.initialValue | optional | undefined | String |  |
 | select.chips | optional | false | Boolean |  |
@@ -322,7 +322,7 @@ Many of the options are optional and sensible defaults are used.
 | select.hideSelected | optional | true | Boolean |  |
 | select.items | optional | undefined | Array of Strings |  |
 | select.style | optional | optional | String |  |
-| select.icons | optional | undefined | Icons Object |  |
+| select.icons | optional | undefined | [Icons Object](icons-object.md) | Prepend, append icons outside and inside the field's display |
 | select.validations | optional | undefined | String | [VeeValidate validations](validation.md) can be combined together by separating them with a pipe sign \| |
 
 ### JSON
@@ -381,9 +381,9 @@ Many of the options are optional and sensible defaults are used.
 | Element | Required/Optional | Default | Type | Notes |
 | :--- | :--- | :--- | :--- | :--- |
 | `comboBox` | `required` |  | Object |  |
-| `comboBox.name` | `required` | undefined | String |  |
-| `comboBox.label` | `required` | undefined | String |  |
-| textInput.description | optional | undefined | String | If added produces a 2 column layout with the description in the left column. Can be used as an alternative for the [header field](field-types.md#header) |
+| `comboBox.name` | `required` | undefined | String | A unique `camelCase` name for this form element. This is the name that will be used when posting back the form data to Teneo |
+| `comboBox.label` | `required` | undefined | String | Sets input label |
+| comboBox.description | optional | undefined | String | If added produces a 2 column layout with the description in the left column. Can be used as an alternative for the [header field](field-types.md#header) |
 | comboBox.hint | optional | undefined | String |  |
 | comboBox.persistentHint | optional | true | Boolean |  |
 | comboBox.chips | optional | false | Boolean |  |
@@ -394,8 +394,8 @@ Many of the options are optional and sensible defaults are used.
 | comboBox.dense | optional | false | Boolean |  |
 | comboBox.items | optional | undefined | Array of Objects |  |
 | comboBox.style | optional | undefined | String |  |
-| openOnClear | optional | false | Boolean |  |
-| comboBox.icons | optional | undefined | Icons Object |  |
+| comboBox.openOnClear | optional | false | Boolean |  |
+| comboBox.icons | optional | undefined | [Icons Object](icons-object.md) | Prepend, append icons outside and inside the field's display |
 | comboBox.validations | optional | undefined | String | [VeeValidate validations](validation.md) can be combined together by separating them with a pipe sign \| |
 
 ### JSON
@@ -456,9 +456,9 @@ Many of the options are optional and sensible defaults are used.
 | Property | Required/Optional | Default | Type | Notes |
 | :--- | :--- | :--- | :--- | :--- |
 | `checkbox` | `required` |  | Object |  |
-| `checkbox.name` | `required` | undefined | String |  |
-| `checkbox.label` | `required` | undefined | String |  |
-| textInput.description | optional | undefined | String | If added produces a 2 column layout with the description in the left column. Can be used as an alternative for the [header field](field-types.md#header) |
+| `checkbox.name` | `required` | undefined | String | A unique `camelCase` name for this form element. This is the name that will be used when posting back the form data to Teneo |
+| `checkbox.label` | `required` | undefined | String | Sets input label |
+| checkbox.description | optional | undefined | String | If added produces a 2 column layout with the description in the left column. Can be used as an alternative for the [header field](field-types.md#header) |
 | checkbox.hint | optional | undefined | String |  |
 | checkbox.persistentHint | optional | true | Boolean |  |
 | checkbox.dense | optional | false | Boolean |  |
@@ -494,9 +494,9 @@ Many of the options are optional and sensible defaults are used.
 | Property | Required/Optional | Default | Type | Notes |
 | :--- | :--- | :--- | :--- | :--- |
 | `switch` | `required` |  | Object |  |
-| `switch.name` | `required` | undefined | String |  |
-| `switch.label` | `required` | undefined | String |  |
-| textInput.description | optional | undefined | String | If added produces a 2 column layout with the description in the left column. Can be used as an alternative for the [header field](field-types.md#header) |
+| `switch.name` | `required` | undefined | String | A unique `camelCase` name for this form element. This is the name that will be used when posting back the form data to Teneo |
+| `switch.label` | `required` | undefined | String | Sets input label |
+| switch.description | optional | undefined | String | If added produces a 2 column layout with the description in the left column. Can be used as an alternative for the [header field](field-types.md#header) |
 | switch.persistentHint | optional | true | Boolean |  |
 | switch.dense | optional | false | Boolean |  |
 | switch.hint | optional | undefined | String |  |
@@ -557,7 +557,8 @@ Many of the options are optional and sensible defaults are used.
       </td>
       <td style="text-align:left">undefined</td>
       <td style="text-align:left">String</td>
-      <td style="text-align:left"></td>
+      <td style="text-align:left">A unique <code>camelCase</code> name for this form element. This is the
+        name that will be used when posting back the form data to Teneo</td>
     </tr>
     <tr>
       <td style="text-align:left"><code>radio.label</code>
@@ -566,10 +567,10 @@ Many of the options are optional and sensible defaults are used.
       </td>
       <td style="text-align:left">undefined</td>
       <td style="text-align:left">String</td>
-      <td style="text-align:left"></td>
+      <td style="text-align:left">Sets input label</td>
     </tr>
     <tr>
-      <td style="text-align:left">textInput.description</td>
+      <td style="text-align:left">radio.description</td>
       <td style="text-align:left">optional</td>
       <td style="text-align:left">undefined</td>
       <td style="text-align:left">String</td>
@@ -637,8 +638,9 @@ Many of the options are optional and sensible defaults are used.
       <td style="text-align:left">radio.icons</td>
       <td style="text-align:left">optional</td>
       <td style="text-align:left">undefined</td>
-      <td style="text-align:left">Object</td>
-      <td style="text-align:left"></td>
+      <td style="text-align:left"><a href="icons-object.md">Icons Object</a>
+      </td>
+      <td style="text-align:left">Prepend, append icons outside and inside the field&apos;s display</td>
     </tr>
     <tr>
       <td style="text-align:left">radio.validations</td>

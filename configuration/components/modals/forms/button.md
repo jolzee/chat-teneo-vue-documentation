@@ -4,7 +4,7 @@ description: >-
   "clear" buttons in a form.
 ---
 
-# Button
+# Button Object
 
 ## JSON Configuration
 
