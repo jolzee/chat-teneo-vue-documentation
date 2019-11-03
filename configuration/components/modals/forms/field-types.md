@@ -98,10 +98,10 @@ Simple component that adds a `<hr/>` that can be used to separate fields or logi
 | :--- | :--- | :--- | :--- | :--- |
 | `alert` | `required` |  | Object |  |
 | `alert.text` | `required` | undefined | String | The message you want to display in the alert box |
-| alert.type | optional | info | String |  Specify a **success**, **info**, **warning** or **error** alert |
-| alert.border | optional | left | String |  Puts a border on the alert. Accepts **top** \| **right** \| **bottom** \| **left** |
+| alert.type | optional | info | String | Specify a **success**, **info**, **warning** or **error** alert |
+| alert.border | optional | left | String | Puts a border on the alert. Accepts **top** \| **right** \| **bottom** \| **left** |
 | alert.elevation | optional | 2 | Integer | Designates an elevation applied to the component between 0 and 24 |
-| alert.coloredBorder | optional | true | Boolean |  Applies the **color** defined by the type to the alert's border |
+| alert.coloredBorder | optional | true | Boolean | Applies the **color** defined by the type to the alert's border |
 | alert.dense | optional | false | Boolean | Decreases the alerts height |
 | alert.prominent | optional | false | Boolean | Displays a larger vertically centered icon to draw more attention |
 | alert.outlined | optional | false | Boolean | Makes the background transparent and applies a thin border |
@@ -182,17 +182,17 @@ Many of the options are optional and sensible defaults are used.
 | `textInput.name` | `required` | undefined | String | A unique `camelCase` name for this form element. This is the name that will be used when posting back the form data to Teneo |
 | `textInput.label` | `required` | undefined | String | Sets input label |
 | textInput.description | optional | undefined | String | If added produces a 2 column layout with the description in the left column. Can be used as an alternative for the [header field](field-types.md#header) |
-| textInput.hint | optional | undefined | String |  |
-| textInput.persistentHint | optional | true | Boolean |  |
+| textInput.hint | optional | undefined | String | Hint text |
+| textInput.persistentHint | optional | true | Boolean | Forces hint to always be visible |
 | textInput.initialValue | optional | undefined | String | Populate the default if originally known from an integration call or gathered through conversation |
-| textInput.placeHolder | optional | undefined | String |  |
+| textInput.placeHolder | optional | undefined | String | Sets the input’s placeholder text |
 | textInput.style | optional | undefined | [Style Object](style.md) | Control the look for the form field |
 | textInput.clearable | optional | false | Boolean | Add input clear functionality |
-| textInput.dense | optional | false | Boolean |  |
-| textInput.counter | optional | false | Integer |  |
+| textInput.dense | optional | false | Boolean | Reduces the input height |
+| textInput.counter | optional | false | Integer | Creates counter for input length; if no number is specified, it defaults to 25. Does not apply any validation. |
 | textInput.icons | optional | undefined | [Icons Object](icons-object.md) | Prepend, append icons outside and inside the field's display  |
-| textInput.prefix | optional | undefined | String |  |
-| textInput.suffix | optional | undefined | String |  |
+| textInput.prefix | optional | undefined | String | Displays prefix text |
+| textInput.suffix | optional | undefined | String | Displays suffix text |
 | textInput.validations | optional | undefined | String | [VeeValidate validations](validation.md) can be combined together by separating them with a pipe sign \| |
 
 ### JSON
@@ -249,19 +249,19 @@ Many of the options are optional and sensible defaults are used.
 | `textarea.name` | `required` | undefined | String | A unique `camelCase` name for this form element. This is the name that will be used when posting back the form data to Teneo |
 | `textarea.label` | `required` | undefined | String | Sets input label |
 | textInput.description | optional | undefined | String | If added produces a 2 column layout with the description in the left column. Can be used as an alternative for the [header field](field-types.md#header) |
-| textarea.hint | optional | undefined | String |  |
-| textarea.initialValue | optional | undefined | String |  |
-| textarea.autoGrow | optional | true | Boolean |  |
-| textarea.placeHolder | optional | undefined | String |  |
+| textarea.hint | optional | undefined | String | Hint text |
+| textarea.initialValue | optional | undefined | String | Populate the default if originally known from an integration call or gathered through conversation |
+| textarea.autoGrow | optional | true | Boolean | Automatically grow the textarea depending on amount of text |
+| textarea.placeHolder | optional | undefined | String | Sets the input’s placeholder text |
 | textInput.style | optional | undefined | [Style Object](style.md) | Control the look for the form field |
-| textarea.clearable | optional | false | Boolean |  |
-| textarea.persistentHint | optional | false | Boolean |  |
-| textarea.rows | optional | 5 | Integer |  |
-| textarea.dense | optional | false | Boolean |  |
-| textarea.counter | optional | undefined | Integer |  |
-| textarea.prefix | optional | undefined | String |  |
-| textarea.suffix | optional | undefined | String |  |
-| textarea.icons | optional |  | [Icons Object](icons-object.md) | Prepend, append icons outside and inside the field's display |
+| textarea.clearable | optional | false | Boolean | Add input clear functionality |
+| textarea.persistentHint | optional | false | Boolean | Forces hint to always be visible |
+| textarea.rows | optional | 5 | Integer | Default row count |
+| textarea.dense | optional | false | Boolean | Reduces the input height |
+| textarea.counter | optional | undefined | Integer | Creates counter for input length; if no number is specified, it defaults to 25. Does not apply any validation. |
+| textarea.prefix | optional | undefined | String | Displays prefix text |
+| textarea.suffix | optional | undefined | String | Displays suffix text |
+| textarea.icons | optional | undefined | [Icons Object](icons-object.md) | Prepend, append icons outside and inside the field's display |
 | textarea.validations | optional | undefined | String | [VeeValidate validations](validation.md) can be combined together by separating them with a pipe sign \| |
 
 ### JSON
@@ -313,27 +313,155 @@ Many of the options are optional and sensible defaults are used.
 
 ### Config Options
 
-| Property | Required/Optional | Default | Type | Notes |
-| :--- | :--- | :--- | :--- | :--- |
-| `select` | `required` | select | Object |  |
-| `select.name` | `required` | undefined | String | A unique `camelCase` name for this form element. This is the name that will be used when posting back the form data to Teneo |
-| `select.label` | `required` | undefined | String | Sets input label |
-| select.description | optional | undefined | String | If added produces a 2 column layout with the description in the left column. Can be used as an alternative for the [header field](field-types.md#header) |
-| select.hint | optional | undefined | String |  |
-| select.initialValue | optional | undefined | String |  |
-| select.chips | optional | false | Boolean |  |
-| select.deletableChips | optional | true | Boolean |  |
-| select.persistentHint | optional | true | Boolean |  |
-| select.clearable | optional | true | Boolean |  |
-| select.multiple | optional | false | Boolean |  |
-| select.dense | optional | false | Boolean |  |
-| select.hideSelected | optional | true | Boolean |  |
-| select.items | optional | undefined | Array of Strings |  |
-| select.style | optional | optional | String |  |
-| select.icons | optional | undefined | [Icons Object](icons-object.md) | Prepend, append icons outside and inside the field's display |
-| select.validations | optional | undefined | String | [VeeValidate validations](validation.md) can be combined together by separating them with a pipe sign \| |
-
-### JSON
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">Property</th>
+      <th style="text-align:left">Required/Optional</th>
+      <th style="text-align:left">Default</th>
+      <th style="text-align:left">Type</th>
+      <th style="text-align:left">Notes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left"><code>select</code>
+      </td>
+      <td style="text-align:left"><code>required</code>
+      </td>
+      <td style="text-align:left">select</td>
+      <td style="text-align:left">Object</td>
+      <td style="text-align:left"></td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>select.name</code>
+      </td>
+      <td style="text-align:left"><code>required</code>
+      </td>
+      <td style="text-align:left">undefined</td>
+      <td style="text-align:left">String</td>
+      <td style="text-align:left">A unique <code>camelCase</code> name for this form element. This is the
+        name that will be used when posting back the form data to Teneo</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>select.label</code>
+      </td>
+      <td style="text-align:left"><code>required</code>
+      </td>
+      <td style="text-align:left">undefined</td>
+      <td style="text-align:left">String</td>
+      <td style="text-align:left">Sets input label</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">select.description</td>
+      <td style="text-align:left">optional</td>
+      <td style="text-align:left">undefined</td>
+      <td style="text-align:left">String</td>
+      <td style="text-align:left">If added produces a 2 column layout with the description in the left column.
+        Can be used as an alternative for the <a href="field-types.md#header">header field</a>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">select.hint</td>
+      <td style="text-align:left">optional</td>
+      <td style="text-align:left">undefined</td>
+      <td style="text-align:left">String</td>
+      <td style="text-align:left">Hint text</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">select.initialValue</td>
+      <td style="text-align:left">optional</td>
+      <td style="text-align:left">undefined</td>
+      <td style="text-align:left">String</td>
+      <td style="text-align:left">Populate the default if originally known from an integration call or gathered
+        through conversation</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">select.chips</td>
+      <td style="text-align:left">optional</td>
+      <td style="text-align:left">false</td>
+      <td style="text-align:left">Boolean</td>
+      <td style="text-align:left">Changes display of selections to chips</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">select.deletableChips</td>
+      <td style="text-align:left">optional</td>
+      <td style="text-align:left">true</td>
+      <td style="text-align:left">Boolean</td>
+      <td style="text-align:left">Adds a remove icon to selected chips</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">select.persistentHint</td>
+      <td style="text-align:left">optional</td>
+      <td style="text-align:left">true</td>
+      <td style="text-align:left">Boolean</td>
+      <td style="text-align:left">Forces hint to always be visible</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">select.clearable</td>
+      <td style="text-align:left">optional</td>
+      <td style="text-align:left">true</td>
+      <td style="text-align:left">Boolean</td>
+      <td style="text-align:left">Add input clear functionality</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">select.multiple</td>
+      <td style="text-align:left">optional</td>
+      <td style="text-align:left">false</td>
+      <td style="text-align:left">Boolean</td>
+      <td style="text-align:left">Changes select to multiple</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">select.dense</td>
+      <td style="text-align:left">optional</td>
+      <td style="text-align:left">false</td>
+      <td style="text-align:left">Boolean</td>
+      <td style="text-align:left">Reduces the input height</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">select.hideSelected</td>
+      <td style="text-align:left">optional</td>
+      <td style="text-align:left">true</td>
+      <td style="text-align:left">Boolean</td>
+      <td style="text-align:left">Hide items from the drop down that have already been selected</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">select.items</td>
+      <td style="text-align:left">optional</td>
+      <td style="text-align:left">undefined</td>
+      <td style="text-align:left">Array of Strings</td>
+      <td style="text-align:left"><code>[&quot;South Africa&quot;, &quot;England&quot;, &quot;U.S.A.&quot;]</code>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">select.style</td>
+      <td style="text-align:left">optional</td>
+      <td style="text-align:left">optional</td>
+      <td style="text-align:left"><a href="style.md">Style Object</a>
+      </td>
+      <td style="text-align:left">
+        <p></p>
+        <p>Control the look for the form field</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">select.icons</td>
+      <td style="text-align:left">optional</td>
+      <td style="text-align:left">undefined</td>
+      <td style="text-align:left"><a href="icons-object.md">Icons Object</a>
+      </td>
+      <td style="text-align:left">Prepend, append icons outside and inside the field&apos;s display</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">select.validations</td>
+      <td style="text-align:left">optional</td>
+      <td style="text-align:left">undefined</td>
+      <td style="text-align:left">String</td>
+      <td style="text-align:left"><a href="validation.md">VeeValidate validations</a> can be combined together
+        by separating them with a pipe sign |</td>
+    </tr>
+  </tbody>
+</table>### JSON
 
 ```javascript
 {
@@ -390,27 +518,172 @@ Many of the options are optional and sensible defaults are used.
 
 ### Config Options
 
-| Element | Required/Optional | Default | Type | Notes |
-| :--- | :--- | :--- | :--- | :--- |
-| `comboBox` | `required` |  | Object |  |
-| `comboBox.name` | `required` | undefined | String | A unique `camelCase` name for this form element. This is the name that will be used when posting back the form data to Teneo |
-| `comboBox.label` | `required` | undefined | String | Sets input label |
-| comboBox.description | optional | undefined | String | If added produces a 2 column layout with the description in the left column. Can be used as an alternative for the [header field](field-types.md#header) |
-| comboBox.hint | optional | undefined | String |  |
-| comboBox.persistentHint | optional | true | Boolean |  |
-| comboBox.chips | optional | false | Boolean |  |
-| comboBox.multiple | optional | true | Boolean |  |
-| comboBox.hideSelected | optional | true | Boolean |  |
-| comboBox.deletableChips | optional | true | Boolean |  |
-| comboBox.clearable | optional | true | Boolean |  |
-| comboBox.dense | optional | false | Boolean |  |
-| comboBox.items | optional | undefined | Array of Objects |  |
-| comboBox.style | optional | undefined | String |  |
-| comboBox.openOnClear | optional | false | Boolean |  |
-| comboBox.icons | optional | undefined | [Icons Object](icons-object.md) | Prepend, append icons outside and inside the field's display |
-| comboBox.validations | optional | undefined | String | [VeeValidate validations](validation.md) can be combined together by separating them with a pipe sign \| |
-
-### JSON
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">Element</th>
+      <th style="text-align:left">Required/Optional</th>
+      <th style="text-align:left">Default</th>
+      <th style="text-align:left">Type</th>
+      <th style="text-align:left">Notes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left"><code>comboBox</code>
+      </td>
+      <td style="text-align:left"><code>required</code>
+      </td>
+      <td style="text-align:left"></td>
+      <td style="text-align:left">Object</td>
+      <td style="text-align:left"></td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>comboBox.name</code>
+      </td>
+      <td style="text-align:left"><code>required</code>
+      </td>
+      <td style="text-align:left">undefined</td>
+      <td style="text-align:left">String</td>
+      <td style="text-align:left">A unique <code>camelCase</code> name for this form element. This is the
+        name that will be used when posting back the form data to Teneo</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>comboBox.label</code>
+      </td>
+      <td style="text-align:left"><code>required</code>
+      </td>
+      <td style="text-align:left">undefined</td>
+      <td style="text-align:left">String</td>
+      <td style="text-align:left">Sets input label</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">comboBox.description</td>
+      <td style="text-align:left">optional</td>
+      <td style="text-align:left">undefined</td>
+      <td style="text-align:left">String</td>
+      <td style="text-align:left">If added produces a 2 column layout with the description in the left column.
+        Can be used as an alternative for the <a href="field-types.md#header">header field</a>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">comboBox.hint</td>
+      <td style="text-align:left">optional</td>
+      <td style="text-align:left">undefined</td>
+      <td style="text-align:left">String</td>
+      <td style="text-align:left">Hint text</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">comboBox.persistentHint</td>
+      <td style="text-align:left">optional</td>
+      <td style="text-align:left">true</td>
+      <td style="text-align:left">Boolean</td>
+      <td style="text-align:left">Forces hint to always be visible</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">comboBox.chips</td>
+      <td style="text-align:left">optional</td>
+      <td style="text-align:left">false</td>
+      <td style="text-align:left">Boolean</td>
+      <td style="text-align:left">Changes display of selections to chips</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">comboBox.multiple</td>
+      <td style="text-align:left">optional</td>
+      <td style="text-align:left">true</td>
+      <td style="text-align:left">Boolean</td>
+      <td style="text-align:left">Changes combo box to multiple</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">comboBox.hideSelected</td>
+      <td style="text-align:left">optional</td>
+      <td style="text-align:left">true</td>
+      <td style="text-align:left">Boolean</td>
+      <td style="text-align:left">Do not display in the select menu items that are already selected</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">comboBox.deletableChips</td>
+      <td style="text-align:left">optional</td>
+      <td style="text-align:left">true</td>
+      <td style="text-align:left">Boolean</td>
+      <td style="text-align:left">Adds a remove icon to selected chips</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">comboBox.clearable</td>
+      <td style="text-align:left">optional</td>
+      <td style="text-align:left">true</td>
+      <td style="text-align:left">Boolean</td>
+      <td style="text-align:left">Add input clear functionality</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">comboBox.dense</td>
+      <td style="text-align:left">optional</td>
+      <td style="text-align:left">false</td>
+      <td style="text-align:left">Boolean</td>
+      <td style="text-align:left">Reduces the input height</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">comboBox.items</td>
+      <td style="text-align:left">optional</td>
+      <td style="text-align:left">undefined</td>
+      <td style="text-align:left">Array of Objects</td>
+      <td style="text-align:left">
+        <p><code>[ </code>
+        </p>
+        <p><code> { </code>
+        </p>
+        <p><code>   &quot;text&quot;: &quot;Java&quot;, </code>
+        </p>
+        <p><code>   &quot;value&quot;: &quot;java&quot; </code>
+        </p>
+        <p><code> }, </code>
+        </p>
+        <p><code> { </code>
+        </p>
+        <p><code>   &quot;text&quot;: &quot;Node JS&quot;,</code>
+        </p>
+        <p><code>   &quot;value&quot;: &quot;nodejs&quot; </code>
+        </p>
+        <p><code> } </code>
+        </p>
+        <p><code>]</code>
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">comboBox.style</td>
+      <td style="text-align:left">optional</td>
+      <td style="text-align:left">undefined</td>
+      <td style="text-align:left"><a href="style.md">Style Object</a>
+      </td>
+      <td style="text-align:left">Controls the styling of the field</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">comboBox.openOnClear</td>
+      <td style="text-align:left">optional</td>
+      <td style="text-align:left">false</td>
+      <td style="text-align:left">Boolean</td>
+      <td style="text-align:left">When using the <b>clearable</b> prop, once cleared, the select menu will
+        either open or stay open, depending on the current state</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">comboBox.icons</td>
+      <td style="text-align:left">optional</td>
+      <td style="text-align:left">undefined</td>
+      <td style="text-align:left"><a href="icons-object.md">Icons Object</a>
+      </td>
+      <td style="text-align:left">Prepend, append icons outside and inside the field&apos;s display</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">comboBox.validations</td>
+      <td style="text-align:left">optional</td>
+      <td style="text-align:left">undefined</td>
+      <td style="text-align:left">String</td>
+      <td style="text-align:left"><a href="validation.md">VeeValidate validations</a> can be combined together
+        by separating them with a pipe sign |</td>
+    </tr>
+  </tbody>
+</table>### JSON
 
 ```javascript
 {
@@ -471,11 +744,12 @@ Many of the options are optional and sensible defaults are used.
 | `checkbox.name` | `required` | undefined | String | A unique `camelCase` name for this form element. This is the name that will be used when posting back the form data to Teneo |
 | `checkbox.label` | `required` | undefined | String | Sets input label |
 | checkbox.description | optional | undefined | String | If added produces a 2 column layout with the description in the left column. Can be used as an alternative for the [header field](field-types.md#header) |
-| checkbox.hint | optional | undefined | String |  |
-| checkbox.persistentHint | optional | true | Boolean |  |
-| checkbox.dense | optional | false | Boolean |  |
-| checkbox.initialValue | optional | undefined | String |  |
+| checkbox.hint | optional | undefined | String | Hint text |
+| checkbox.persistentHint | optional | true | Boolean | Forces hint to always be visible |
+| checkbox.dense | optional | false | Boolean | Reduces the input height |
+| checkbox.initialValue | optional | undefined | String | Populate the default if originally known from an integration call or gathered through conversation |
 | checkbox.validations | optional | undefined | String | [VeeValidate validations](validation.md) can be combined together by separating them with a pipe sign \| |
+| checkbox.color | optional | undefined | String |  Applies specified color to the control - it can be the name of material color \(for example `success` or `purple`\) or css color \(`#033` or `rgba(255, 0, 0, 0.5)`\). You can find list of built in classes on the Vuetify [colors page](https://vuetifyjs.com/styles/colors#material-colors) |
 
 ### JSON
 
@@ -509,12 +783,13 @@ Many of the options are optional and sensible defaults are used.
 | `switch.name` | `required` | undefined | String | A unique `camelCase` name for this form element. This is the name that will be used when posting back the form data to Teneo |
 | `switch.label` | `required` | undefined | String | Sets input label |
 | switch.description | optional | undefined | String | If added produces a 2 column layout with the description in the left column. Can be used as an alternative for the [header field](field-types.md#header) |
-| switch.persistentHint | optional | true | Boolean |  |
-| switch.dense | optional | false | Boolean |  |
-| switch.hint | optional | undefined | String |  |
-| switch.initialValue | optional | undefined | String |  |
-| switch.inset | optional | false | Boolean |  |
+| switch.persistentHint | optional | true | Boolean | Forces hint to always be visible |
+| switch.dense | optional | false | Boolean | Reduces the input height |
+| switch.hint | optional | undefined | String | Hint text |
+| switch.initialValue | optional | false | Boolean | Populate the default if originally known from an integration call or gathered through conversation |
+| switch.inset | optional | false | Boolean | Changes the styling of the switch |
 | switch.validations | optional | undefined | String | [VeeValidate validations](validation.md) can be combined together by separating them with a pipe sign \| |
+| switch.color | optional | undefined | String | Applies specified color to the control - it can be the name of material color \(for example `success` or `purple`\) or css color \(`#033` or `rgba(255, 0, 0, 0.5)`\). You can find list of built in classes on the Vuetify [colors page](https://vuetifyjs.com/styles/colors#material-colors) |
 
 ### JSON
 
@@ -595,35 +870,35 @@ Many of the options are optional and sensible defaults are used.
       <td style="text-align:left">optional</td>
       <td style="text-align:left">false</td>
       <td style="text-align:left">Boolean</td>
-      <td style="text-align:left"></td>
+      <td style="text-align:left">Reduces the input height</td>
     </tr>
     <tr>
       <td style="text-align:left">radio.hint</td>
       <td style="text-align:left">optional</td>
       <td style="text-align:left">undefined</td>
       <td style="text-align:left">String</td>
-      <td style="text-align:left"></td>
+      <td style="text-align:left">Hint text</td>
     </tr>
     <tr>
       <td style="text-align:left">radio.persistentHint</td>
       <td style="text-align:left">optional</td>
       <td style="text-align:left">true</td>
       <td style="text-align:left">Boolean</td>
-      <td style="text-align:left"></td>
+      <td style="text-align:left">Forces hint to always be visible</td>
     </tr>
     <tr>
       <td style="text-align:left">radio.mandatory</td>
       <td style="text-align:left">optional</td>
       <td style="text-align:left">false</td>
       <td style="text-align:left">Boolean</td>
-      <td style="text-align:left"></td>
+      <td style="text-align:left">Forces a selection on a <code>v-radio</code> child</td>
     </tr>
     <tr>
       <td style="text-align:left">radio.multiple</td>
       <td style="text-align:left">optional</td>
       <td style="text-align:left">false</td>
       <td style="text-align:left">Boolean</td>
-      <td style="text-align:left"></td>
+      <td style="text-align:left">Changes radio to multiple</td>
     </tr>
     <tr>
       <td style="text-align:left">radio.row</td>
@@ -661,6 +936,17 @@ Many of the options are optional and sensible defaults are used.
       <td style="text-align:left">String</td>
       <td style="text-align:left"><a href="validation.md">VeeValidate validations</a> can be combined together
         by separating them with a pipe sign |</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">radio.colors</td>
+      <td style="text-align:left">optional</td>
+      <td style="text-align:left">undefined</td>
+      <td style="text-align:left">String</td>
+      <td style="text-align:left">Applies specified color to the control - it can be the name of material
+        color (for example <code>success</code> or <code>purple</code>) or css color
+        (<code>#033</code> or <code>rgba(255, 0, 0, 0.5)</code>). You can find list
+        of built in classes on the Vuetify <a href="https://vuetifyjs.com/styles/colors#material-colors">colors page</a>
+      </td>
     </tr>
   </tbody>
 </table>### JSON
