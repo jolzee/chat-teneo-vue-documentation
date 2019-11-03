@@ -1,6 +1,13 @@
+---
+description: >-
+  Some fields allow icons to be appended or prepended both inside and outside of
+  the field. If required you could show 4 different icons at the same time in
+  each of the specific locations.
+---
+
 # Icons Object
 
-[Material Design Icons](https://materialdesignicons.com/)
+Any icon name from [Material Design Icons](https://materialdesignicons.com/) is an acceptable String.
 
 ![Various placements of icons](../../../../.gitbook/assets/image%20%285%29.png)
 

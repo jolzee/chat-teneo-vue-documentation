@@ -162,15 +162,17 @@ Configurable text input field. You can control the initial value, styling, icon 
 
 Many of the options are optional and sensible defaults are used.
 
-### Screenshot
+### Screenshots
+
+![Location of label, placeholder, hint and counter](../../../../.gitbook/assets/image%20%288%29.png)
 
 ![Hint text, counter, append outer icon and suffix ](../../../../.gitbook/assets/text-field.jpg)
 
-![Clearable input fields](../../../../.gitbook/assets/image%20%2811%29.png)
+![Clearable input fields](../../../../.gitbook/assets/image%20%2813%29.png)
 
-![Counters](../../../../.gitbook/assets/image%20%286%29.png)
+![Counters](../../../../.gitbook/assets/image%20%287%29.png)
 
-![Labels and hints](../../../../.gitbook/assets/image%20%287%29.png)
+![Labels and hints](../../../../.gitbook/assets/image%20%289%29.png)
 
 ![Prefix and Suffix](../../../../.gitbook/assets/image%20%282%29.png)
 
@@ -512,9 +514,9 @@ Many of the options are optional and sensible defaults are used.
 
 ### Screenshot
 
-![](../../../../.gitbook/assets/image%20%289%29.png)
+![](../../../../.gitbook/assets/image%20%2811%29.png)
 
-![Dense](../../../../.gitbook/assets/image%20%2810%29.png)
+![Dense](../../../../.gitbook/assets/image%20%2812%29.png)
 
 ### Config Options
 
@@ -749,7 +751,7 @@ Many of the options are optional and sensible defaults are used.
 | checkbox.dense | optional | false | Boolean | Reduces the input height |
 | checkbox.initialValue | optional | undefined | String | Populate the default if originally known from an integration call or gathered through conversation |
 | checkbox.validations | optional | undefined | String | [VeeValidate validations](validation.md) can be combined together by separating them with a pipe sign \| |
-| checkbox.color | optional | undefined | String |  Applies specified color to the control - it can be the name of material color \(for example `success` or `purple`\) or css color \(`#033` or `rgba(255, 0, 0, 0.5)`\). You can find list of built in classes on the Vuetify [colors page](https://vuetifyjs.com/styles/colors#material-colors) |
+| checkbox.color | optional | success | String |  Applies specified color to the control - it can be the name of material color \(for example `success` or `purple`\) or css color \(`#033` or `rgba(255, 0, 0, 0.5)`\). You can find list of built in classes on the Vuetify [colors page](https://vuetifyjs.com/styles/colors#material-colors) |
 
 ### JSON
 
@@ -789,7 +791,7 @@ Many of the options are optional and sensible defaults are used.
 | switch.initialValue | optional | false | Boolean | Populate the default if originally known from an integration call or gathered through conversation |
 | switch.inset | optional | false | Boolean | Changes the styling of the switch |
 | switch.validations | optional | undefined | String | [VeeValidate validations](validation.md) can be combined together by separating them with a pipe sign \| |
-| switch.color | optional | undefined | String | Applies specified color to the control - it can be the name of material color \(for example `success` or `purple`\) or css color \(`#033` or `rgba(255, 0, 0, 0.5)`\). You can find list of built in classes on the Vuetify [colors page](https://vuetifyjs.com/styles/colors#material-colors) |
+| switch.color | optional | success | String | Applies specified color to the control - it can be the name of material color \(for example `success` or `purple`\) or css color \(`#033` or `rgba(255, 0, 0, 0.5)`\). You can find list of built in classes on the Vuetify [colors page](https://vuetifyjs.com/styles/colors#material-colors) |
 
 ### JSON
 
@@ -938,9 +940,9 @@ Many of the options are optional and sensible defaults are used.
         by separating them with a pipe sign |</td>
     </tr>
     <tr>
-      <td style="text-align:left">radio.colors</td>
+      <td style="text-align:left">radio.color</td>
       <td style="text-align:left">optional</td>
-      <td style="text-align:left">undefined</td>
+      <td style="text-align:left">success</td>
       <td style="text-align:left">String</td>
       <td style="text-align:left">Applies specified color to the control - it can be the name of material
         color (for example <code>success</code> or <code>purple</code>) or css color

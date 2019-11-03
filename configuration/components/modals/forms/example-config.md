@@ -242,6 +242,56 @@ description: A working JSON config to explore
       }
     },
     {
+      "slider": {
+        "name": "musicVolume",
+        "label": "Volume",
+        "hint": "Louder is better 😉",
+        "persistentHint": true,
+        "color": "success",
+        "dense": false,
+        "prependIcon": "volume-low",
+        "appendIcon": "volume-high",
+        "initialValue": "50",
+        "range": false,
+        "min": 0,
+        "max": 100,
+        "step": 2,
+        "thumbColor": "primary",
+        "thumbLabel": true,
+        "thumbSize": 32,
+        "ticks": true,
+        "tickLabels": [],
+        "trackColor": "error",
+        "trackFillColor": "success",
+        "validations": "required"
+      }
+    },
+    {
+      "slider": {
+        "name": "musicRangeVolume",
+        "label": "Range",
+        "hint": "Louder is better 😉",
+        "persistentHint": true,
+        "color": "success",
+        "dense": false,
+        "prependIcon": "volume-low",
+        "appendIcon": "volume-high",
+        "initialValue": ["20", "80"],
+        "range": true,
+        "min": 0,
+        "max": 100,
+        "step": 2,
+        "thumbColor": "primary",
+        "thumbLabel": true,
+        "thumbSize": 32,
+        "ticks": true,
+        "tickLabels": [],
+        "trackColor": "error",
+        "trackFillColor": "success",
+        "validations": "required"
+      }
+    },
+    {
       "checkbox": {
         "name": "agreedToTerms",
         "label": "Do you agree to our terms and conditions?",
