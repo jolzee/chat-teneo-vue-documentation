@@ -1,8 +1,8 @@
 ---
 description: >-
-  Create and display custom forms in Leopard for any Teneo response. It's highly
-  configurable with sensible defaults (look & feel, icons, validations, selects,
-  combo boxes, images, headers & html)
+  Create and display custom forms in Leopard for any Teneo response. Styling,
+  icons, validations, input, text areas, selects, combo boxes, images, headers,
+  html, sliders, check boxes, switches & radios
 ---
 
 # Forms
