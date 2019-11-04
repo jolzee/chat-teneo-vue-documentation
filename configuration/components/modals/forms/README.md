@@ -9,6 +9,8 @@ description: >-
 
 ## Introduction
 
+![Example Custom Form with Validation](../../../../.gitbook/assets/form.gif)
+
 {% hint style="warning" %}
 A form will only ever display in a **modal window**. You have control over the max width of the form but you can't control its position on the page. It always be displayed in the center of the page.
 {% endhint %}
@@ -48,10 +50,6 @@ Due to the current implementation of Leopard in production the form will only be
 
 It will not be centered and wide as it is in development mode. Therefore if you plan to use custom forms in a production install of Leopard you should expect your form to render in a smaller and narrower area.
 {% endhint %}
-
-## Screenshot
-
-![Render of custom form](../../../../.gitbook/assets/form.jpg)
 
 ## Output Parameter
 
