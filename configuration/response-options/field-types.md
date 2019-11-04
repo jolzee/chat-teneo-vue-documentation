@@ -2,7 +2,7 @@
 description: You can have the UI present either a password or email field
 ---
 
-# Field Types
+# Chat Field Types \(Email, Password, Location, Upload\)
 
 ## Email Field
 

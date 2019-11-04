@@ -44,7 +44,7 @@
     * [Splitting a Response](configuration/response-options/splitting-a-response.md)
     * [Buttons and Lists](configuration/response-options/buttons-and-lists.md)
     * [Hyperlinks](configuration/response-options/hyperlinks.md)
-    * [Field Types](configuration/response-options/field-types.md)
+    * [Chat Field Types \(Email, Password, Location, Upload\)](configuration/response-options/field-types.md)
     * [Field Masks](configuration/response-options/field-masks.md)
     * [Input Field Help Text](configuration/response-options/input-field-help-text.md)
     * [Expensive Operations](configuration/response-options/expensive-operations.md)
