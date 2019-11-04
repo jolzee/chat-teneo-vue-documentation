@@ -169,7 +169,7 @@ description: A working JSON config to explore
         "name": "favoriteRugbyTeam",
         "label": "What's your favorite Rugby Team",
         "hint": "Go with the Green and Gold",
-        "initialValue": ["South Africa"],
+        "initialValue": "South Africa",
         "chips": true,
         "deletableChips": false,
         "persistentHint": true,
