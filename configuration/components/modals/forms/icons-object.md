@@ -9,7 +9,7 @@ description: >-
 
 Any icon name from [Material Design Icons](https://materialdesignicons.com/) is an acceptable String.
 
-![Various placements of icons](../../../../.gitbook/assets/image%20%289%29.png)
+![Various placements of icons](../../../../.gitbook/assets/image%20%2810%29.png)
 
 ```javascript
 {
