@@ -48,6 +48,7 @@
     * [Field Masks](configuration/response-options/field-masks.md)
     * [Input Field Help Text](configuration/response-options/input-field-help-text.md)
     * [Expensive Operations](configuration/response-options/expensive-operations.md)
+    * [Form](configuration/response-options/form.md)
     * [Card](configuration/response-options/card.md)
     * [Feedback Form](configuration/response-options/feedback-form.md)
 * [Embedding](embedding.md)

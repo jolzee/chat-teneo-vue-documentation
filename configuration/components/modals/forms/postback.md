@@ -23,6 +23,40 @@ if (formData) {
 println(formData.someField)
 ```
 
+### JSON FormData
+
+This will show you an example of the format of the JSON that is returned in `formData` for each of the available fields.  
+
+```groovy
+URLDecoder.decode(formData)
+```
+
+| Property | Field |
+| :--- | :--- |
+| ageRange | Radio |
+| userName | Input Field |
+| bio | Text Area |
+| favoriteRugbyTeam | Select |
+| newsLetter | Switch |
+| musicVolume | Slider |
+| musicRangeVolume | Range Slider |
+| agreedToTerms | Checkbox |
+| skills | Combo Box |
+
+```javascript
+{
+    "ageRange": "18to25",
+    "username": "jolzee",
+    "bio": "Bacon ipsum dolor amet rump ham hock sirloin doner fatback beef kielbasa picanha leberkas sausage buffalo capicola. Shoulder tail pancetta tenderloin. ",
+    "favoriteRugbyTeam": "South Africa",
+    "newsLetter": true,
+    "musicVolume": 50,
+    "musicRangeVolume": [20, 80],
+    "agreedToTerms": true,
+    "skills": ["java"]
+}
+```
+
 ## JSON Configuration
 
 `"postback": {}`  [See usage here](./#component-configuration)
