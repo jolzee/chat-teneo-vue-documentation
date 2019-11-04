@@ -164,17 +164,17 @@ Many of the options are optional and sensible defaults are used.
 
 ### Screenshots
 
-![Location of label, placeholder, hint and counter](../../../../.gitbook/assets/image%20%288%29.png)
+![Location of label, placeholder, hint and counter](../../../../.gitbook/assets/image%20%2813%29.png)
 
 ![Hint text, counter, append outer icon and suffix ](../../../../.gitbook/assets/text-field.jpg)
 
-![Clearable input fields](../../../../.gitbook/assets/image%20%2813%29.png)
+![Clearable input fields](../../../../.gitbook/assets/image%20%2818%29.png)
 
-![Counters](../../../../.gitbook/assets/image%20%287%29.png)
+![Counters](../../../../.gitbook/assets/image%20%2812%29.png)
 
-![Labels and hints](../../../../.gitbook/assets/image%20%289%29.png)
+![Labels and hints](../../../../.gitbook/assets/image%20%2814%29.png)
 
-![Prefix and Suffix](../../../../.gitbook/assets/image%20%282%29.png)
+![Prefix and Suffix](../../../../.gitbook/assets/image%20%284%29.png)
 
 ### Config Options
 
@@ -514,9 +514,9 @@ Many of the options are optional and sensible defaults are used.
 
 ### Screenshot
 
-![](../../../../.gitbook/assets/image%20%2811%29.png)
+![](../../../../.gitbook/assets/image%20%2816%29.png)
 
-![Dense](../../../../.gitbook/assets/image%20%2812%29.png)
+![Dense](../../../../.gitbook/assets/image%20%2817%29.png)
 
 ### Config Options
 
@@ -750,7 +750,7 @@ Many of the options are optional and sensible defaults are used.
 | checkbox.persistentHint | optional | true | Boolean | Forces hint to always be visible |
 | checkbox.dense | optional | false | Boolean | Reduces the input height |
 | checkbox.initialValue | optional | undefined | String | Populate the default if originally known from an integration call or gathered through conversation |
-| checkbox.validations | optional | undefined | String | [VeeValidate validations](validation.md) can be combined together by separating them with a pipe sign \| |
+| checkbox.mustBeChecked | optional | false | String | Ensures that the check box is checked before the form is validated |
 | checkbox.color | optional | success | String |  Applies specified color to the control - it can be the name of material color \(for example `success` or `purple`\) or css color \(`#033` or `rgba(255, 0, 0, 0.5)`\). You can find list of built in classes on the Vuetify [colors page](https://vuetifyjs.com/styles/colors#material-colors) |
 
 ### JSON
@@ -764,7 +764,7 @@ Many of the options are optional and sensible defaults are used.
     "persistentHint": true,
     "dense": false,
     "initialValue": false,
-    "validations": "required"
+    "mustBeChecked": true
   }
 }
 ```
@@ -983,4 +983,108 @@ Many of the options are optional and sensible defaults are used.
 ```
 
 
+
+## Slider
+
+
+
+Many of the options are optional and sensible defaults are used.
+
+### Screenshots
+
+![Color, Labels Icons and Hint Text](../../../../.gitbook/assets/image%20%285%29.png)
+
+![Tumbs](../../../../.gitbook/assets/image%20%2810%29.png)
+
+![Ticks](../../../../.gitbook/assets/image%20%288%29.png)
+
+![Colors](../../../../.gitbook/assets/image%20%282%29.png)
+
+### Config Options
+
+| Property | Required/Optional | Value | Type | Notes |
+| :--- | :--- | :--- | :--- | :--- |
+| `slider` | `required` |  | Object |  |
+| `slider.name` | `required` | undefined | String | A unique `camelCase` name for this form element. This is the name that will be used when posting back the form data to Teneo |
+| `slider.label` | `required` | undefined | String | Sets input label |
+| slider.description | optional | undefined | String | If added produces a 2 column layout with the description in the left column. Can be used as an alternative for the [header field](field-types.md#header) |
+| slider.hint | optional | undefined | String | Hint text |
+| slider.persistentHint | optional | true | Boolean | Forces hint to always be visible |
+| slider.initialValue | optional | undefined | String \| Array of String | Populate the default if originally known from an integration call or gathered through conversation |
+| slider.color | optional | success | String | Main color slider |
+| slider.range | optional | false | Boolean | Set to true if you want the slider to be a range \[ "start", "end"\] slider. |
+| textInput.dense | optional | false | Boolean | Reduces the input height |
+| slider.prependIcon | optional | undefined | String | Any icon name from [https://materialdesignicons.com/](https://materialdesignicons.com/) |
+| slider.appendIcon | optional | undefined | String | Any icon name from [https://materialdesignicons.com/](https://materialdesignicons.com/) |
+| slider.min | optional | 0 | Integer / String | Sets the minimum allowed value |
+| slider.max | optional | 100 | Integer / String | Sets the maximum allowed value |
+| slider.step | optional | 1 | Integer | If greater than 0, sets step interval for ticks |
+| slider.thumbColor | optional | undefined | String | Sets the thumb and thumb label color |
+| slider.thumbLabel | optional | true | Boolean / String |  Show thumb label. If `true` it shows label when using slider. If set to `'always'` it always shows label. |
+| slider.thumbSize | optional | 32 | Integer / String | Controls the size of the thumb label. |
+| slider.ticks | optional | false | Boolean / String |  Show track ticks. If `true` it shows ticks when using slider. If set to `'always'` it always shows ticks. |
+| slider.tickLabels | optional | \[ \] | Array | When provided with Array, will attempt to map the labels to each step in index order |
+| slider.trackColor | optional | undefined | String | Sets the track's color |
+| slider.trackFillColor | optional | undefined | String | Sets the track's fill color |
+| slider.validations | optional | undefined | String | [VeeValidate validations](validation.md) can be combined together by separating them with a pipe sign \| |
+
+### Slider JSON
+
+```javascript
+{
+  "slider": {
+    "name": "musicVolume",
+    "label": "Volume",
+    "hint": "Louder is better 😉",
+	"persistentHint": true,
+	"color": "success",
+	"dense": false,
+	"prependIcon": "volume-low",
+	"appendIcon": "volume-high",
+    "initialValue": "50",
+	"range": false,
+	"min": 0,
+	"max": 100,
+	"step": 2,
+	"thumbColor": "primary",
+	"thumbLabel": true,
+	"thumbSize": 32,
+	"ticks": true,
+	"tickLabels": [],
+	"trackColor": "error",
+	"trackFillColor": "success",
+    "validations": "required"
+  }
+}
+```
+
+### Range Slider JSON 
+
+```javascript
+{
+  "slider": {
+    "name": "musicVolumeRange",
+    "label": "Volume Range",
+    "hint": "Anything goes",
+	"persistentHint": true,
+	"color": "success",
+	"dense": false,
+	"prependIcon": "volume-low",
+	"appendIcon": "volume-high",
+    "initialValue": ["20", "80"],
+	"range": true,
+	"min": 0,
+	"max": 100,
+	"step": 2,
+	"thumbColor": "primary",
+	"thumbLabel": true,
+	"thumbSize": 32,
+	"ticks": true,
+	"tickLabels": [],
+	"trackColor": "error",
+	"trackFillColor": "success",
+    "validations": "required"
+  }
+}
+```
 

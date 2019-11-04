@@ -299,7 +299,7 @@ description: A working JSON config to explore
         "persistentHint": true,
         "dense": false,
         "initialValue": false,
-        "validations": "required"
+        "mustBeChecked": true
       }
     }
   ]
