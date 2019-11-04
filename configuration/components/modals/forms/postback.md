@@ -23,7 +23,7 @@ if (formData) {
 println(formData.someField)
 ```
 
-### JSON FormData
+## JSON FormData Postback
 
 This will show you an example of the format of the JSON that is returned in `formData` for each of the available fields.  
 
@@ -57,7 +57,7 @@ URLDecoder.decode(formData)
 }
 ```
 
-## JSON Configuration
+## JSON Configuration for Postback Object
 
 `"postback": {}`  [See usage here](./#component-configuration)
 
