@@ -92,19 +92,19 @@ formConfig = {
 A more comprehensive example can be [found here](example-config.md)
 {% endhint %}
 
-## Component Configuration
+## Form Config Component Configuration
 
 
 
 | Element | Required/Optional | Default Value | Type | Notes |
 | :--- | :--- | :--- | :--- | :--- |
-| title | required |  | String | The form's title |
+| `title` | `required` |  | String | The form's title |
 | validationFailedMessage | optional | Please complete all required fields | String | A custom message to be displayed once a user submits the form and there are validation errors |
 | openAutomatically | optional | false | Boolean | Controls if the form should automatically open for the Teneo response that contains the formConfig |
 | openFormButtonText | optional | Form | String | Set the button text to open the form. Seen just below the answer text. |
 | [postback](postback.md) | optional | [Postback Object](postback.md) | Object | Controls what is send back to Teneo on a successful submission of the form  |
 | [button](button.md) | optional | [Button Object](button.md) | Object | Controls the display of the button used in the form to complete the form submission |
-| [fields](field-types.md) | required | [Field Objects](field-types.md) | Array of Field Type Objects | Allows you to add as many of the available [fields](field-types.md) in a specific order  |
+| \`\`[`fields`](field-types.md)\`\` | `required` | [Field Objects](field-types.md) | Array of Field Type Objects | Allows you to add as many of the available [fields](field-types.md) in a specific order  |
 
 {% page-ref page="example-config.md" %}
 
