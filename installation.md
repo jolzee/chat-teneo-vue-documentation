@@ -7,7 +7,33 @@ description: >-
 
 # Installation
 
+## Git
+
+You will need to download and install Git to clone Leopard from Github.
+
+{% embed url="https://git-scm.com/downloads" %}
+
+## Node
+
+You will need to have Node.js installed. Version `12.13` is supported by Leopard.
+
+{% embed url="https://nodejs.org/en/download/" %}
+
+## Vue CLI
+
+You will need to install Vue CLI globally.
+
+{% embed url="https://cli.vuejs.org/guide/installation.html" %}
+
+```groovy
+npm install -g @vue/cli
+```
+
 ## Code
+
+{% hint style="info" %}
+Once you have installed **Git**, **Node.js** and **Vue CLI** you are ready to clone the Leopard repository.
+{% endhint %}
 
 ### Github
 
@@ -17,6 +43,8 @@ The latest code is stored in Github.
 
 ### Clone the Repository
 
+Navigate into the folder you wish to clone the code into. Then run the following command. 
+
 ```bash
 git clone https://github.com/jolzee/chat-teneo-vue leopard
 ```
@@ -25,6 +53,14 @@ git clone https://github.com/jolzee/chat-teneo-vue leopard
 
 ```bash
 cd leopard
+```
+
+### Windows Users
+
+If you're developing on windows you will most likely have to install `node-gyp` before you attempt to run `npm install`.  You will need to compile some native node modules.  To enable this on Windows you can run this one liner.  It's **going to take a while to complete** but it only has to be run once. **Start PowerShell as Administrator and run**:
+
+```javascript
+npm install --global windows-build-tools
 ```
 
 ### Project setup
@@ -73,19 +109,20 @@ If you would like to leverage [Live Chat](configuration/integrations/live-chat.m
 
 {% code title=".env" %}
 ```text
+VUE_APP_HIDE_CONFIG_MENU=false
+VUE_APP_LOAD_CONFIG_FOR_NEW_SESSIONS=false
+VUE_APP_GET_STATIC_DEFAULT_CONFIG=true
 VUE_APP_FIREBASE_API_KEY=XXXXXXXXXXX_XXXXXXXXXXX-XXXXXXXXXXX
 VUE_APP_FIREBASE_AUTH_DOMAIN=my-project-id.firebaseapp.com
 VUE_APP_FIREBASE_DATABASE_URL=https://my-project-id.firebaseio.com
 VUE_APP_FIREBASE_MESSAGING_SENDER_ID=1234567890
 VUE_APP_FIREBASE_PROJECT_ID=my-project-id
 VUE_APP_FIREBASE_STORAGE_BUCKET=my-project-id.appspot.com
-VUE_APP_GET_STATIC_DEFAULT_CONFIG=true
-VUE_APP_HIDE_CONFIG_MENU=false
 VUE_APP_LIVE_CHAT_INC_KEY=1234567
-VUE_APP_LOAD_CONFIG_FOR_NEW_SESSIONS=false
 VUE_APP_LOCATION_IQ_KEY=
 VUE_APP_LONG_PRESS_LENGTH=1000
 VUE_APP_PUSHER_KEY=
+VUE_APP_SENTRY_DSN=
 ```
 {% endcode %}
 
@@ -145,6 +182,12 @@ VUE_APP_PUSHER_KEY=
           name of the chat window, TIE endpoint url, etc.) then that change will
           appear automatically when Leopard is next opened by a user.</p>
       </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">VUE_APP_SENTRY_DSN</td>
+      <td style="text-align:left">If you wanted to send core Vue errors and exceptions in a production build
+        to Sentry <a href="https://sentry.io/">https://sentry.io/</a> then add your
+        account&apos;s DSN.</td>
     </tr>
   </tbody>
 </table>## Studio
