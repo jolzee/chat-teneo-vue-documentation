@@ -4,8 +4,7 @@ description: A working JSON config to explore
 
 # Example Config
 
-{% code-tabs %}
-{% code-tabs-item title="formConfig =" %}
+{% code title="formConfig =" %}
 ```javascript
 {
   "title": "My Custom Form",
@@ -306,6 +305,5 @@ description: A working JSON config to explore
 }
 
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 

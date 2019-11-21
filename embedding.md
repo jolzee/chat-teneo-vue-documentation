@@ -25,8 +25,7 @@ Remember to update the **`tieUrl`** in **`embed-leopard.js`**
 
 You can pick up any of the parameters in a pre-processing script in Teneo Studio.
 
-{% code-tabs %}
-{% code-tabs-item title="Pre-Processing in Teneo Studio" %}
+{% code title="Pre-Processing in Teneo Studio" %}
 ```groovy
 if (engineEnvironment.getParameter("pageTitle")) {
 	pageTile = engineEnvironment.getParameter("pageTitle")
@@ -44,8 +43,7 @@ if (engineEnvironment.getParameter("message")) {
 	message = engineEnvironment.getParameter("message")
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 ## Dynamically passing information
 

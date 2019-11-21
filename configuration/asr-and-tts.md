@@ -62,8 +62,7 @@ Depending on the CAI use case you might find that the ASR badly transcribes some
 
 The file is located in  `\src\constants\asr-corrections.js` and contains a case insensitive search and replace array of arrays.
 
-{% code-tabs %}
-{% code-tabs-item title="\\src\\constants\\asr-corrections.js" %}
+{% code title="\\src\\constants\\asr-corrections.js" %}
 ```javascript
 export const ASR_CORRECTIONS = [
     ["replacethis", "with this"], 
@@ -71,8 +70,7 @@ export const ASR_CORRECTIONS = [
     [". coke", "diet coke"]
 ];
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 {% hint style="info" %}
 You can also define ASR transcription corrections at a solution configuration level. Edit a solution in the Leopard config area and there a field that allows you to define the corrections.

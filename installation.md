@@ -71,8 +71,7 @@ This will allow Leopard to be run in IE11 along with modern browsers.
 
 If you would like to leverage [Live Chat](configuration/integrations/live-chat.md), [Location Detection](configuration/response-options/field-types.md#location-information), [Pusher Messaging](configuration/integrations/pusher.md) or [Social Authentication](configuration/integrations/social-authentication.md) then you will need to update your license keys in the `.env` properties file.  Know that you can define a `.env.local` file within the same directory. This file will be used for local builds. `.env.local` files are added to `.gitignore` so that your licence keys and config isn't publicly exposed.
 
-{% code-tabs %}
-{% code-tabs-item title=".env" %}
+{% code title=".env" %}
 ```text
 VUE_APP_FIREBASE_API_KEY=XXXXXXXXXXX_XXXXXXXXXXX-XXXXXXXXXXX
 VUE_APP_FIREBASE_AUTH_DOMAIN=my-project-id.firebaseapp.com
@@ -88,8 +87,7 @@ VUE_APP_LOCATION_IQ_KEY=
 VUE_APP_LONG_PRESS_LENGTH=1000
 VUE_APP_PUSHER_KEY=
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 ### Description of Some Variables
 
@@ -167,8 +165,7 @@ Disable the following flow from the TDR's - `The user continues conversation aft
 
 Capture the `command` request parameter. Leopard sends a `?command=login` whenever the chat window is opened. You will want to trigger the greeting message when this request parameter is present.
 
-{% code-tabs %}
-{% code-tabs-item title="Pre-processing Script" %}
+{% code title="Pre-processing Script" %}
 ```groovy
 if (engineEnvironment.getParameter("command")) {
 	command = engineEnvironment.getParameter("command")
@@ -176,18 +173,15 @@ if (engineEnvironment.getParameter("command")) {
 	command = ""
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 In your greeting flow you will want to add a syntax trigger with the following condition
 
-{% code-tabs %}
-{% code-tabs-item title="Trigger Condition in Greeting Flow" %}
+{% code title="Trigger Condition in Greeting Flow" %}
 ```groovy
 {command == "login"}
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 ### Capture the User's Time Zone
 

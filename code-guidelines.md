@@ -8,8 +8,7 @@ description: Describes the project's file structure
 
 In the root folder of the project. Called either `.env` or `.env.local`
 
-{% code-tabs %}
-{% code-tabs-item title=".env" %}
+{% code title=".env" %}
 ```text
 VUE_APP_HIDE_CONFIG_MENU=false
 VUE_APP_LIVE_CHAT_INC_KEY=
@@ -24,8 +23,7 @@ VUE_APP_FIREBASE_STORAGE_BUCKET=
 VUE_APP_FIREBASE_MESSAGING_SENDER_ID=
 VUE_APP_GET_STATIC_DEFAULT_CONFIG=true
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 You can define global variables here. To reference one of these variables you should prefix the key with `process.env.`
 

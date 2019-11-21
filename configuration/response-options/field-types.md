@@ -103,7 +103,7 @@ In all likelihood you will probably want the file to be upload to another server
 #### Output Parameter
 
 ```text
-extensions = ${ExtensionHelper.setUploadConfig(configMap}
+extensions = ${ExtensionHelper.setUploadConfig(configMap)}
 ```
 
 Where `configMap` is a Groovy map:

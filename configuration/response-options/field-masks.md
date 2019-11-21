@@ -33,13 +33,11 @@ description: >-
 
 Just add the following as an output parameter to a node which is asking for a user input where a mask is required.
 
-{% code-tabs %}
-{% code-tabs-item title="Will force the UI to accept a phone number" %}
+{% code title="Will force the UI to accept a phone number" %}
 ```text
 inputMask = (###) ### - ####
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 {% hint style="info" %}
 You can also override the help text that is shown in the input field. 

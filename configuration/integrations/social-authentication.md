@@ -43,8 +43,7 @@ You will need to setup a Firebase project and enable social authentication for t
 
 Define your Firebase configuration in Leopard's .env file.
 
-{% code-tabs %}
-{% code-tabs-item title=".env" %}
+{% code title=".env" %}
 ```text
 VUE_APP_FIREBASE_API_KEY=
 VUE_APP_FIREBASE_AUTH_DOMAIN=
@@ -53,13 +52,11 @@ VUE_APP_FIREBASE_PROJECT_ID=
 VUE_APP_FIREBASE_STORAGE_BUCKET=
 VUE_APP_FIREBASE_MESSAGING_SENDER_ID=
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 ## Capture Email and Name in Teneo
 
-{% code-tabs %}
-{% code-tabs-item title="Pre-processing Script in Teneo" %}
+{% code title="Pre-processing Script in Teneo" %}
 ```groovy
 if (engineEnvironment.getParameter("name")) { 
 	Lib_sUserFirstName = engineEnvironment.getParameter("name").split()[0]
@@ -69,6 +66,5 @@ if (engineEnvironment.getParameter("email")) {
 	globalUserEmail = engineEnvironment.getParameter("email")
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 

@@ -15,8 +15,7 @@ Add an output parameter of `command = delay` to any output node. Leopard will th
 
 Remember you can retrieve request parameters in Teneo in Pre-Processing.
 
-{% code-tabs %}
-{% code-tabs-item title="Pre-Processing script grabs command parameter and sets it as a global variable" %}
+{% code title="Pre-Processing script grabs command parameter and sets it as a global variable" %}
 ```groovy
 if (engineEnvironment.getParameter("command")) {
 	command = engineEnvironment.getParameter("command")
@@ -24,8 +23,7 @@ if (engineEnvironment.getParameter("command")) {
 	command = ""
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 ### Screenshots
 
