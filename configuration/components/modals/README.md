@@ -23,7 +23,7 @@ By default all modals are shown in their small size. To override this sizing on 
 modalSize = small/medium/large/x-large
 ```
 
-## Displaying multiple inline components
+## Displaying multiple components
 
 {% hint style="info" %}
 If you require _**two or more**_ components outputted inline for example **you can append a numerical ordering** to the **`extensions`** output parameter. 
