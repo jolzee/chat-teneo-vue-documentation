@@ -5,7 +5,7 @@ description: >-
   be displayed in the respective view.
 ---
 
-# Modal or Inline
+# Modal or Inline Components
 
 ## Positioning
 
@@ -22,6 +22,40 @@ By default all modals are shown in their small size. To override this sizing on 
 ```text
 modalSize = small/medium/large/x-large
 ```
+
+## Displaying multiple inline components
+
+{% hint style="info" %}
+If you require _**two or more**_ components outputted inline for example **you can append a numerical ordering** to the **`extensions`** output parameter. 
+{% endhint %}
+
+For example you might want to show some button options along with an inline carousel.
+
+```groovy
+extensions1 = ${ExtensionHelper.displayClickableList(yesNoMaybeOptions,channel)}
+```
+
+```groovy
+extensions2 = ${ExtensionHelper.displayImageCarousel(imageUrlArray,channel)}
+```
+
+{% page-ref page="image.md" %}
+
+{% page-ref page="image-carousel.md" %}
+
+{% page-ref page="video.md" %}
+
+{% page-ref page="audio.md" %}
+
+{% page-ref page="table.md" %}
+
+{% page-ref page="maps.md" %}
+
+{% page-ref page="html.md" %}
+
+{% page-ref page="forms/" %}
+
+{% page-ref page="custom.md" %}
 
 
 

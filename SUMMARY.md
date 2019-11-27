@@ -16,7 +16,7 @@
   * [Language Auto Switch](configuration/language-auto-switch.md)
   * [Components](configuration/components/README.md)
     * [Date & Time Pickers](configuration/components/date-and-time-pickers.md)
-    * [Modal or Inline](configuration/components/modals/README.md)
+    * [Modal or Inline Components](configuration/components/modals/README.md)
       * [Image](configuration/components/modals/image.md)
       * [Image Carousel](configuration/components/modals/image-carousel.md)
       * [Video](configuration/components/modals/video.md)
