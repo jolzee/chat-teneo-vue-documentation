@@ -7,7 +7,7 @@ description: >-
 
 # Message Response Options
 
-
+{% page-ref page="custom-response-icons.md" %}
 
 {% page-ref page="answer-text-formatting.md" %}
 
