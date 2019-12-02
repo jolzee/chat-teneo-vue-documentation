@@ -6,7 +6,7 @@ description: >-
 
 # Style Object
 
-![Regular \(default setting\), Filled, Solo and Outlined. Also shows the Placeholder location](../../../../.gitbook/assets/image.png)
+![Regular \(default setting\), Filled, Solo and Outlined. Also shows the Placeholder location](../../../../.gitbook/assets/image%20%281%29.png)
 
 ```javascript
 {

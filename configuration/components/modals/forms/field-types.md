@@ -88,7 +88,7 @@ Simple component that adds a `<hr/>` that can be used to separate fields or logi
 
 ## Alert
 
-![](../../../../.gitbook/assets/image%20%284%29.png)
+![](../../../../.gitbook/assets/image%20%285%29.png)
 
 ### Screenshot
 
@@ -164,17 +164,17 @@ Many of the options are optional and sensible defaults are used.
 
 ### Screenshots
 
-![Location of label, placeholder, hint and counter](../../../../.gitbook/assets/image%20%2814%29.png)
+![Location of label, placeholder, hint and counter](../../../../.gitbook/assets/image%20%2816%29.png)
 
 ![Hint text, counter, append outer icon and suffix ](../../../../.gitbook/assets/text-field.jpg)
 
-![Clearable input fields](../../../../.gitbook/assets/image%20%2819%29.png)
+![Clearable input fields](../../../../.gitbook/assets/image%20%2821%29.png)
 
-![Counters](../../../../.gitbook/assets/image%20%2813%29.png)
+![Counters](../../../../.gitbook/assets/image%20%2815%29.png)
 
-![Labels and hints](../../../../.gitbook/assets/image%20%2815%29.png)
+![Labels and hints](../../../../.gitbook/assets/image%20%2817%29.png)
 
-![Prefix and Suffix](../../../../.gitbook/assets/image%20%285%29.png)
+![Prefix and Suffix](../../../../.gitbook/assets/image%20%286%29.png)
 
 ### Config Options
 
@@ -512,9 +512,9 @@ Many of the options are optional and sensible defaults are used.
 
 ### Screenshot
 
-![](../../../../.gitbook/assets/image%20%2817%29.png)
+![](../../../../.gitbook/assets/image%20%2819%29.png)
 
-![Dense](../../../../.gitbook/assets/image%20%2818%29.png)
+![Dense](../../../../.gitbook/assets/image%20%2820%29.png)
 
 ### Config Options
 
@@ -990,13 +990,13 @@ Many of the options are optional and sensible defaults are used.
 
 ### Screenshots
 
-![Color, Labels Icons and Hint Text](../../../../.gitbook/assets/image%20%286%29.png)
+![Color, Labels Icons and Hint Text](../../../../.gitbook/assets/image%20%288%29.png)
 
-![Tumbs](../../../../.gitbook/assets/image%20%2811%29.png)
+![Tumbs](../../../../.gitbook/assets/image%20%2813%29.png)
 
-![Ticks](../../../../.gitbook/assets/image%20%289%29.png)
+![Ticks](../../../../.gitbook/assets/image%20%2811%29.png)
 
-![Colors](../../../../.gitbook/assets/image%20%282%29.png)
+![Colors](../../../../.gitbook/assets/image%20%283%29.png)
 
 ### Config Options
 
