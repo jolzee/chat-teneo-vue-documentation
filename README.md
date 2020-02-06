@@ -17,7 +17,7 @@ It can also be embedded on an external site.
 
 [Vue.js](https://vuejs.org/) and [Vuetify ](https://vuetifyjs.com/en/getting-started/quick-start)are modern frameworks. Leopard will therefore run fine on Microsoft Edge, Opera, Firefox, Chrome, Safari and IE 11.
 
-![](.gitbook/assets/image%20%2822%29.png)
+![](.gitbook/assets/image%20%2823%29.png)
 
 {% embed url="https://cli.vuejs.org/guide/browser-compatibility.html\#browserslist" %}
 

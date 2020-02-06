@@ -9,7 +9,7 @@ description: >-
 
 More information on the acceptable mask formatting can be found here: [The Mask for Vue.js](https://vuejs-tips.github.io/vue-the-mask/)
 
-![](../../../../.gitbook/assets/image%20%2814%29.png)
+![](../../../../.gitbook/assets/image%20%2815%29.png)
 
 ## Tokens
 

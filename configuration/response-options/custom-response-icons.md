@@ -16,11 +16,11 @@ Any icon from here should work.
 
 {% embed url="https://materialdesignicons.com/" %}
 
-![](../../.gitbook/assets/image%20%2823%29.png)
+![](../../.gitbook/assets/image%20%2824%29.png)
 
 ### Teneo Studio Setup
 
-![Solution &#xBB; Globals &#xBB; Emotions](../../.gitbook/assets/image%20%287%29.png)
+![Solution &#xBB; Globals &#xBB; Emotions](../../.gitbook/assets/image%20%288%29.png)
 
-![Assign emotion on output nodes](../../.gitbook/assets/image.png)
+![Assign emotion on output nodes](../../.gitbook/assets/image%20%281%29.png)
 

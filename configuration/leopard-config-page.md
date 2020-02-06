@@ -27,13 +27,14 @@ Example `default.json`
 
 ```javascript
 {
-  "activeSolution": "My Demo Solution",
+  "activeSolution": "f79b1246-bcac-4f83-bfd0-7aefe58eaad2",
   "solutions": [
     {
-      "name": "My Demo Solution",
-      "url": "https://teneo-interaction-engine.com/my-solution-ctx/",
-      "deepLink": "my-demo-deep-link",
-      "iframeUrl": "https://www.artificial-solutions.com/",
+      "id": "f79b1246-bcac-4f83-bfd0-7aefe58eaad2",
+      "name": "Leopard Test Solution - Development",
+      "url": "https://teneo-demos-fusion.presales.artificial-solutions.com/leopard/",
+      "deepLink": "leopard-development",
+      "iframeUrl": "https://wi.presales.artificial-solutions.com/leopard-info/",
       "sendContextParams": "all",
       "contextParams": [
         {
@@ -46,29 +47,58 @@ Example `default.json`
           ]
         }
       ],
-      "float": "true",
-      "locale": "en",
-      "chatTitle": "Speak with Peter",
-      "responseIcon": "person",
-      "userIcon": "fa-comment-alt",
-      "useLocalStorage": "false",
-      "enableLiveChat": "true",
-      "theme": {
-        "primary": "#3277D5",
-        "secondary": "#E78600",
-        "accent": "#4CAF50",
-        "error": "#FF5252",
-        "info": "#2196F3",
-        "success": "#4CAF50",
-        "warning": "#FFC107"
+      "animations": {
+        "in": "slideInUp",
+        "out": "flipOutY"
       },
-      "knowledgeData": [
-        "Who created you?",
-        "What's your name?"
-      ]
+      "chatTitle": "Speak with Leo (Dev)",
+      "font": "leopard-font-normal",
+      "responseIcon": "mdi-message-bulleted",
+      "userIcon": "mdi-comment-account",
+      "useLocalStorage": false,
+      "enableLiveChat": false,
+      "theme": {
+        "primary": "#3D237D",
+        "secondary": "#7C5BB7",
+        "accent": "#2196F3",
+        "success": "#4CAF50",
+        "info": "#2196F3",
+        "error": "#FF5252",
+        "warning": "#FFC107",
+        "dark": "#0062B1",
+        "custom1": "#0062B1",
+        "custom2": "#0062B1",
+        "custom3": "#0062B1"
+      },
+      "lookAndFeel": {
+        "response": {
+          "iconColor": "secondary",
+          "blockBgColor": "white",
+          "blockTextColor": "dark"
+        },
+        "question": {
+          "iconColor": "primary",
+          "blockBgColor": "white",
+          "blockTextColor": "dark"
+        }
+      },
+      "displayAccent": true,
+      "knowledgeData": ["What's your name?", "Who created you?"],
+      "float": true,
+      "showChatIcons": true,
+      "asrCorrections": "pizza | Peter\nthiss | that",
+      "pulseButton": true,
+      "promptTriggers": {
+        "enabled": false,
+        "pollSeconds": "10"
+      },
+      "customCssButtonToolbar": "",
+      "locale": "en-uk-female",
+      "longResponsesInModal": false
     }
   ]
 }
+
 ```
 
 The solution called, `My Demo Solution` would be loaded for all new users accessing the Leopard deployment.
@@ -77,7 +107,7 @@ The solution called, `My Demo Solution` would be loaded for all new users access
 
 You can always access the config from the Leopard chat window's menu.
 
-![](../.gitbook/assets/config-page.jpg)
+![](../.gitbook/assets/config-a.jpg)
 
 ## Config Page
 
@@ -100,7 +130,7 @@ You can always access the config from the Leopard chat window's menu.
 
   Accessing this documentation
 
-![](../.gitbook/assets/cfg.jpg)
+![](../.gitbook/assets/image.png)
 
 ## Solution Add/Edit Screen
 
