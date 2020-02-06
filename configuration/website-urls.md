@@ -19,7 +19,9 @@ If Leopard is served over a HTTPS url then you will want to make certain that bo
 The Leopard UI effectively Iframes the site behind the chat window.  If this is a site you host you should see the site loaded along with the Leopard chat button hovering in the bottom right corner of the page. 
 
 {% hint style="warning" %}
-You might find that linking to an external site doesn't work. This is almost always the caused by   the fact that the website is sending back headers suggesting to the browser not to IFRAME the site.  You can work around this by installing a X-Frame buster extension in your browser. There are plenty of them. Here's one I use.
+You might find that linking to an external site doesn't work. This is most likely caused by the  website sending back headers to instruct your browser not to IFRAME the site.  You can work around this by installing a X-Frame buster extension in your browser. There are plenty of extension that do the same thing. 
+
+Here's one I use.
 
 [https://chrome.google.com/webstore/detail/ignore-x-frame-headers/gleekbfjekiniecknbkamfmkohkpodhe](https://chrome.google.com/webstore/detail/ignore-x-frame-headers/gleekbfjekiniecknbkamfmkohkpodhe)
 {% endhint %}
