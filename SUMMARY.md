@@ -7,6 +7,7 @@
 * [Configuration](configuration/README.md)
   * [Leopard Config Page](configuration/leopard-config-page.md)
   * [Website URLs](configuration/website-urls.md)
+  * [Deep Linked Question](configuration/deep-linked-question.md)
   * [Views](configuration/views/README.md)
     * [Hiding Chat Icons](configuration/views/hiding-chat-icons.md)
     * [Desktop](configuration/views/desktop.md)
