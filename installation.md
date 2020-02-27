@@ -5,7 +5,7 @@ description: >-
   and to build and deploy Leopard.
 ---
 
-# Installation
+# Installation and Build
 
 ## Git
 
@@ -15,7 +15,7 @@ You will need to download and install Git to clone Leopard from Github.
 
 ## Node
 
-You will need to have Node.js installed. Version `12.13` is supported by Leopard.
+You will need to have Node.js installed.
 
 {% embed url="https://nodejs.org/en/download/" %}
 
@@ -71,7 +71,13 @@ This command will inspect the dependencies in the project's **package.json** fil
 npm install
 ```
 
-### Compiles and hot-reloads for development
+If you are on a version of **npm &gt; 6.0.0** you should preferably install dependencies using
+
+```groovy
+npm ci
+```
+
+### Run locally
 
 To run a local version of Leopard for testing and development run the following.
 
@@ -79,28 +85,28 @@ To run a local version of Leopard for testing and development run the following.
 npm run serve
 ```
 
-The browser should automatically open to [http://localhost:8080/](http://localhost:8080/) once compiling has finished. You can change code in the project and the Website should automatically reload. 
+The browser should automatically open to [http://localhost:8080/](http://localhost:8080/) once compiled. You can change code in the project and the Website should automatically reload. 
 
-### Build for just modern browsers
+### Build Process
 
-The following command will compile and minify all the code for production. The resulting HTML, CSS and JS code in the `/dist` folder can then be deployed to any web server.
+The following command will compile, compress and minify all the code for production. The resulting HTML, CSS and JS code in the `/dist` folder can then be deployed to any web server.
 
 ```bash
 npm run build
 ```
 
 {% hint style="info" %}
-This build will only support modern browser and will not support IE11
+This build will transpile all code such that it will run on all modern browsers including IE11
 {% endhint %}
 
-### Build for modern browsers with IE11 fallback
+### Build separate code for modern browsers vs old browsers \(IE11\)
 
 ```bash
 npm run build:modern
 ```
 
 {% hint style="info" %}
-This will allow Leopard to be run in IE11 along with modern browsers.
+Has the same browser coverage as **npm run build** but rather doesn't transpile everything that doesn't need transpiling in modern browsers. For older browsers it creates a separate set of files that are automatically loaded depending on each browser's capabilities.
 {% endhint %}
 
 ## Leopard Environment Variables
@@ -109,31 +115,32 @@ If you would like to leverage [Live Chat](configuration/integrations/live-chat.m
 
 {% code title=".env" %}
 ```text
-NODE_ENV=production
 VUE_APP_BUILD_COMPRESS_JAVASCRIPT_ASSETS=true
+VUE_APP_BUILD_COMPRESS_CSS_ASSETS=true
 VUE_APP_EMBED_KILL_SESSION_ON_CLOSE=false
-VUE_APP_FIREBASE_API_KEY=XXXXXXXXXXX_XXXXXXXXXXX-XXXXXXXXXXX
-VUE_APP_FIREBASE_AUTH_DOMAIN=my-project-id.firebaseapp.com
-VUE_APP_FIREBASE_DATABASE_URL=https://my-project-id.firebaseio.com
-VUE_APP_FIREBASE_MESSAGING_SENDER_ID=1234567890
-VUE_APP_FIREBASE_PROJECT_ID=my-project-id
-VUE_APP_FIREBASE_STORAGE_BUCKET=my-project-id.appspot.com
+VUE_APP_FIREBASE_API_KEY=
+VUE_APP_FIREBASE_AUTH_DOMAIN=
+VUE_APP_FIREBASE_DATABASE_URL=
+VUE_APP_FIREBASE_MESSAGING_SENDER_ID=
+VUE_APP_FIREBASE_PROJECT_ID=
+VUE_APP_FIREBASE_STORAGE_BUCKET=
 VUE_APP_GET_STATIC_DEFAULT_CONFIG=false
 VUE_APP_HIDE_CONFIG_MENU=false
 VUE_APP_LIVE_CHAT_AGENT_ASSIST_SERVER=
-VUE_APP_LIVE_CHAT_INC_KEY=1234567
+VUE_APP_LIVE_CHAT_INC_KEY=
 VUE_APP_LOAD_FRESH_CONFIG_FOR_NEW_SESSIONS=false
 VUE_APP_LOCATION_IQ_KEY=
 VUE_APP_LOG_ROCKET=
-VUE_APP_LONG_PRESS_LENGTH=1000
 VUE_APP_PUSHER_KEY=
 VUE_APP_SENTRY_DSN=
 VUE_APP_SOLUTION_CONFIG_FILE=.env.solution.json
 VUE_APP_SOURCE_MAP=false
+VUE_APP_HIDE_AS_BRANDING=false
+VUE_APP_KUTT_IT_API_KEY=
 ```
 {% endcode %}
 
-### Description of Some Variables
+### Important Notes on Some Variables
 
 <table>
   <thead>
@@ -144,60 +151,62 @@ VUE_APP_SOURCE_MAP=false
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left">VUE_APP_GET_STATIC_DEFAULT_CONFIG</td>
+      <td style="text-align:left"><code>VUE_APP_GET_STATIC_DEFAULT_CONFIG</code>
+      </td>
       <td style="text-align:left">
-        <p>If set to <b><code>false</code></b> then the leopard chat client will retrieve
-          your solution config json from the <code>/static/default.json</code> on first
-          load. From there on the configuration is stored in your browser&apos;s
+        <p>If set to <b><code>true</code></b> then the leopard chat client will retrieve
+          your solution config json from the <code>/dist/static/config.json</code> on
+          first load. From there on the configuration is stored in your browser&apos;s
           local storage. Any changes you make in the leopard config will update the
-          configuration in your local storage.</p>
+          configuration in your local storage. The <code>/dist/static/config.json</code> file
+          is derived from the <code>.env.solution.json</code> file in the root directory.
+          If you add a <code>.env.solution.json.token </code>file adjacent to the <code>.env.solution.json</code> file
+          then that token file will also be copied as <code>/dist/static/config.json.token</code> file
+          after the build completes. This is useful for those that might need to
+          perform variable substitution prior to deployment in tools such as <em>Octopus Deploy</em>.</p>
         <p></p>
-        <p>If set to <b><code>true</code></b> then instead of making an ajax request
-          to load the default solution config from the static directory the <code>default.json</code> file
-          located in <code>/src/assets/default.json</code> will be loaded. This file
-          is always bundled in the final build and will not result in an AJAX request.
-          Note that changing the <code>/static/default.json</code> in the deployment
-          folder will do nothing when this setting is turned on.</p>
+        <p>If set to <b><code>false</code></b> then instead of making an ajax request
+          to load the default solution config from the static directory the configuration
+          file located in <code>.env.solution.json </code>is moved into a <code>leopardConfig.*.js</code> file
+          in <code>/dist/assets/js/.</code>
+        </p>
       </td>
     </tr>
     <tr>
-      <td style="text-align:left">VUE_APP_HIDE_CONFIG_MENU</td>
+      <td style="text-align:left"><code>VUE_APP_HIDE_CONFIG_MENU</code>
+      </td>
       <td style="text-align:left">If set to <b><code>false </code></b>then you are able to navigate to Leopard&apos;s
         configuration area from the Leopard&apos;s fly-out menu. This should be
         the default setting in a development environment where you might be using
         Leopard to demonstrate multiple Teneo solutions.
         <br />
         <br />If set to <b><code>true </code></b>then the menu option for the config
-        are is hidden from the menu and you will not be able to navigate to the
+        area is hidden from the menu and you will not be able to navigate to the
         respective route. This is the setting you will want to have enabled in
         a production environment where you&apos;re embedding Leopard.</td>
     </tr>
     <tr>
-      <td style="text-align:left">VUE_APP_LOAD_CONFIG_FOR_NEW_SESSIONS</td>
+      <td style="text-align:left"><code>VUE_APP_LOAD_CONFIG_FOR_NEW_SESSIONS</code>
+      </td>
       <td style="text-align:left">
         <p>If set to <b><code>false </code></b>then the local storage version of your
           solution configurations will be used for all new sessions with Leopard.
-          This is the setting you will most likely want to have disabled in a development
+          This is the setting you will most likely want to have in a development
           environment where possibly multiple sales engineers each use the same hosted
           Leopard UI to demonstrate different Teneo solutions. It effectively allows
           each developer to have their own configurations.</p>
         <p></p>
         <p>If set to <b><code>true </code></b>then the user&apos;s local storage is
-          cleared for every new session and the <code>default.json</code> is loaded
-          fresh. In a production environment you will probably want to enable this
+          cleared for every new session and either the <code>config.json</code> file
+          or the values in <code>leopardConfig.*.js</code> are loaded for every new
+          session. In a production environment you will probably want to enable this
           setting so that if you deploy a change to the solution config (color theme,
           name of the chat window, TIE endpoint url, etc.) then that change will
           appear automatically when Leopard is next opened by a user.</p>
       </td>
     </tr>
-    <tr>
-      <td style="text-align:left">VUE_APP_SENTRY_DSN</td>
-      <td style="text-align:left">If you wanted to send core Vue errors and exceptions in a production build
-        to Sentry <a href="https://sentry.io/">https://sentry.io/</a> then add your
-        account&apos;s DSN.</td>
-    </tr>
   </tbody>
-</table>## Studio
+</table>## Teneo Studio
 
 ### Capture the Channel
 

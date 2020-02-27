@@ -2,7 +2,7 @@
 
 * [Quick Start](README.md)
 * [Screenshots](screenshots.md)
-* [Installation](installation.md)
+* [Installation and Build](installation.md)
 * [Tools](tools.md)
 * [Configuration](configuration/README.md)
   * [Leopard Config Page](configuration/leopard-config-page.md)
