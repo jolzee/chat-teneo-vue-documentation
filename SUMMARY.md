@@ -40,6 +40,7 @@
     * [Live Chat](configuration/integrations/live-chat.md)
     * [Pusher](configuration/integrations/pusher.md)
   * [Message Response Options](configuration/response-options/README.md)
+    * [Toasts](configuration/response-options/toasts.md)
     * [Custom Response Icons](configuration/response-options/custom-response-icons.md)
     * [Answer Text Formatting](configuration/response-options/answer-text-formatting.md)
     * [Open Long Response in Modal](configuration/response-options/open-long-response-in-modal.md)
