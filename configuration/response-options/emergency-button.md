@@ -6,6 +6,10 @@ description: >-
 
 # Emergency Button
 
+{% hint style="info" %}
+You must add the output parameter to your greeting for the emergency button to display.
+{% endhint %}
+
 ![](../../.gitbook/assets/911.png)
 
 ### Output Parameter
