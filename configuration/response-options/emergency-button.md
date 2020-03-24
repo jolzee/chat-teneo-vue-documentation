@@ -1,6 +1,6 @@
 ---
 description: >-
-  You can display an option button in the chat toolbar by returning some JSON
+  You can display an optional button in the chat toolbar by returning some JSON
   from an output parameter
 ---
 
