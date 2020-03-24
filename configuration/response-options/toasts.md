@@ -12,6 +12,7 @@ description: You can signal Leopard to display toasts.
 
 ```groovy
 toast = 
+
 {
   "type"   :  "success", // [simple/success/info/warning/error]
   "title"  :  "Success", // optional
@@ -30,6 +31,8 @@ toast =
 Display multiple Toasts - displayed 2 seconds apart
 
 ```javascript
+toast =
+
 [ { "type"   : "success",
     "title"  : "Success",
     "body"   : "This is a success toast",
