@@ -30,6 +30,8 @@ toast =
 
 Display multiple Toasts - displayed 2 seconds apart
 
+![](../../.gitbook/assets/toasts-min.gif)
+
 ```javascript
 toast =
 
@@ -66,6 +68,4 @@ toast =
                  "pauseOnHover"    : true,
                  "position"        : "leftBottom" } } ]
 ```
-
-![](../../.gitbook/assets/toasts-min.gif)
 
