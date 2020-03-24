@@ -7,6 +7,8 @@ description: >-
 
 # Message Response Options
 
+{% page-ref page="emergency-button.md" %}
+
 {% page-ref page="toasts.md" %}
 
 {% page-ref page="custom-response-icons.md" %}
