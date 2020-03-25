@@ -63,36 +63,48 @@ extensions = ${ExtensionHelper.displayModal(model, template)}
 
 ```javascript
 {
-	"name": "displayModal",
-	"items": [{
-			"type": "title",
-			"value": "This is a flexable modal"
-		}, {
-			"type": "audio",
-			"value": "https://www.mfiles.co.uk/mp3-downloads/chopin-nocturne-op9-no2.mp3"
-		}, {
-			"type": "subtitle",
-			"value": "My SubTitle"
-		}, {
-			"type": "image",
-			"value": "https://cdn.pixabay.com/photo/2018/08/03/14/00/vw-beetle-3581950__340.jpg"
-		}, {
-			"type": "html",
-			"value": "This is the body HTML..."
-		}, {
-			"type": "carousel",
-			"value": ["https://cdn.pixabay.com/photo/2017/08/03/11/28/ferris-wheel-2575709__340.jpg", "https://cdn.pixabay.com/photo/2016/11/23/15/54/architecture-1853687__340.jpg"]
-		}, {
-			"type": "html",
-			"value": "This is more HTML... This is more <b>HTML...</b> This is more HTML... This is more HTML... "
-		}, {
-			"type": "youTube",
-			"value": "https://www.youtube.com/watch?v=rayiRwxUGdk"
-		}, {
-			"type": "image",
-			"value": "https://cdn.pixabay.com/photo/2018/03/08/21/51/lake-3209994__340.jpg"
-		}
-	]
+  "name"  : "displayModal",
+  "items" : [
+    {
+      "type"  : "title",
+      "value" : "This is a flexable modal"
+    },
+    {
+      "type"  : "audio",
+      "value" : "https://www.mfiles.co.uk/mp3-downloads/chopin-nocturne-op9-no2.mp3"
+    },
+    {
+      "type"  : "subtitle",
+      "value" : "My SubTitle"
+    },
+    {
+      "type"  : "image",
+      "value" : "https://cdn.pixabay.com/photo/2018/08/03/14/00/vw-beetle-3581950__340.jpg"
+    },
+    {
+      "type"  : "html",
+      "value" : "This is the body HTML..."
+    },
+    {
+      "type"  : "carousel",
+      "value" : [
+        "https://cdn.pixabay.com/photo/2017/08/03/11/28/ferris-wheel-2575709__340.jpg",
+        "https://cdn.pixabay.com/photo/2016/11/23/15/54/architecture-1853687__340.jpg"
+      ]
+    },
+    {
+      "type"  : "html",
+      "value" : "This is more HTML... This is more <b>HTML...</b> This is more HTML... This is more HTML... "
+    },
+    {
+      "type"  : "youTube",
+      "value" : "https://www.youtube.com/watch?v=rayiRwxUGdk"
+    },
+    {
+      "type"  : "image",
+      "value" : "https://cdn.pixabay.com/photo/2018/03/08/21/51/lake-3209994__340.jpg"
+    }
+  ]
 }
 ```
 

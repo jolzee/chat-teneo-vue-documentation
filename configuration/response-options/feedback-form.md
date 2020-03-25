@@ -11,11 +11,13 @@ description: You can instruct Leopard to show a feedback form for any output nod
 ### Output Parameter
 
 ```groovy
-offerFeedbackForm = {
- "rating": true,
- "reasons": ["Reason 1", "Reason 2"],
- "nodeId": "8d20a808-a4a5-4af1-8b55-5c058ec929f4",
- "label": "Feedback?"
+offerFeedbackForm = 
+
+{
+  "rating"  : true,
+  "reasons" : [ "Reason 1", "Reason 2" ],
+  "nodeId"  : "8d20a808-a4a5-4af1-8b55-5c058ec929f4",
+  "label"   : "Feedback?"
 }
 ```
 
@@ -27,10 +29,10 @@ When the user fills in the feedback for Leopard will send a request to your TIE 
 
 ```javascript
 {
-    "rating": 3,
-    "reasons": ["Reason 1", "Reason 2"],
-    "comment": "This answer doesn't look correct",
-    "nodeId": "8d20a808-a4a5-4af1-8b55-5c058ec929f4"
+  "rating"  : 3,
+  "reasons" : [ "Reason 1", "Reason 2" ],
+  "comment" : "This answer doesn't look correct",
+  "nodeId"  : "8d20a808-a4a5-4af1-8b55-5c058ec929f4"
 }
 ```
 

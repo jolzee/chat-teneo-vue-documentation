@@ -14,10 +14,10 @@ extensions = ${ExtensionHelper.displayPanel(htmlContent,channel)}
 
 ```javascript
 {
-	"name": "displayPanelCard",
-	"parameters": {
-		"content": "<h1>My Custom HTML</h1>"
-	}
+  "name"       : "displayPanelCard",
+  "parameters" : {
+    "content" : "<h1>My Custom HTML</h1>"
+  }
 }
 ```
 

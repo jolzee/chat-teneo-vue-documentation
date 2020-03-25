@@ -20,11 +20,11 @@ extensions = ${ExtensionHelper.displayMap("333 West San Carlos Street, 6th Floor
 
 ```javascript
 {
-    "name": "displayMap",
-    "parameters": {
-        "address": "333 West San Carlos Street, 6th Floor, Riverpark Tower, San Jose, CA 95110"
-    },
-    "inline": false
+  "name"       : "displayMap",
+  "parameters" : {
+    "address" : "333 West San Carlos Street, 6th Floor, Riverpark Tower, San Jose, CA 95110"
+  },
+  "inline"     : false
 }
 ```
 

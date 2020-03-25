@@ -13,10 +13,10 @@ Any icon name from [Material Design Icons](https://materialdesignicons.com/) is 
 
 ```javascript
 {
-   "prepend":"email-edit",
-   "prependInner":"email-edit",
-   "append":"email-edit",
-   "appendOuter":"email-edit"
+  "prepend"      : "email-edit",
+  "prependInner" : "email-edit",
+  "append"       : "email-edit",
+  "appendOuter"  : "email-edit"
 }
 ```
 

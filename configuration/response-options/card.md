@@ -15,34 +15,34 @@ description: >-
 
 ```groovy
 displayCard = {
-    "imageUrl": "https://gcs.thesouthafrican.com/2019/04/6c0aed1b-springboks-kit-750x536.jpg",
-    "title": "Springboks: New kit - Thoughts?",
-    "subTitle": "A new look for the Springboks in the RWC in Japan.",
-    "bodyText": "The Springboks will be wearing an \"unstoppable\" jersey, designed and manufactured by ASICS, which features technological advancements to give the men in green and gold an extra edge.",
-    "chips": [
-        {
-            "name": "Love",
-            "params": "opinion=love"
-        },
-        {
-            "name": "Ok",
-            "params": "opinion=ok"
-        },
-        {
-            "name": "Meh",
-            "params": "opinion=meh"
-        },
-        {
-            "name": "Hate",
-            "params": "opinion=hate"
-        }
-    ],
-    "actions": [
-        {
-            "name": "Vote",
-            "params": "vote=true"
-        }
-    ]
+  "imageUrl" : "https://gcs.thesouthafrican.com/2019/04/6c0aed1b-springboks-kit-750x536.jpg",
+  "title"    : "Springboks: New kit - Thoughts?",
+  "subTitle" : "A new look for the Springboks in the RWC in Japan.",
+  "bodyText" : "The Springboks will be wearing an \"unstoppable\" jersey, designed and manufactured by ASICS, which features technological advancements to give the men in green and gold an extra edge.",
+  "chips"    : [
+    {
+      "name"   : "Love",
+      "params" : "opinion=love"
+    },
+    {
+      "name"   : "Ok",
+      "params" : "opinion=ok"
+    },
+    {
+      "name"   : "Meh",
+      "params" : "opinion=meh"
+    },
+    {
+      "name"   : "Hate",
+      "params" : "opinion=hate"
+    }
+  ],
+  "actions"  : [
+    {
+      "name"   : "Vote",
+      "params" : "vote=true"
+    }
+  ]
 }
 ```
 

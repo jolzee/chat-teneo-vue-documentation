@@ -130,18 +130,16 @@ You don't have to define all the keys in the map.  At the very least you need to
 
 ```javascript
 {
-	"name": "uploadConfig",
-	"parameters": {
-		"postUrl": "http://url-to-post-file-to.com/some-context",
-		"postFileNameParam": "file",
-		"postParams": {
-			"my_key": "my_value"
-		},
-		"teneoSuccessQuery": "&uploadResult=success",
-		"teneoFailureQuery": "&uploadResult=error",
-		"reqUserInputSuccess": "I have uploaded my file",
-		"reqUserInputFailure": "I tried uploading but it didn't work"
-	}
+  "name"       : "uploadConfig",
+  "parameters" : {
+    "postUrl"             : "http://url-to-post-file-to.com/some-context",
+    "postFileNameParam"   : "file",
+    "postParams"          : { "my_key":"my_value" },
+    "teneoSuccessQuery"   : "&uploadResult=success",
+    "teneoFailureQuery"   : "&uploadResult=error",
+    "reqUserInputSuccess" : "I have uploaded my file",
+    "reqUserInputFailure" : "I tried uploading but it didn't work"
+  }
 }
 ```
 

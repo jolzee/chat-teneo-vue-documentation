@@ -56,20 +56,18 @@ def yesNoMaybeOptions = ["title": "Please confirm",
 
 ```javascript
 {
-	"name": "displayCollection",
-	"hasLongOptions": false,
-	'permanent': false,
-	"parameters": {
-		"content": {
-			"title": "Please confirm",
-			"items": [{
-					"name": "Yes"
-				}, {
-					"name": "No"
-				}
-			]
-		}
-	}
+  "name"           : "displayCollection",
+  "hasLongOptions" : false,
+  "permanent"      : false,
+  "parameters"     : {
+    "content" : {
+      "title" : "Please confirm",
+      "items" : [
+        { "name":"Yes" },
+        { "name":"No" }
+      ]
+    }
+  }
 }
 ```
 
@@ -117,20 +115,18 @@ def yesNoMaybeOptions = ["title": "Please confirm",
 
 ```javascript
 {
-	"name": "displayCollection",
-	"hasLongOptions": true,
-	'permanent': false,
-	"parameters": {
-		"content": {
-			"title": "Please confirm",
-			"items": [{
-					"name": "Yes"
-				}, {
-					"name": "No"
-				}
-			]
-		}
-	}
+  "name"           : "displayCollection",
+  "hasLongOptions" : true,
+  "permanent"      : false,
+  "parameters"     : {
+    "content" : {
+      "title" : "Please confirm",
+      "items" : [
+        { "name":"Yes" },
+        { "name":"No" }
+      ]
+    }
+  }
 }
 ```
 

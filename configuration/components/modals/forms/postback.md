@@ -45,15 +45,15 @@ URLDecoder.decode(formData)
 
 ```javascript
 {
-    "ageRange": "18to25",
-    "username": "jolzee",
-    "bio": "Bacon ipsum dolor amet rump ham hock sirloin doner fatback beef kielbasa picanha leberkas sausage buffalo capicola. Shoulder tail pancetta tenderloin. ",
-    "favoriteRugbyTeam": "South Africa",
-    "newsLetter": true,
-    "musicVolume": 50,
-    "musicRangeVolume": [20, 80],
-    "agreedToTerms": true,
-    "skills": ["java"]
+  "ageRange"          : "18to25",
+  "username"          : "jolzee",
+  "bio"               : "Bacon ipsum dolor amet rump ham hock sirloin doner fatback beef kielbasa picanha leberkas sausage buffalo capicola. Shoulder tail pancetta tenderloin. ",
+  "favoriteRugbyTeam" : "South Africa",
+  "newsLetter"        : true,
+  "musicVolume"       : 50,
+  "musicRangeVolume"  : [ 20, 80 ],
+  "agreedToTerms"     : true,
+  "skills"            : [ "java" ]
 }
 ```
 
@@ -107,9 +107,9 @@ URLDecoder.decode(formData)
 
 ```javascript
 {
-   "formDataUrlParam":"formData",
-   "userInput":"Thanks, I've completed the form",
-   "confirmationAlert":"Thanks we have received your form"
+  "formDataUrlParam"  : "formData",
+  "userInput"         : "Thanks, I've completed the form",
+  "confirmationAlert" : "Thanks we have received your form"
 }
 ```
 

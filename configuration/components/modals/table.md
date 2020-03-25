@@ -85,36 +85,41 @@ extensions = ${ExtensionHelper.displayTable("webview", "My Example Table Title",
 
 ```javascript
 {
-	"name": "displayTable",
-	"parameters": {
-		"title": "Your Accounts",
-		"enableSearch": true,
-		"headers": [{
-				"text": "Account",
-				"value": "account",
-				"align": "left",
-				"sortable": true,
-				"width": "70%"
-			}, {
-				"text": "Balance",
-				"value": "balance",
-				"align": "left",
-				"sortable": true
-			}
-		],
-		"rows": [{
-				"account": "Current",
-				"balance": "$1271.21"
-			}, {
-				"account": "Private",
-				"balance": "$137.54"
-			}, {
-				"account": "Savings",
-				"balance": "$2376.54"
-			}
-		],
-		"rowsPerPage": [5, 10, 25]
-	}
+  "name"       : "displayTable",
+  "parameters" : {
+    "title"        : "Your Accounts",
+    "enableSearch" : true,
+    "headers"      : [
+      {
+        "text"     : "Account",
+        "value"    : "account",
+        "align"    : "left",
+        "sortable" : true,
+        "width"    : "70%"
+      },
+      {
+        "text"     : "Balance",
+        "value"    : "balance",
+        "align"    : "left",
+        "sortable" : true
+      }
+    ],
+    "rows"         : [
+      {
+        "account" : "Current",
+        "balance" : "$1271.21"
+      },
+      {
+        "account" : "Private",
+        "balance" : "$137.54"
+      },
+      {
+        "account" : "Savings",
+        "balance" : "$2376.54"
+      }
+    ],
+    "rowsPerPage"  : [ 5, 10, 25 ]
+  }
 }
 ```
 

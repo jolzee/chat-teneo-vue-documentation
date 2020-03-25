@@ -21,10 +21,10 @@ description: >-
 
 ```javascript
 {
-   "text":"Send",
-   "icon":"send-circle",
-   "color":"secondary",
-   "clearButtonText":"Clear"
+  "text"            : "Send",
+  "icon"            : "send-circle",
+  "color"           : "secondary",
+  "clearButtonText" : "Clear"
 }
 ```
 

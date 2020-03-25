@@ -55,34 +55,30 @@ It will not be centered and wide as it is in development mode. Therefore if you 
 
 ```javascript
 formConfig = {
-  "title": "My Custom Form",
-  "fields": [
+  "title"  : "My Custom Form",
+  "fields" : [
     {
-      "header": {
-        "label": "Please enter in your email address"
+      "header" : {
+        "label" : "Please enter in your email address"
       }
     },
     {
-      "textInput": {
-        "name": "username",
-        "label": "Email",
-        "hint": "Just the username part please",
-        "initialValue": "jolzee",
-        "placeHolder": "username",
-        "style": {
-          "solo": true
-        },
-        "clearable": true,
-        "persistentHint": true,
-        "icons": {
-          "appendOuter": "email-edit"
-        },
-        "suffix": "@gmail.com",
-        "validations": "required"
+      "textInput" : {
+        "name"           : "username",
+        "label"          : "Email",
+        "hint"           : "Just the username part please",
+        "initialValue"   : "jolzee",
+        "placeHolder"    : "username",
+        "style"          : { "solo":true },
+        "clearable"      : true,
+        "persistentHint" : true,
+        "icons"          : { "appendOuter":"email-edit" },
+        "suffix"         : "@gmail.com",
+        "validations"    : "required"
       }
-    }, 
+    },
     {
-      other fields....
+      // ... other fields
     }
   ]
 }
