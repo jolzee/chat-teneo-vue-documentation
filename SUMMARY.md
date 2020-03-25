@@ -4,7 +4,7 @@
 * [Screenshots](screenshots.md)
 * [Installation and Build](installation.md)
 * [Tools](tools.md)
-* [Context Parameters](context-parameters.md)
+* [Location Context Parameters](context-parameters.md)
 * [Configuration](configuration/README.md)
   * [Leopard Config Page](configuration/leopard-config-page.md)
   * [Website URLs](configuration/website-urls.md)

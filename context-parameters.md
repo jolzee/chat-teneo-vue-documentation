@@ -4,7 +4,7 @@ description: >-
   to personalize responses.
 ---
 
-# Context Parameters
+# Location Context Parameters
 
 To have the location information sent to Teneo you must enable the following environment variable in you .env file. By default it is set to true.
 
@@ -29,5 +29,53 @@ latitude: 47.5857
 longitude: -122.0345
 regionCode: WA
 regionName: Washington
+```
+
+### Retrieving in Pre-Processing within Teneo
+
+```java
+if (engineEnvironment.getParameter("timeZone")) { 
+    timeZone = engineEnvironment.getParameter("timeZone") 
+}
+
+if (engineEnvironment.getParameter("city")) { 
+    city = engineEnvironment.getParameter("city") 
+}
+
+if (engineEnvironment.getParameter("continentCode")) { 
+    continentCode = engineEnvironment.getParameter("continentCode") 
+}
+
+if (engineEnvironment.getParameter("continentName")) { 
+    continentName = engineEnvironment.getParameter("continentName") 
+}
+
+if (engineEnvironment.getParameter("countryCode")) { 
+    countryCode = engineEnvironment.getParameter("countryCode") 
+}
+
+if (engineEnvironment.getParameter("currencySymbol")) { 
+    currencySymbol = engineEnvironment.getParameter("currencySymbol") 
+}
+
+if (engineEnvironment.getParameter("currencyCode")) { 
+    currencyCode = engineEnvironment.getParameter("currencyCode") 
+}
+
+if (engineEnvironment.getParameter("latitude")) { 
+    latitude = engineEnvironment.getParameter("latitude") 
+}
+
+if (engineEnvironment.getParameter("longitude")) { 
+    longitude = engineEnvironment.getParameter("longitude") 
+}
+
+if (engineEnvironment.getParameter("regionCode")) { 
+    regionCode = engineEnvironment.getParameter("regionCode") 
+}
+
+if (engineEnvironment.getParameter("regionName")) { 
+    regionName = engineEnvironment.getParameter("regionName") 
+}
 ```
 
