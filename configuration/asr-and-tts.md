@@ -12,6 +12,7 @@ description: >-
 * English
 * French
 * German
+* Italian
 * Japanese
 * Danish
 * Dutch
