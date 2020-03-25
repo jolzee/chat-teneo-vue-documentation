@@ -23,7 +23,7 @@ It can also be embedded on an external site.
 
 {% embed url="https://vuetifyjs.com/en/getting-started/quick-start\#supported-browsers" %}
 
-ASR and TTS utilizes the [Web Speech API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API) through the use of the [Artyom.js](https://sdkcarlos.github.io/sites/artyom.html) library.  You will only reliably be able to use both ASR and TTS in a Chrome Browser.
+[ASR and TTS](configuration/asr-and-tts.md) utilizes the [Web Speech API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API) through the use of the [Artyom.js](https://sdkcarlos.github.io/sites/artyom.html) library.  You will only reliably be able to use both ASR and TTS in a Chrome Browser.
 
 ## Education
 
