@@ -7,6 +7,10 @@ description: >-
 
 # Message Response Options
 
+{% page-ref page="dynamic-theme-change.md" %}
+
+{% page-ref page="./" %}
+
 {% page-ref page="emergency-button.md" %}
 
 {% page-ref page="toasts.md" %}
