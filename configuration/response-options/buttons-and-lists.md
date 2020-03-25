@@ -71,6 +71,59 @@ def yesNoMaybeOptions = ["title": "Please confirm",
 }
 ```
 
+## Buttons with Icons
+
+As before you can display buttons but you can optionally define custom icons shown in the buttons and you can optionally control what is sent back to Teneo as user input text. Therefore the button says one thing but the text that is sent back after a click could be something different.
+
+![](../../.gitbook/assets/button-icons.png)
+
+### Variable
+
+```java
+def buttonIconOptions = 
+
+["title": "Some UI Elements",
+    "items": [
+     ["name": "Form Button Text", "text": "This is sent as user input", "icon": "book-information-variant"],
+		 ["name": "Map Button Text", "text": "Where are you located", "icon": "google-maps"],
+		 ["name": "Youtube Button Text", "text": "Tell me about your company", "icon": "youtube"],
+    ]
+]
+```
+
+### Output Parameter
+
+```groovy
+extensions = ${ExtensionHelper.displayClickableList(buttonIconOptions, channel)}
+```
+
+If you wanted the **buttons to persist** for any reason then specify this output parameter:
+
+```groovy
+extensions = ${ExtensionHelper.displayPermanentClickableList(buttonIconOptions, channel)
+```
+
+### JSON
+
+```javascript
+{
+  "name"           : "displayCollection",
+  "hasLongOptions" : false,
+  "permanent"      : false,
+  "parameters"     : {
+    "content" : {
+      "title" : "Please confirm",
+      "items" : [
+        { "name":"Yes" },
+        { "name":"No" }
+      ]
+    }
+  }
+}
+```
+
+
+
 ## Line Based Options
 
 ![Line Based Options](../../.gitbook/assets/option-list.jpg)
