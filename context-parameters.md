@@ -17,18 +17,18 @@ VUE_APP_SEND_LOCATION_LOGIN=true
 The values will differ based off the location of the user chatting with Teneo via Leopard. You can access these variables in a pre-processing script from within Teneo Studio. 
 
 ```text
-timeZone: America/Los_Angeles
-city: Sammamish
-continentCode: NA
-continentName: North America
-countryCode: US
-countryName: United States
-currencySymbol: $
-currencyCode: USD
-latitude: 47.5857
-longitude: -122.0345
-regionCode: WA
-regionName: Washington
+timeZone        : America/Los_Angeles  
+city            : Sammamish            
+continentCode   : NA                   
+continentName   : North America        
+countryCode     : US                   
+countryName     : United States        
+currencySymbol  : $                    
+currencyCode    : USD                  
+latitude        : 47.5857              
+longitude       : -122.0345            
+regionCode      : WA                   
+regionName      : Washington           
 ```
 
 ### Retrieving in Pre-Processing within Teneo
