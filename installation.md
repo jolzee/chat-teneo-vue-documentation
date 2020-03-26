@@ -114,7 +114,7 @@ Has the same browser coverage as **npm run build** but rather doesn't transpile 
 If you would like to leverage [Live Chat](configuration/integrations/live-chat.md), [Location Detection](configuration/response-options/field-types.md#location-information), [Pusher Messaging](configuration/integrations/pusher.md) or [Social Authentication](configuration/integrations/social-authentication.md) then you will need to update your license keys in the `.env` properties file.  Know that you can define a `.env.local` file within the same directory. This file will be used for local builds. `.env.local` files are added to `.gitignore` so that your licence keys and config isn't publicly exposed.
 
 {% code title=".env" %}
-```text
+```bash
 VUE_APP_BUILD_COMPRESS_JAVASCRIPT_ASSETS=true
 VUE_APP_BUILD_COMPRESS_CSS_ASSETS=true
 VUE_APP_EMBED_KILL_SESSION_ON_CLOSE=false
