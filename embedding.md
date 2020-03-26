@@ -2,7 +2,7 @@
 description: Describes the process of including Leopard on an external website.
 ---
 
-# Embedding
+# Embedding / Production
 
 Note that you can inject the Lepard Chat UI into a specific element on a page. This might be beneficial if you want to place it in a specific tab order. To enable this add a `<div id="leopardChatWindow"></div>` anywhere on the page. This is not required though and if absent the UI will automatically be injected at the beginning of the body.
 

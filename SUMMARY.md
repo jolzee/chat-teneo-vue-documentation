@@ -57,7 +57,7 @@
     * [Form](configuration/response-options/form.md)
     * [Card](configuration/response-options/card.md)
     * [Feedback Form](configuration/response-options/feedback-form.md)
-* [Embedding](embedding.md)
+* [Embedding / Production](embedding.md)
 * [Logging / Reporting](logging-reporting.md)
 * [Code Guidelines](code-guidelines.md)
 
