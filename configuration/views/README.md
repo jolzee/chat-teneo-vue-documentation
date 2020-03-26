@@ -7,3 +7,11 @@ description: >-
 
 # Views
 
+{% page-ref page="hiding-chat-icons.md" %}
+
+{% page-ref page="desktop.md" %}
+
+{% page-ref page="mobile.md" %}
+
+
+
