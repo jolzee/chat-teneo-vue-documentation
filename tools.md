@@ -114,7 +114,7 @@ Cmder is a Console Emulator for windows.
 
 ## Vuetify
 
-Vuetify is the component UI library used in Leopard. If you wanted to add some new custom components or teak existing ones then Vuetify will have all the documentation needed.
+Vuetify is the component UI library used in Leopard. If you wanted to add some new custom components or tweak existing ones then have a look at the Vuetify documentation.
 
 {% embed url="https://vuetifyjs.com/en/getting-started/quick-start" %}
 
