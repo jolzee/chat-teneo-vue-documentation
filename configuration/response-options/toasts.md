@@ -35,37 +35,55 @@ Display multiple Toasts - displayed 2 seconds apart
 ```javascript
 toast =
 
-[ { "type"   : "success",
+[
+  {
+    "type"   : "success",
     "title"  : "Success",
     "body"   : "This is a success toast",
-    "config" : { "timeout"         : 5000,
-                 "showProgressBar" : true,
-                 "closeOnClick"    : true,
-                 "pauseOnHover"    : true,
-                 "position"        : "leftBottom" } },
-  { "type"   : "info",
+    "config" : {
+      "timeout"         : 5000,
+      "showProgressBar" : true,
+      "closeOnClick"    : true,
+      "pauseOnHover"    : true,
+      "position"        : "leftBottom"
+    }
+  },
+  {
+    "type"   : "info",
     "title"  : "Information",
     "body"   : "This is an info toast",
-    "config" : { "timeout"         : 5000,
-                 "showProgressBar" : true,
-                 "closeOnClick"    : true,
-                 "pauseOnHover"    : true,
-                 "position"        : "leftBottom" } },
-  { "type"   : "warning",
+    "config" : {
+      "timeout"         : 5000,
+      "showProgressBar" : true,
+      "closeOnClick"    : true,
+      "pauseOnHover"    : true,
+      "position"        : "leftBottom"
+    }
+  },
+  {
+    "type"   : "warning",
     "title"  : "Warning",
     "body"   : "This is an warning toast",
-    "config" : { "timeout"         : 5000,
-                 "showProgressBar" : true,
-                 "closeOnClick"    : true,
-                 "pauseOnHover"    : true,
-                 "position"        : "leftBottom" } },
-  { "type"   : "error",
+    "config" : {
+      "timeout"         : 5000,
+      "showProgressBar" : true,
+      "closeOnClick"    : true,
+      "pauseOnHover"    : true,
+      "position"        : "leftBottom"
+    }
+  },
+  {
+    "type"   : "error",
     "title"  : "Error",
     "body"   : "This is an warning toast",
-    "config" : { "timeout"         : 5000,
-                 "showProgressBar" : true,
-                 "closeOnClick"    : true,
-                 "pauseOnHover"    : true,
-                 "position"        : "leftBottom" } } ]
+    "config" : {
+      "timeout"         : 5000,
+      "showProgressBar" : true,
+      "closeOnClick"    : true,
+      "pauseOnHover"    : true,
+      "position"        : "leftBottom"
+    }
+  }
+]
 ```
 
