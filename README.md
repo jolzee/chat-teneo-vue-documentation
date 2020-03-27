@@ -13,9 +13,9 @@ Leopard can be used for demonstrations, prototypes and in production. In non-emb
 
 It can also be embedded on an external site. 
 
-## Limitations
+## Browser Compatibility
 
-[Vue.js](https://vuejs.org/) and [Vuetify ](https://vuetifyjs.com/en/getting-started/quick-start)are modern frameworks. Leopard will therefore run fine on Microsoft Edge, Opera, Firefox, Chrome, Safari and IE 11.
+[Vue.js](https://vuejs.org/) and [Vuetify ](https://vuetifyjs.com/en/getting-started/quick-start)are modern frameworks. Leopard will therefore run fine on Microsoft Edge, Opera, Firefox, Chrome, Safari and IE11.
 
 ![](.gitbook/assets/image%20%2823%29.png)
 
@@ -23,7 +23,9 @@ It can also be embedded on an external site.
 
 {% embed url="https://vuetifyjs.com/en/getting-started/quick-start\#supported-browsers" %}
 
+{% hint style="info" %}
 [ASR and TTS](configuration/asr-and-tts.md) utilizes the [Web Speech API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API) through the use of the [Artyom.js](https://sdkcarlos.github.io/sites/artyom.html) library.  You will only reliably be able to use both ASR and TTS in a Chrome Browser.
+{% endhint %}
 
 ## Education
 
