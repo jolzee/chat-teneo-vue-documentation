@@ -20,5 +20,9 @@ extensions1 = ${ExtensionHelper.displayClickableList(yesNoMaybeOptions,channel)}
 extensions2 = ${ExtensionHelper.displayImageCarousel(imageUrlArray,channel)}
 ```
 
+{% page-ref page="date-and-time-pickers.md" %}
+
+{% page-ref page="modals/" %}
+
 
 
