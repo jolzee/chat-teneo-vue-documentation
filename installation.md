@@ -59,7 +59,7 @@ cd leopard
 
 If you're developing on windows you will most likely have to install `node-gyp` before you attempt to run `npm install`.  You will need to compile some native node modules.  To enable this on Windows you can run this one liner.  It's **going to take a while to complete** but it only has to be run once. **Start PowerShell as Administrator and run**:
 
-```javascript
+```bash
 npm install --global windows-build-tools
 ```
 
