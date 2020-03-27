@@ -9,6 +9,6 @@ description: >-
 Just add a `question` parameter to the Leopard URL. For example
 
 ```text
-https://wi.presales.artificial-solutions.com/leopard-chat/?question=who%20created%20you
+https://wi.presales.artificial-solutions.com/leopard-chat/?question=who%20created%20you  
 ```
 
