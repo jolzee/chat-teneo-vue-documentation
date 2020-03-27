@@ -4,7 +4,11 @@ description: You can signal Leopard to display toasts.
 
 # Toasts
 
+
+
 ![green = success / blue = info / red = error / orange = warning](../../.gitbook/assets/toast%20%281%29.png)
+
+## Single Toast
 
 ### Output Parameter
 
@@ -28,9 +32,13 @@ toast =
 }
 ```
 
+## Multiple Toasts
+
 Display multiple Toasts - displayed 2 seconds apart
 
 ![](../../.gitbook/assets/toasts-min.gif)
+
+### Output Parameter
 
 ```javascript
 toast =
