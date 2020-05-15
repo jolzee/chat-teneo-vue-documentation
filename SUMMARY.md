@@ -19,6 +19,7 @@
   * [Components](configuration/components/README.md)
     * [Date & Time Pickers](configuration/components/date-and-time-pickers.md)
     * [Modal or Inline Components](configuration/components/modals/README.md)
+      * [Alerts](configuration/components/modals/alerts.md)
       * [Image](configuration/components/modals/image.md)
       * [Image Carousel](configuration/components/modals/image-carousel.md)
       * [Video](configuration/components/modals/video.md)
