@@ -39,6 +39,8 @@ extensions1 = ${ExtensionHelper.displayClickableList(yesNoMaybeOptions,channel)}
 extensions2 = ${ExtensionHelper.displayImageCarousel(imageUrlArray,channel)}
 ```
 
+{% page-ref page="alerts.md" %}
+
 {% page-ref page="image.md" %}
 
 {% page-ref page="image-carousel.md" %}
