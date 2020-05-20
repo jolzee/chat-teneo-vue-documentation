@@ -29,11 +29,11 @@ Note that you can inject the Leopard Chat UI into a specific element on a page. 
       var leopardState = {
         data: {},
         listener: function (val) {},
-        setData(val) {
+        setData: function (val) {
           this.data = val;
           this.listener(val);
         },
-        getData() {
+        getData: function () {
           return this.data;
         },
         registerListener: function (listener) {
