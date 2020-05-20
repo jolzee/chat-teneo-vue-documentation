@@ -32,7 +32,7 @@ extensions = ${ExtensionHelper.displayImage(imageUrl,channel)}
 
 ### Screenshot
 
-![](../../../.gitbook/assets/inline-image.jpg)
+![](../../../.gitbook/assets/leopard-26.png)
 
 ### Output Parameter
 

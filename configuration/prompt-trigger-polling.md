@@ -23,7 +23,7 @@ _.putOutputParameter("numActiveFlows", "" + _.getActiveFlows().size())
 
 ## Screenshots
 
-![Leopard Config for Prompt Trigger Polling](../.gitbook/assets/promt-trigger-config.jpg)
+![](../.gitbook/assets/poll.png)
 
 ![A catch all flow that handles every poll request](../.gitbook/assets/catch-all-flow-polling.jpg)
 

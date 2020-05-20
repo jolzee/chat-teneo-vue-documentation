@@ -14,7 +14,7 @@ Under certain scenarios you can make some buttons or options remain permanently 
 
 ## Buttons
 
-![Button Response Options](../../.gitbook/assets/buttons.jpg)
+![](../../.gitbook/assets/leopard-16.png)
 
 ### Output Parameter
 
@@ -126,7 +126,7 @@ extensions = ${ExtensionHelper.displayPermanentClickableList(buttonIconOptions, 
 
 ## Line Based Options
 
-![Line Based Options](../../.gitbook/assets/option-list.jpg)
+![](../../.gitbook/assets/leopard-05%20%281%29.png)
 
 ### Output Parameter
 

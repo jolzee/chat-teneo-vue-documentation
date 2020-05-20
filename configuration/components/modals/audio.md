@@ -36,7 +36,7 @@ extensions = ${ExtensionHelper.displayVideo(urlToMp3, channel)}
 
 ### Screenshot
 
-![](../../../.gitbook/assets/inline-audio.jpg)
+![](../../../.gitbook/assets/leopard-27.png)
 
 ### Output Parameter
 

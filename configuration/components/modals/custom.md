@@ -8,7 +8,7 @@ description: >-
 
 ## Screenshot
 
-![Custom Modal for the Example listed](../../../.gitbook/assets/custom-modal.jpg)
+![](../../../.gitbook/assets/leopard-28.png)
 
 ## Output Parameter
 

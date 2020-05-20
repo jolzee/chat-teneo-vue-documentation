@@ -36,7 +36,7 @@ extensions = ${ExtensionHelper.displayVideo(url,channel)}
 
 ### Screenshot
 
-![](../../../.gitbook/assets/inline-video.jpg)
+![](../../../.gitbook/assets/leopard-24.png)
 
 ### Output Parameter
 

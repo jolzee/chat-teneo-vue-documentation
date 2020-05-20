@@ -8,13 +8,13 @@ description: Leopard shown in the context of a website
 
 ### Screenshots
 
-![](../../.gitbook/assets/fly-out.jpg)
+![](../../.gitbook/assets/flyout.png)
 
 ## Floating Overlay
 
 ### Screenshots
 
-![Floating version of Leopard](../../.gitbook/assets/floating.jpg)
+![](../../.gitbook/assets/leopard-33.png)
 
 
 

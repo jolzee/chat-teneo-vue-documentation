@@ -29,15 +29,14 @@ The chat interface also has some i18n added that will change some of the labels 
 
 In Leopard Chat Configuration UI each solution has a configuration option to change the language of the solution it's expecting to interact with. This setting also sets the ASR and TTS to be configured that respective language.
 
-![Locale Option in Web Config](../.gitbook/assets/locale.jpg)
+![](../.gitbook/assets/locale.png)
 
 ## Enable in Chat UI
 
  There are a few options of toggling the use of both ASR and TTS. 
 
-* Long click in input box 
 * Long click on any Teneo response icon 
-* Long click on the `>>` chevron or microphone icon
+* Long click on the `>>` chevron or microphone icon when it's activated
 * `CTL+ALT+/` or `CTL+ALT+DOWNARROW`
 
 ## Capturing Audio

@@ -6,7 +6,7 @@ description: Leopard shown in the context of a mobile phone.
 
 ## Screenshots
 
-![Mobile view](../../.gitbook/assets/mobile.jpg)
+![](../../.gitbook/assets/leopard-01%20%281%29.png)
 
 ## Mobile URL
 

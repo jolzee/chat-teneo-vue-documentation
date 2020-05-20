@@ -14,7 +14,7 @@ description: >-
 {% endtab %}
 
 {% tab title="Leopard Rendering" %}
-![](../../.gitbook/assets/markdown-result.jpg)
+![](../../.gitbook/assets/leopard-13.png)
 {% endtab %}
 {% endtabs %}
 

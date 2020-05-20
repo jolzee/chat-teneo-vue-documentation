@@ -133,11 +133,11 @@ You can always access the config from the Leopard chat window's menu.
 
   Accessing this documentation
 
-![](../.gitbook/assets/image.png)
+![](../.gitbook/assets/leopard-31%20%281%29.png)
 
 ## Solution Add/Edit Screen
 
-![](../.gitbook/assets/cfg-solution.jpg)
+![](../.gitbook/assets/leopard-30%20%281%29.png)
 
 ## Styling Chat Button and Chat Window Header
 
@@ -163,5 +163,5 @@ You can export the JSON configuration for individual solutions or all solutions 
 
 Within the Leopard configuration page you can import previously exported solution configurations.  Adding and merging is all automatically handled.  
 
-![](../.gitbook/assets/upload.png)
+![](../.gitbook/assets/upload%20%281%29.png)
 

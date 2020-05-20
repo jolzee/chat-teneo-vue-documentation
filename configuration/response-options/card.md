@@ -9,7 +9,7 @@ description: >-
 
 ### Screenshots
 
-![Example of a card with all the options present](../../.gitbook/assets/card.jpg)
+![](../../.gitbook/assets/leopard-19%20%281%29.png)
 
 ### Output Parameter
 

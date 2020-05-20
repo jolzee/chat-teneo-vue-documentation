@@ -46,7 +46,7 @@ The latest code is stored in Github.
 Navigate into the folder you wish to clone the code into. Then run the following command. 
 
 ```bash
-git clone https://github.com/jolzee/chat-teneo-vue leopard
+git clone https://github.com/jolzee/leopard-chat-ui-teneo leopard
 ```
 
  Next navigate into the cloned project
@@ -146,13 +146,13 @@ VUE_APP_SEND_LOCATION_LOGIN=true
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">Environment Variable</th>
+      <th style="text-align:center">Environment Variable</th>
       <th style="text-align:left">Description</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left"><code>VUE_APP_GET_STATIC_DEFAULT_CONFIG</code>
+      <td style="text-align:center"><code>VUE_APP_GET_STATIC_DEFAULT_CONFIG</code>
       </td>
       <td style="text-align:left">
         <p>If set to <b><code>true</code></b> then the leopard chat client will retrieve
@@ -174,7 +174,7 @@ VUE_APP_SEND_LOCATION_LOGIN=true
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><code>VUE_APP_HIDE_CONFIG_MENU</code>
+      <td style="text-align:center"><code>VUE_APP_HIDE_CONFIG_MENU</code>
       </td>
       <td style="text-align:left">If set to <b><code>false </code></b>then you are able to navigate to Leopard&apos;s
         configuration area from the Leopard&apos;s fly-out menu. This should be
@@ -187,7 +187,7 @@ VUE_APP_SEND_LOCATION_LOGIN=true
         a production environment where you&apos;re embedding Leopard.</td>
     </tr>
     <tr>
-      <td style="text-align:left"><code>VUE_APP_LOAD_CONFIG_FOR_NEW_SESSIONS</code>
+      <td style="text-align:center"><code>VUE_APP_LOAD_CONFIG_FOR_NEW_SESSIONS</code>
       </td>
       <td style="text-align:left">
         <p>If set to <b><code>false </code></b>then the local storage version of your
@@ -262,7 +262,7 @@ TimeZone timeZone = TimeZone.getTimeZone(Lib_sUserTimeZone);
 iHour = Integer.parseInt(String.format('%tH', new GregorianCalendar(timeZone)));
 ```
 
-![](.gitbook/assets/greeting.jpg)
+![Greeting Message](.gitbook/assets/greeting.png)
 
 ## ExtensionHelper
 
@@ -291,7 +291,7 @@ The Facebook and Slack have not been updated in a while and might fall behind so
 
 You can always get the latest version of ExtensionHelper here:  
 
-[**https://github.com/jolzee/chat-teneo-vue/blob/master/src/teneo-assets/ExtensionHelper.groovy**](https://raw.githubusercontent.com/jolzee/chat-teneo-vue/master/src/teneo-assets/ExtensionHelper.groovy)\*\*\*\*
+[https://github.com/jolzee/leopard-chat-ui-teneo/blob/master/src/teneo-assets/ExtensionHelper.groovy](https://github.com/jolzee/leopard-chat-ui-teneo/blob/master/src/teneo-assets/ExtensionHelper.groovy)
 
 ### Installation
 

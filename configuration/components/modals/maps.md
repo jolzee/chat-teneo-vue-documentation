@@ -32,7 +32,7 @@ extensions = ${ExtensionHelper.displayMap("333 West San Carlos Street, 6th Floor
 
 ### Screenshot
 
-![](../../../.gitbook/assets/map-inline.png)
+![](../../../.gitbook/assets/leopard-25%20%281%29.png)
 
 ### Output Parameter
 

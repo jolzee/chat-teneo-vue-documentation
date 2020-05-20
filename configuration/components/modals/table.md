@@ -2,11 +2,11 @@
 description: 'Sort-able, paginated and searchable tables can be shown in a modal'
 ---
 
-# Tables
+# Tables - Advanced
 
 ## Screenshot
 
-![Searchable, Sortable and Paginated](../../../.gitbook/assets/tables.jpg)
+![](../../../.gitbook/assets/leopard-14%20%281%29.png)
 
 ## Output Parameter
 

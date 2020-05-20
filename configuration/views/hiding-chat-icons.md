@@ -11,14 +11,16 @@ In some scenarios you might have a preference to hide the chat icons. This can e
 ### Screenshots
 
 {% tabs %}
-{% tab title="UI" %}
-![Without Icons](../../.gitbook/assets/hide-chat-cons-ui.jpg)
+{% tab title="Without Icons" %}
+![](../../.gitbook/assets/hide-icons.png)
+{% endtab %}
 
-![With icons](../../.gitbook/assets/with-icons.jpg)
+{% tab title="With Icons" %}
+![](../../.gitbook/assets/show-icons.png)
 {% endtab %}
 
 {% tab title="Config" %}
-![](../../.gitbook/assets/hide-chat-icons.jpg)
+![](../../.gitbook/assets/feature-toggles.png)
 {% endtab %}
 {% endtabs %}
 

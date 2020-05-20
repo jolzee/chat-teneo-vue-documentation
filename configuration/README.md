@@ -4,6 +4,8 @@ description: Details all the configuration options available in the Leopard Chat
 
 # Configuration
 
+
+
 {% page-ref page="leopard-config-page.md" %}
 
 {% page-ref page="website-urls.md" %}

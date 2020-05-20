@@ -17,9 +17,9 @@ If you need to capture a date you can present the option to display a date picke
 
 ### Screenshots
 
-![Date Picker Option in Chat Window](../../.gitbook/assets/date-picker-response.jpg)
+![](../../.gitbook/assets/leopard-09%20%281%29.png)
 
-![Date Picker Modal](../../.gitbook/assets/date-picker-modal.jpg)
+![](../../.gitbook/assets/leopard-06.png)
 
 ### Output Parameter
 
@@ -37,9 +37,9 @@ The time picker uses a 24 hour format so a selection of 4am would be `04:00` and
 
 ### Screenshots
 
-![Example of time picker button in message output](../../.gitbook/assets/time-picker.jpg)
+![](../../.gitbook/assets/leopard-11.png)
 
-![Example of Time Picker Modal](../../.gitbook/assets/timepicker-modal.jpg)
+![](../../.gitbook/assets/leopard-10%20%281%29.png)
 
 ### Output Parameter
 

@@ -9,7 +9,7 @@ description: >-
 
 ## Screenshot
 
-![](../../.gitbook/assets/split-message.jpg)
+![](../../.gitbook/assets/leopard-18.png)
 
 Sometimes you want to build up a response from a series of output nodes in Teneo but have control over splitting the final response into what seems like separate messages in the chat window. This can help provide context and allow for a logic separation of some messages. 
 
