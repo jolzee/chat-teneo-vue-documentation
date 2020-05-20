@@ -219,7 +219,7 @@ if (engineEnvironment.getParameter("channel")) {
 }
 ```
 
-### Capture the Login command
+### Capture the Login command - For the Greeting Message
 
 Disable the following flow from the TDR's - `The user continues conversation after Timeout`  This flow is located in `Dialogue » Non-conversational » Timeout`
 
