@@ -7,19 +7,55 @@ description: Describes the process of including Leopard on an external website.
 Note that you can inject the Leopard Chat UI into a specific element on a page. This might be beneficial if you want to place it in a specific tab order. To enable this add a `<div id="leopardChatWindow"></div>` anywhere on the page. This is not required though and if absent the UI will automatically be injected at the beginning of the body.
 
 ```markup
-<script type="text/javascript">
-window.TENEOCTX ||(TENEOCTX={});
-TENEOCTX = {
-	pageTitle: document.title,
-	pageUrl: window.location.href,
-	pageTopic: "Help",
-	message: "This was sent from the customer's web site"
-}
-</script>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Your Website</title>
+    <script type="text/javascript">
+      // [optional] only include this if you want to send info to Teneo via Leopard
+      window.TENEOCTX || (TENEOCTX = {});
+      TENEOCTX = {
+        eventSource: "leopard-embed",
+        pageTitle: document.title,
+        pageUrl: window.location.href,
+        pageTopic: "Help",
+        message: "This was sent from the customer's web site"
+      };
 
-<div id="leopardChatWindow"></div>
+      // [optional] If you want to be able to react client side to data send by Teneo via Leopard
+      var leopardState = {
+        data: {},
+        listener: function (val) {},
+        setData(val) {
+          this.data = val;
+          this.listener(val);
+        },
+        getData() {
+          return this.data;
+        },
+        registerListener: function (listener) {
+          this.listener = listener;
+        }
+      };
 
-<script src="https://<your-leopard-host>/<leopard-ctx>/static/embed-leopard.js"></script>
+      // [optional] Some external JavaScript can then listen for state changes by registering a listener
+      if (leopardState) {
+        leopardState.registerListener(function (dataFromLeopard) {
+          alert("Leopard just sent this data to the page: " + JSON.stringify(dataFromLeopard));
+        });
+      }
+    </script>
+  </head>
+  <body>
+    <!-- NB: use the full url to static/embed-leopard.js below -->
+    <div id="leopardChatWindow"></div>
+    <script src="https://<your-leopard-host>/<leopard-ctx>/static/embed-leopard.js"></script>
+  </body>
+</html>
+
 ```
 
 The keys in the `TENEOCTX` object will be passed as individual request parameters to your TIE endpoint with every request.  
@@ -71,7 +107,9 @@ if (teneoFrameWindow) {
 
 You can run JavaScript sent from Teneo on the website that embeds Teneo. Add an output parameter to any node in Teneo with the name "**script**" with the value containing the JavaScript you want to run.
 
-![Creates a button and changes the site&apos;s background text to Red!!](.gitbook/assets/image%20%2819%29.png)
+![](.gitbook/assets/run-script-set-data.png)
 
-
+{% hint style="info" %}
+The above code snippet shows that you can run ad hoc JavaScript against the page that is embedding Leopard. You can also populate the **`leopardState`** object if you have defined it on the target page and that data can then be subscribed to from other scripts. 
+{% endhint %}
 
