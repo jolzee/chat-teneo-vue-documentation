@@ -6,6 +6,10 @@ description: >-
 
 # Tables - Simple
 
+{% hint style="info" %}
+Simple Tables are only available as an inline component. 
+{% endhint %}
+
 ## Screenshot
 
 ![](../../../.gitbook/assets/simple-inline-table.png)
