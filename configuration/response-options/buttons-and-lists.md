@@ -122,7 +122,18 @@ extensions = ${ExtensionHelper.displayPermanentClickableList(buttonIconOptions, 
 }
 ```
 
+## Buttons with Colors
 
+The default color for buttons comes from the success theme color configured for the solution. If you want to change the color of a specific button you can define a color property in the json.
+
+```groovy
+def yesNoMaybeOptions = ["title": "Please confirm",
+                        "items": [
+                            ["name": "Yes"],
+                            ["name": "No", "color": "#FF4C5B"],
+                            ["name": "Maybe", "params": "paramname=this-will-be-sent-back-in-url-when-maybe-option-clicked-optional"]
+                        ]]
+```
 
 ## Line Based Options
 
