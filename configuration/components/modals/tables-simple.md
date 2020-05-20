@@ -28,7 +28,7 @@ If you want to omit the headers then remove the property.
     "height": null,
     "fixedHeader": false,
     "headers": ["Account", "Balance"],
-    "rows": [["Current", "$1271.21"], ["Private", "$137.54"]]
+    "rows": [["<b>Current</b>", "$1271.21"], ["Private", "$137.54"]]
 }
 ```
 
