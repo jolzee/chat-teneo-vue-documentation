@@ -298,7 +298,9 @@ The Facebook and Slack have not been updated in a while and might fall behind so
 
 You can always get the latest version of ExtensionHelper here:  
 
-[https://github.com/jolzee/leopard-chat-ui-teneo/blob/master/src/teneo-assets/ExtensionHelper.groovy](https://github.com/jolzee/leopard-chat-ui-teneo/blob/master/src/teneo-assets/ExtensionHelper.groovy)
+> [https://github.com/jolzee/leopard-chat-ui-teneo/blob/master/src/teneo-assets/ExtensionHelper.groovy](https://github.com/jolzee/leopard-chat-ui-teneo/blob/master/src/teneo-assets/ExtensionHelper.groovy)
+
+![ExtensionHelper.groovy](.gitbook/assets/extenstionhelper.png)
 
 ### Installation
 
