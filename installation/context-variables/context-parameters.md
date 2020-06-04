@@ -6,10 +6,10 @@ description: >-
 
 # Location Context Parameters
 
-To have the location information sent to Teneo you must enable the following environment variable in you .env file. By default it is set to true.
+To have the location information sent to Teneo you must enable the following [build configuration](../build-variables.md) variable. 
 
 ```text
-VUE_APP_SEND_LOCATION_LOGIN=true
+location.login.sendAtLogin = true
 ```
 
 ### Variables Sent
