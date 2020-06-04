@@ -8,7 +8,6 @@ Capture the `command` request parameter. Leopard sends a `?command=login` whenev
 
 {% tabs %}
 {% tab title="Pre-processing Script" %}
-{% code title="" %}
 ```groovy
 if (engineEnvironment.getParameter("command")) {
 	command = engineEnvironment.getParameter("command")
@@ -16,7 +15,6 @@ if (engineEnvironment.getParameter("command")) {
 	command = ""
 }
 ```
-{% endcode %}
 {% endtab %}
 {% endtabs %}
 
