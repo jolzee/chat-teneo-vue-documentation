@@ -23,6 +23,10 @@ description: >-
 
 The chat interface also has some i18n added that will change some of the labels used in Leopard to be shown in the respective language. It doesn't have full coverage of every area available in Leopards UI but it does cover the main bases.  The file used to control the labels is located in `\src\constants\translations.js`
 
+{% hint style="warning" %}
+[**ASR and TTS**](asr-and-tts.md) utilizes the [Web Speech API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API) through the use of the [Artyom.js](https://sdkcarlos.github.io/sites/artyom.html) library.  You will only reliably be able to use both ASR and TTS in a **Chrome Browser**.
+{% endhint %}
+
 ![](../.gitbook/assets/french.jpg)
 
 ## Configuration

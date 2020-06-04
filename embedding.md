@@ -13,16 +13,22 @@ Note that you can inject the Leopard Chat UI into a specific element on a page. 
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Your Website</title>
+    <title>Client's Website</title>
     <script type="text/javascript">
       // [optional] only include this if you want to send info to Teneo via Leopard
       window.TENEOCTX || (TENEOCTX = {});
       TENEOCTX = {
-        eventSource: "leopard-embed",
-        pageTitle: document.title,
-        pageUrl: window.location.href,
-        pageTopic: "Help",
-        message: "This was sent from the customer's web site"
+        init: {
+          trustedDomain: "", // something like http://localhost:8080 // "" = receive and post messages to all domains
+          allowScripts: true // false = if you want to disable potential eval
+        },
+        ctx: {
+          eventSource: "leopard-embed",
+          pageTitle: document.title,
+          pageUrl: window.location.href,
+          pageTopic: "Help",
+          message: "This was sent from the customer's web site"
+        }
       };
 
       // [optional] If you want to be able to react client side to data send by Teneo via Leopard
@@ -50,11 +56,18 @@ Note that you can inject the Leopard Chat UI into a specific element on a page. 
     </script>
   </head>
   <body>
-    <!-- NB: use the full url to static/embed-leopard.js below -->
+    <!-- (function() {
+    var b = document.body;
+    var scr = document.createElement('script');
+    scr.src = 'https://192.168.1.112:8080/static/embed-leopard.js';
+    b.appendChild(scr);
+    })(); -->
+    <!-- use the full url to static/embed-leopard.js below | https://domain.com/static/embed-leopard.js -->
     <div id="leopardChatWindow"></div>
-    <script src="https://<your-leopard-host>/<leopard-ctx>/static/embed-leopard.js"></script>
+    <script src="static/embed-leopard.js"></script>
   </body>
 </html>
+
 
 ```
 

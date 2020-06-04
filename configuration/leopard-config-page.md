@@ -5,106 +5,105 @@ description: >-
   shared.
 ---
 
-# Leopard Config Page
+# Solution Configuration
 
 ## Initial Load
 
 On initial load of the Leopard chat client the logic in the code will look to see if it can find a [default configuration](leopard-config-page.md#default-configuration) to load. If that configuration can't be located you can head over into the [config page](leopard-config-page.md#config-page) and create a new one.
 
-{% hint style="warning" %}
-If you want a working Leopard interface for the majority of people on first load then you must define a default configuration. If you don't then every person will be required to manually setup their solutions. 
-
-Each person's solution configurations are stored in their browser's local storage.  
-{% endhint %}
-
 ### Default Configuration
 
-Once Leopard is [built and deployed ](../installation.md#build)there will be a file called `/static/default.json` located in the distribution. 
+Leopard loads the site's configured in your `.env.solution.json` file located in the root of Leopard's source code.  
 
-You can export any full solution config from your personal Leopard configuration and use that as the default `default.json`  
+You can export any full solution config from your personal Leopard Admin Area and use that as the default in production.   
 
-Example `default.json`
+Example `.env.solution.json`
 
 ```javascript
 {
-  "activeSolution" : "f79b1246-bcac-4f83-bfd0-7aefe58eaad2",
-  "solutions"      : [
+  "activeSolution": "241ae1c3-leopard-983c02abe2b3",
+  "solutions": [
     {
-      "id"                     : "f79b1246-bcac-4f83-bfd0-7aefe58eaad2",
-      "name"                   : "Leopard Test Solution - Development",
-      "url"                    : "https://teneo-demos-fusion.presales.artificial-solutions.com/leopard/",
-      "deepLink"               : "leopard-development",
-      "iframeUrl"              : "https://wi.presales.artificial-solutions.com/leopard-info/",
-      "sendContextParams"      : "all",
-      "contextParams"          : [
+      "name": "Leopard Test Solution",
+      "url": "https://teneo-demos-fusion.presales.artificial-solutions.com/leopard/",
+      "deepLink": "leopard",
+      "iframeUrl": "https://wi.presales.artificial-solutions.com/leopard-info/",
+      "sendContextParams": "all",
+      "contextParams": [
         {
-          "name"   : "channel",
-          "values" : [
+          "name": "channel",
+          "values": [
             {
-              "text"   : "webview",
-              "active" : true
+              "text": "webview",
+              "active": true
             }
           ]
         }
       ],
-      "animations"             : {
-        "in"  : "slideInUp",
-        "out" : "flipOutY"
+      "animations": {
+        "in": "slideInUp",
+        "out": "flipOutY"
       },
-      "chatTitle"              : "Speak with Leo (Dev)",
-      "font"                   : "leopard-font-normal",
-      "responseIcon"           : "mdi-message-bulleted",
-      "userIcon"               : "mdi-comment-account",
-      "useLocalStorage"        : false,
-      "enableLiveChat"         : false,
-      "theme"                  : {
-        "primary"   : "#3D237D",
-        "secondary" : "#7C5BB7",
-        "accent"    : "#2196F3",
-        "success"   : "#4CAF50",
-        "info"      : "#2196F3",
-        "error"     : "#FF5252",
-        "warning"   : "#FFC107",
-        "dark"      : "#0062B1",
-        "custom1"   : "#0062B1",
-        "custom2"   : "#0062B1",
-        "custom3"   : "#0062B1"
+      "chatTitle": "Speak with Leo",
+      "responseIcon": "mdi-comment-arrow-right",
+      "userIcon": "mdi-comment-quote-outline",
+      "useLocalStorage": false,
+      "enableLiveChat": false,
+      "theme": {
+        "primary": "#1A237E",
+        "secondary": "#880E4F",
+        "accent": "#4CAF50",
+        "success": "#8BC34A",
+        "info": "#E65100",
+        "error": "#FF5252",
+        "warning": "#FFC107",
+        "dark": "#0062B1",
+        "custom1": "#6A1B9A",
+        "custom2": "#0062B1",
+        "custom3": "#0062B1",
+        "focusButton": "#C8C4C4",
+        "sendButton": "#311B92",
+        "textButton": "#000000"
       },
-      "lookAndFeel"            : {
-        "response" : {
-          "iconColor"      : "secondary",
-          "blockBgColor"   : "white",
-          "blockTextColor" : "dark"
-        },
-        "question" : {
-          "iconColor"      : "primary",
-          "blockBgColor"   : "white",
-          "blockTextColor" : "dark"
-        }
-      },
-      "displayAccent"          : true,
-      "knowledgeData"          : [
+      "displayAccent": true,
+      "knowledgeData": [
         "What's your name?",
         "Who created you?"
       ],
-      "float"                  : true,
-      "showChatIcons"          : true,
-      "asrCorrections"         : "pizza | Peter\nthiss | that",
-      "pulseButton"            : true,
-      "promptTriggers"         : {
-        "enabled"     : false,
-        "pollSeconds" : "10"
+      "float": true,
+      "showChatIcons": true,
+      "asrCorrections": "pizza | Peter\nthiss | that",
+      "pulseButton": true,
+      "promptTriggers": {
+        "enabled": false,
+        "pollSeconds": "5"
       },
-      "customCssButtonToolbar" : "",
-      "locale"                 : "en-uk-female",
-      "longResponsesInModal"   : false
+      "customCssButtonToolbar": "",
+      "locale": "en-us-female",
+      "longResponsesInModal": false,
+      "useInProduction": false,
+      "font": "leopard-font-medium",
+      "lookAndFeel": {
+        "response": {
+          "iconColor": "error",
+          "blockBgColor": "white",
+          "blockTextColor": "dark"
+        },
+        "question": {
+          "iconColor": "accent",
+          "blockBgColor": "white",
+          "blockTextColor": "dark"
+        }
+      },
+      "id": "241ae1c3-leopard-983c02abe2b3",
+      "responseDelay": 0,
+      "enableAsrTtsOnOpen": false
     }
   ]
 }
-
 ```
 
-The solution called, `My Demo Solution` would be loaded for all new users accessing the Leopard deployment.
+The solution called,  `Leopard Test Solution` would be loaded for all new users accessing the Leopard deployment.
 
 ## Accessing the Config Page
 
@@ -116,40 +115,28 @@ You can always access the config from the Leopard chat window's menu.
 
 ### Features
 
-* You can create new solution configurations
-* You can edit existing solution configurations
-* You can clone existing solution configurations
-* You can delete existing solution configurations
+* Create new solution configurations
+* Edit existing solution configurations
+* Clone existing solution configurations
+* Delete existing solution configurations
 * Exporting
   * Export an individual solution configuration
   * Exporting all solution configurations
 * Importing
   * Importing individual solution configurations
-  * Importing a batch of solution configurations 
+  * Importing a batch of solution configurations
+* Share solutions by generating a link that other can follow to import your solution
+* Test TIE endpoints for all configured solutions
 * Accessing short links for the selected solution configuration
-
   * Mobile view deep link
   * Website view deep link
-
-  Accessing this documentation
+* Access the documentation
 
 ![](../.gitbook/assets/leopard-31%20%281%29.png)
 
 ## Solution Add/Edit Screen
 
 ![](../.gitbook/assets/leopard-30%20%281%29.png)
-
-## Styling Chat Button and Chat Window Header
-
-At a solution level you can define custom css that is applied to both the chat open & close button as well the chat window header.
-
-For example this css produces the look and feel seen in the image below.
-
-```css
-background: #944ad6; background: -moz-linear-gradient(left, #944ad6 0%, #207cca 90%, #207cca 100%, #207cca 100%, #207cca 100%, #1c76d6 100%, #207cca 101%, #207cca 101%, #207cca 102%, #207cca 102%); background: -webkit-linear-gradient(left,  #944ad6 0%,#207cca 90%,#207cca 100%,#207cca 100%,#207cca 100%,#1c76d6 100%,#207cca 101%,#207cca 101%,#207cca 102%,#207cca 102%); background: linear-gradient(to right,  #944ad6 0%,#207cca 90%,#207cca 100%,#207cca 100%,#207cca 100%,#1c76d6 100%,#207cca 101%,#207cca 101%,#207cca 102%,#207cca 102%); filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#944ad6', endColorstr='#207cca',GradientType=1 );
-```
-
-![](../.gitbook/assets/style.png)
 
 ## Exporting
 

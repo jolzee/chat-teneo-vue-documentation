@@ -1,29 +1,26 @@
 ---
 description: >-
-  Leopard can be shown on any web page and you can instruct Leopard to redirect
-  that page to another page as a result of of a user's question.
+  Leopard when configured in "demoMode" displayed a configured site in an iFrame
+  behind the chat window. Teneo responses that have URLs will trigger a redirect
+  within this iFrame.
 ---
 
-# Website URLs
+# Demo Mode - iFrames & URLs
 
 ## Main Site URL
 
-When creating a new solution configuration in the Leopard web based configuration area you have the option of defining an IFRAME url. 
+When creating a new solution configuration in the Leopard's Admin Area you have the option of defining an IFRAME url. 
 
-![](../.gitbook/assets/iframe.jpg)
+![](../.gitbook/assets/iframes.png)
 
 {% hint style="info" %}
-If Leopard is served over a HTTPS url then you will want to make certain that both the Teneo Solution URL and the IFRAME url are both available over HTTPS 
+If Leopard is served over a **HTTPS** url then you will want to make certain that both the Teneo Solution URL and the IFRAME url are both available over **HTTPS** 
 {% endhint %}
 
-The Leopard UI effectively Iframes the site behind the chat window.  If this is a site you host you should see the site loaded along with the Leopard chat button hovering in the bottom right corner of the page. 
-
 {% hint style="warning" %}
-You might find that linking to an external site doesn't work. This is most likely caused by the  website sending back headers to instruct your browser not to IFRAME the site.  You can work around this by installing a X-Frame buster extension in your browser. There are plenty of extension that do the same thing. 
+Some sites don't like to be Iframed. This is most likely caused by the website sending back headers to instruct your browser not to IFRAME the site.  You can work around this by installing a X-Frame buster extension in your browser. There are plenty of extensions that help with this. Here's one I use: 
 
-Here's one I use.
-
-[https://chrome.google.com/webstore/detail/ignore-x-frame-headers/gleekbfjekiniecknbkamfmkohkpodhe](https://chrome.google.com/webstore/detail/ignore-x-frame-headers/gleekbfjekiniecknbkamfmkohkpodhe)
+* [https://chrome.google.com/webstore/detail/ignore-x-frame-headers/gleekbfjekiniecknbkamfmkohkpodhe](https://chrome.google.com/webstore/detail/ignore-x-frame-headers/gleekbfjekiniecknbkamfmkohkpodhe)
 {% endhint %}
 
 ## Output Node URLs
