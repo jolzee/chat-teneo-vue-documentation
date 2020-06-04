@@ -76,15 +76,3 @@ The following command will compile, compress and minify all the code for product
 npm run build
 ```
 
-```
-
-```
-
-![Greeting Message](../.gitbook/assets/greeting.png)
-
-## 
-
-{% page-ref page="../components/modals.md" %}
-
-{% page-ref page="../components/" %}
-

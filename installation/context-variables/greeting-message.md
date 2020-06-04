@@ -6,7 +6,9 @@ Disable the following flow from the TDR's - `The user continues conversation aft
 
 Capture the `command` request parameter. Leopard sends a `?command=login` whenever the chat window is opened. You will want to trigger the greeting message when this request parameter is present.
 
-{% code title="Pre-processing Script" %}
+{% tabs %}
+{% tab title="Pre-processing Script" %}
+{% code title="" %}
 ```groovy
 if (engineEnvironment.getParameter("command")) {
 	command = engineEnvironment.getParameter("command")
@@ -15,12 +17,18 @@ if (engineEnvironment.getParameter("command")) {
 }
 ```
 {% endcode %}
+{% endtab %}
+{% endtabs %}
 
 In your greeting flow you will want to add a syntax trigger with the following condition
 
-{% code title="Trigger Condition in Greeting Flow" %}
+{% tabs %}
+{% tab title="Trigger Condition in Greeting Flow" %}
 ```groovy
 {command == "login"}
 ```
-{% endcode %}
+{% endtab %}
+{% endtabs %}
+
+![](../../.gitbook/assets/greeting.png)
 
