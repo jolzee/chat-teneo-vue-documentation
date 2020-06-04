@@ -8,9 +8,7 @@ description: >-
 
  Leopard is configured using **`/config/default.js`** which is a **commented** JavaScript module. You can either directly add your configuration to `default.js` or to an adjacent `local.js` which takes precedence and is added to `.gitignore`. The conversational solutions are configured through the [`.env.solution.json`](https://jolzee.gitbook.io/leopard/configuration/leopard-config-page#default-configuration) file in the root of the project. These changes are picked up if you run either `npm run serve` or `npm run build` .
 
-## Leopard Environment Variables
-
-If you would like to leverage [Live Chat](../integrations/live-chat.md), [Location Detection](../components/field-types.md#location-information), [Pusher Messaging]() or [Social Authentication](../integrations/social-authentication.md) then you will need to update your license keys in the `.env` properties file.  Know that you can define a `.env.local` file within the same directory. This file will be used for local builds. `.env.local` files are added to `.gitignore` so that your licence keys and config isn't publicly exposed.
+## Leopard Build Variables
 
 ```javascript
 const config = {

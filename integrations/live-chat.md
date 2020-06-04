@@ -22,13 +22,32 @@ You will then need to configure Leopard with your LiveChat key that points at yo
 
 ![Key found in the chat link url](../.gitbook/assets/live-chat-key.jpg)
 
-### Configure Leopard's Env. Variable
+{% hint style="info" %}
+Leopard's [build variables](../installation/build-variables.md) control access to the integration with LiveChat. 
+{% endhint %}
 
-In the root of the Leopard source control there is a `.env` and `.env.local` file.  The later is never committed to Git and you can create it if you want to mask the license key from your source control system. 
+```javascript
+const config = {
+  ...,
+  /**
+   * https://www.livechat.com/ integration - live chat handover
+   */
+  liveChatInc: {
+    agentAssist: {
+      /**
+       * Server URL for creating agent assist canned responses -
+       * https://github.com/jolzee/agent-assist-livechat-server-leopard
+       */
+      serverUrl: ""
+    },
+    key: "" // livechat.com license key
+  },
+  ...
+};
 
-More information on environment variables can be found here:
+module.exports = config;
 
-{% embed url="https://cli.vuejs.org/guide/mode-and-env.html\#environment-variables" %}
+```
 
 ### LiveChat API Key
 

@@ -41,16 +41,36 @@ You will need to setup a Firebase project and enable social authentication for t
 * Facebook
 * GitHub
 
-Define your Firebase configuration in Leopard's .env file.
+Define your Firebase configuration in [Leopard's Build Variables](../installation/build-variables.md).
 
-{% code title=".env" %}
-```text
-VUE_APP_FIREBASE_API_KEY=
-VUE_APP_FIREBASE_AUTH_DOMAIN=
-VUE_APP_FIREBASE_DATABASE_URL=
-VUE_APP_FIREBASE_PROJECT_ID=
-VUE_APP_FIREBASE_STORAGE_BUCKET=
-VUE_APP_FIREBASE_MESSAGING_SENDER_ID=
+{% code title="" %}
+```javascript
+const config = {
+  ...,
+  /**
+   * Social Authentication is provided through https://firebase.google.com/
+   * Empty values signals no authentication
+   */
+  socialAuthentication: {
+    firebase: {
+      apiKey: "",
+      authDomain: "",
+      databaseUrl: "", // Firebase Realtime Database
+      messagingSenderId: "",
+      microsoft: {
+        domainHint: "", // my-domain.com
+        tenant: "" // Azure AD Tenant ID
+      },
+      projectId: "", // firebase project id
+      providers: ["microsoft", "facebook", "google", "github"], // login and register will only show buttons for these providers
+      storageBucket: ""
+    }
+  },
+  ...
+};
+
+module.exports = config;
+
 ```
 {% endcode %}
 
