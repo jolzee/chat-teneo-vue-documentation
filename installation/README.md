@@ -82,7 +82,7 @@ The following tools need to be installed before you clone the code and try and b
 {% endtab %}
 {% endtabs %}
 
-### Windows Users
+## Windows Users
 
 You will need to install `node-gyp` globally.  This is needed because some native node modules need to be compiled.  
 
@@ -96,7 +96,7 @@ Only run this once Node.js is installed. The command below will take a while to 
 npm install --global windows-build-tools
 ```
 
-## Code
+## Source Code
 
 The latest code is stored in [`GitHub`](https://github.com/jolzee/leopard-chat-ui-teneo).
 
