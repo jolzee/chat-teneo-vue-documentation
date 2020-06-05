@@ -7,8 +7,71 @@ description: >-
 
 # Setup
 
-## Prerequisites
+{% tabs %}
+{% tab title="Check List ✅" %}
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">Steps</th>
+      <th style="text-align:left">Where</th>
+      <th style="text-align:left">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left"><a href="extension-helper.md">Extension Helper</a>
+      </td>
+      <td style="text-align:left">Studio</td>
+      <td style="text-align:left">Add the <a href="extension-helper.md">Extension Helper</a> groovy script
+        to Teneo Studio as either a resource or to the Global Scripts</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><a href="context-variables/">Global Variables &amp; Pre-processing Scripts</a>
+      </td>
+      <td style="text-align:left">Studio</td>
+      <td style="text-align:left">In Teneo Studio you will want to define a number of global variables and
+        pre-processing scripts</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">Install Prerequisites</td>
+      <td style="text-align:left">Operating System</td>
+      <td style="text-align:left"><a href="https://git-scm.com/downloads">Git</a>, <a href="https://nodejs.org/en/download/">Node.js</a>,
+        <a
+        href="https://cli.vuejs.org/">Vue CLI</a>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">Clone Leopard</td>
+      <td style="text-align:left">Operating System</td>
+      <td style="text-align:left">
+        <p><code>git clone </code><a href="https://github.com/jolzee/leopard-chat-ui-teneo"><code>https://github.com/jolzee/leopard-chat-ui-teneo</code></a>&lt;code&gt;&lt;/code&gt;</p>
+        <p><code>cd leopard-chat-ui-teneo</code>
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><a href="build-variables.md">Build Variables</a>
+      </td>
+      <td style="text-align:left">Operating System</td>
+      <td style="text-align:left">You can control various build aspects of Leopard through build variables.</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">Run Leopard</td>
+      <td style="text-align:left">Operating System</td>
+      <td style="text-align:left"><code>npm run serve</code>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">Build for Production</td>
+      <td style="text-align:left">Operating System</td>
+      <td style="text-align:left"><code>npm run build</code>
+      </td>
+    </tr>
+  </tbody>
+</table>
+{% endtab %}
 
+{% tab title="Prerequisites" %}
 The following tools need to be installed before you clone the code and try and build Leopard:
 
 | Tool |  |
@@ -16,6 +79,8 @@ The following tools need to be installed before you clone the code and try and b
 | [Git](https://git-scm.com/downloads) | [https://git-scm.com/downloads](https://git-scm.com/downloads) |
 | [Node](https://nodejs.org/en/download/).js | [https://nodejs.org/en/download/](https://nodejs.org/en/download/) |
 | [Vue CLI](https://cli.vuejs.org/) | `npm install -g @vue/cli` |
+{% endtab %}
+{% endtabs %}
 
 ### Windows Users
 
