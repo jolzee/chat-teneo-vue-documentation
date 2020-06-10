@@ -107,10 +107,13 @@ const config = {
       sourceFile: ".env.solution.json" // relative path to your solution(s) config file - probably don't need to change
     }
   },
+  tts: {
+    url: "" // Jaguar URL if you plan to use AWS Polly instead of default Web Speech APIs TTS
+  },
   ui: {
     configArea: {
       shareLink: {
-        kuttItApiKey: "" // Optional - URL Shortener https://kutt.it/ can shortener shared links generated in the config area
+        jaguarLinkShortenerUrl: "" // Optional - Use Jaguar's URL Shortener for https://tinyurl.com/ It can shortener shared links generated in the config area
       }
     },
     hideConfigMenu: false, // true = Set in production | false when in demo/development mode
@@ -119,6 +122,7 @@ const config = {
 };
 
 module.exports = config;
+
 
 ```
 
