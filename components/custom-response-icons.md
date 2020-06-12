@@ -6,9 +6,17 @@ description: >-
 
 # Response Icons
 
-## Introduction
+## Quick Custom Icon
 
-This functionality leverages the "emotion" functionality in Teneo Studio. 
+You can override the default response icon by specifying a "`icon`" **output parameter** with the name of the icon. Icon names can be found on [Material Design Icons](https://materialdesignicons.com/)
+
+```javascript
+icon = comment-alert-outline
+```
+
+## Leverage "emotion" in Studio for Custom Response Icons
+
+This option leverages the "emotion" functionality in Teneo Studio. 
 
 Just construct your emotions in a format where there a pipe sign \| and the icon name after the pipe sign. Add the emotion to any response node and you should see the custom icon being displayed in the response.
 
