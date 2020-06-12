@@ -11,6 +11,7 @@
     * [Location Context Parameters](installation/context-variables/context-parameters.md)
   * [Build Variables](installation/build-variables.md)
 * [Components](components/README.md)
+  * [Answer Borders](components/answer-borders.md)
   * [Audio Player](components/audio.md)
   * [Auto Open Leopard with Link](components/deep-linked-question.md)
   * [Alerts](components/alerts.md)
