@@ -12,7 +12,7 @@ If the **output parameter** "`border`" exists then it's value will be used as th
 border = #FF4C5B
 ```
 
-If you want to control the borders for each response chunk the you will need a "`borders`" **output parameter** and an array of colors. 
+If you want to control the borders for each [response chunk](splitting-a-response.md) the you will need a "`borders`" **output parameter** and an array of colors. 
 
 ```javascript
 borders = ["Red", "#00FF00", "", "Blue"]
