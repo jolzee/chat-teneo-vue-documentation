@@ -44,6 +44,12 @@ langurl=https://some-new-url.es/
 
 You can control not just the new target iframe url and TIE url but also the Leopard Chat Title and locale for UI labels and ASR and TTS.
 
+## Language Condition
+
+```text
+%$RU.LANG:{lob.confidence>0.78}
+```
+
 ### Screenshot
 
 ![](../.gitbook/assets/language-handover.jpg)
