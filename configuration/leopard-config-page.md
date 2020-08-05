@@ -66,14 +66,12 @@ Example `.env.solution.json`
         "textButton": "#000000"
       },
       "displayAccent": true,
-      "knowledgeData": [
-        "What's your name?",
-        "Who created you?"
-      ],
+      "knowledgeData": ["What's your name?", "Who created you?"],
       "float": true,
       "showChatIcons": true,
       "asrCorrections": "pizza | Peter\nthiss | that",
       "pulseButton": true,
+      "playResponseBeep": true,
       "promptTriggers": {
         "enabled": false,
         "pollSeconds": "5"
@@ -101,6 +99,7 @@ Example `.env.solution.json`
     }
   ]
 }
+
 ```
 
 The solution called,  `Leopard Test Solution` would be loaded for all new users accessing the Leopard deployment.
