@@ -40,6 +40,16 @@ To have the Leopard UI load a different Iframe for the new language solution the
 langurl=https://some-new-url.es/
 ```
 
+If you have the **Amazon Polly voices** enabled you will need to send an output parameter that instructs Leopard to switch the voice.
+
+```text
+voice=Ruben
+```
+
+{% hint style="info" %}
+A list of available Amazon Polly voices can be found here: [https://docs.aws.amazon.com/polly/latest/dg/voicelist.html](https://docs.aws.amazon.com/polly/latest/dg/voicelist.html)
+{% endhint %}
+
 ## Additional Output Parameters
 
 You can control not just the new target iframe url and TIE url but also the Leopard Chat Title and locale for UI labels and ASR and TTS.
