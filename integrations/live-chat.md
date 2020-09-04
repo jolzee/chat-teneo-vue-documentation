@@ -20,7 +20,7 @@ You will need to have an account at LiveChat.inc
 
 You will then need to configure Leopard with your LiveChat key that points at your account. This key can be found on `/settings/chat-link` . It's a numerical number. 
 
-![Key found in the chat link url](../.gitbook/assets/live-chat-key.jpg)
+![Key found in page link url](../.gitbook/assets/livechat.png)
 
 {% hint style="info" %}
 Leopard's [build variables](../installation/build-variables.md) control access to the integration with LiveChat. 
