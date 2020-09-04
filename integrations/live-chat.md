@@ -55,23 +55,21 @@ You will also need to acquire the LiveChat Personal Access Token \(PAT\) so that
 
 Login to LiveChat's web interface and head over to the LiveChat Deverloper Console - [https://developers.livechat.com/console/tools/personal-access-tokens](https://developers.livechat.com/console/tools/personal-access-tokens) . Create a new token. 
 
-You can control you authorization scopes. Here's the ones I use:
+You can control you authorization scopes. At the very least you will need **agents\_read.**
 
-```groovy
-access_rules:ro, access_rules:rw, accounts--all:ro, accounts--all:rw, accounts--my:ro, accounts--my:rw, agents--my:rw, agents-bot--all:ro, agents-bot--all:rw, agents-bot--my:ro, agents-bot--my:rw, agents_read, agents_write, archives_read, archives_write, buttons_manage, canned_responses_read, canned_responses_write, tags_read, tags_write, chats--access:ro, chats--access:rw, chats--all:ro, chats--all:rw, chats--my:ro, chats--my:rw, chats.conversation--access:rw, chats.conversation--all:rw, chats.conversation--my:rw, customers:ro, customers:rw, greetings_read, greetings_write, in_app_msg_manage, multicast:rw, properties--all:ro, properties--my:ro, properties--my:rw, properties_manage, webhooks--all:ro, webhooks--all:rw, webhooks--my:ro, webhooks--my:rw, webhooks_manage, webhooks_write, sessions--all:rw, sessions--my:rw, visitors_read, agents--all:rw
-```
+![](../.gitbook/assets/check-agent-availability.png)
 
 ## Studio
 
 ### Integration
 
-When a user explicitly asks to speak to a human or some other handover rule has been triggered you will want to first check to see if there's a live agent available. This can be done using a custom integration in Teneo Studio. 
+When a user explicitly asks to speak to a human or some other handover rule has been triggered you will want to first check to see if there's a live agent available. This can be done using a custom integration in Teneo Studio.  **You will need to update the entity id and pat in the integration script.**
 
 ![Integration in Studio](../.gitbook/assets/livechat-integration.jpg)
 
 ```groovy
 def addr = "https://api.livechatinc.com/agents"
-def authString = "email@address.com:personal-access-token".getBytes().encodeBase64().toString()
+def authString = "entity-id:personal-access-token".getBytes().encodeBase64().toString()
 
 def result = new groovy.json.JsonSlurper().parseText(addr.toURL().getText(connectTimeout: 2000, readTimeout: 3000,requestProperties: ['X-API-VERSION': '2','Authorization':'Basic ' + authString]));
 def availableAgents = result.findAll { it.status == "accepting chats" }
