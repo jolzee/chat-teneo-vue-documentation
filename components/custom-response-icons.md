@@ -6,9 +6,17 @@ description: >-
 
 # Response Icons
 
+## Custom Icon Color
+
+You can override the default response icon's color by specifying an "`iconColor`" **output parameter** with with a hex color code. 
+
+```javascript
+iconColor = #E0427E
+```
+
 ## Quick Custom Icon
 
-You can override the default response icon by specifying a "`icon`" **output parameter** with the name of the icon. Icon names can be found on [Material Design Icons](https://materialdesignicons.com/)
+You can override the default response icon by specifying an "`icon`" **output parameter** with the name of the icon. Icon names can be found on [Material Design Icons](https://materialdesignicons.com/)
 
 ```javascript
 icon = comment-alert-outline
