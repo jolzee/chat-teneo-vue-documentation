@@ -17,6 +17,9 @@ const config = {
     compressJavascript: true, // gzip and brotli compress JavaScript
     produceSourceMap: false // in production you probably want to disable
   },
+  tie: {
+    timeoutSecs: 20 // Timeout value for request to TIE
+  },
   demoMode: true, // true = stores configs in local storage. In production it should be false
   /**
    * https://www.livechat.com/ integration - live chat handover
@@ -29,7 +32,18 @@ const config = {
        */
       serverUrl: ""
     },
-    key: "" // livechat.com license key
+    key: "", // livechat.com license key
+    /**
+     * Create custom app "Leopard Chat UI" in
+     * https://developers.livechat.com/console/apps/ and add an authorization
+     * block.
+     * Client Type: Web app
+     * Client Id: copy and paste below
+     * Add your URI whitelists for where Leopard is hosted
+     * app scopes: Define your access scopes.
+     *
+     */
+    clientId: ""
   },
   location: {
     /**
@@ -122,7 +136,6 @@ const config = {
 };
 
 module.exports = config;
-
 
 ```
 
