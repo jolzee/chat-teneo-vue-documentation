@@ -51,6 +51,7 @@
   * [Theme Change](components/dynamic-theme-change.md)
   * [Toasts](components/toasts.md)
   * [Language Auto Switch](components/language-auto-switch.md)
+  * [Minimize Chat after Delay](components/minimize-chat-after-delay.md)
   * [Multiple Components - Same Response](components/multiple-components-same-response.md)
   * [Modal Size & Positioning](components/modals.md)
   * [Open Long Response in Modal](components/open-long-response-in-modal.md)
