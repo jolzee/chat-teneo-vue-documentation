@@ -112,3 +112,22 @@ if (_.getOutputText()) {
 
 ![Live Chat Handover in Studio](../.gitbook/assets/live-chat-handover.jpg)
 
+### Setting User Info
+
+If you want the LiveChat human agent to know who they're about to talk to then you can send some additional JSON back in an output parameter.
+
+```groovy
+userInfo =   {
+  "name": "John Doe",
+  "email": "john.doe@example.com",
+  "sessionFields": {
+	 "custom_property": "BasketValue=10usd",
+	 "any_key_is_ok": "sample custom field"
+  }
+}
+```
+
+![](../.gitbook/assets/johndoe.png)
+
+ 
+

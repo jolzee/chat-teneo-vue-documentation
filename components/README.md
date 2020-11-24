@@ -62,7 +62,7 @@ extensions2 = ${ExtensionHelper.displayImageCarousel(imageUrlArray,channel)}
 
 {% page-ref page="language-auto-switch.md" %}
 
-{% page-ref page="answer-text-formatting.md" %}
+{% page-ref page="../content-styling/answer-text-formatting.md" %}
 
 {% page-ref page="multiple-components-same-response.md" %}
 
