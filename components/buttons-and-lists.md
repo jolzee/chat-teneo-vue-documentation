@@ -22,11 +22,19 @@ Under certain scenarios you can make some buttons or options remain permanently 
 extensions = ${ExtensionHelper.displayClickableList(yesNoMaybeOptions,channel)}
 ```
 
-If you wanted the **buttons to persist** for any reason then specify this output parameter:
+If you wanted the **buttons to persist and remain active** for any reason then specify this output parameter:
 
 ```groovy
 extensions = ${ExtensionHelper.displayPermanentClickableList(yesNoMaybeOptions, channel)}
 ```
+
+If you wanted the **buttons to persist and automatically disable after the conversation moves on.** 
+
+```groovy
+extensions = ${ExtensionHelper.displayPermanentDisabledClickableList(yesNoMaybeOptions, channel)}
+```
+
+
 
 Where `yesNoMaybeOptions` is a groovy map stored either as a flow or global variable
 
@@ -141,14 +149,22 @@ def yesNoMaybeOptions = ["title": "Please confirm",
 
 ### Output Parameter
 
+
+
 ```groovy
 extensions = ${ExtensionHelper.displayClickableList(yesNoMaybeOptions,channel, true)}
 ```
 
-If you wanted the **buttons to persist** for any reason then specify this output parameter:
+If you wanted the **buttons to persist and remain active** for any reason then specify this output parameter:
 
 ```groovy
 extensions = ${ExtensionHelper.displayPermanentClickableList(yesNoMaybeOptions, channel, true)}
+```
+
+If you wanted the **buttons to persist and automatically disable after the conversation moves on.** 
+
+```groovy
+extensions = ${ExtensionHelper.displayPermanentDisabledClickableList(yesNoMaybeOptions, channel, true)}
 ```
 
 Where `yesNoMaybeOptions` is a groovy map stored either as a flow or global variable
