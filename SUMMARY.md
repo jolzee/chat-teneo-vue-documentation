@@ -14,6 +14,7 @@
   * [CSS Styles](content-styling/css-styles.md)
   * [Icons](content-styling/icons.md)
   * [Markdown & HTML](content-styling/answer-text-formatting.md)
+* [Components Simple Syntax](components-simple-syntax.md)
 * [Components](components/README.md)
   * [Answer Borders](components/answer-borders.md)
   * [Audio Player](components/audio.md)
